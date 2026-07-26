@@ -193,6 +193,66 @@ footer{background:var(--dark);padding:40px;}
 @media(max-width:1024px){.nums-grid{grid-template-columns:repeat(2,1fr);}.price-grid{grid-template-columns:repeat(2,1fr);}.serv-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:768px){.why-grid{grid-template-columns:1fr;}.adv-grid{grid-template-columns:1fr 1fr;}.rev-grid{grid-template-columns:1fr;}.cta-box{grid-template-columns:1fr;gap:32px;padding:40px;}.top-bar,.nav,.section,.hero,.cta-s{padding-left:20px;padding-right:20px;}footer{padding:32px 20px;}.footer-in{flex-direction:column;align-items:flex-start;}}
 @media(max-width:540px){.nav-logo{height:23px;width:79px;}.footer-logo i{height:20px;width:69px;}.nums-grid{grid-template-columns:1fr 1fr;}.price-grid{grid-template-columns:1fr;}.serv-grid{grid-template-columns:1fr 1fr;}.adv-grid{grid-template-columns:1fr;}.hero-stats{gap:24px;}}
+
+/* === ГЕОГРАФИЯ И ЦЕНЫ === */
+.geo-toggle{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap;}
+.geo-tab{background:var(--white);border:1.5px solid var(--border);color:var(--gray);padding:10px 20px;border-radius:100px;cursor:pointer;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;transition:all .15s;}
+.geo-tab:hover{border-color:var(--green);color:var(--green);}
+.geo-tab.active{background:var(--green);border-color:var(--green);color:#fff;}
+.geo-pane{display:none;}
+.geo-pane.active{display:block;}
+.ptable{width:100%;border-collapse:collapse;background:var(--white);border:1.5px solid var(--border);border-radius:14px;overflow:hidden;font-size:13px;}
+.ptable thead th{background:var(--green);color:#fff;font-weight:700;text-align:left;padding:12px 14px;font-size:13px;}
+.ptable td{padding:11px 14px;border-top:1px solid var(--border-l);color:var(--text);vertical-align:top;line-height:1.5;}
+.ptable tbody tr:hover{background:var(--green-l);}
+.ptable .pcat{font-weight:600;color:var(--dark);white-space:nowrap;}
+.ptable .pprice{font-weight:800;color:var(--green-d);white-space:nowrap;}
+.ptable .pcities{color:var(--gray);font-size:12px;}
+.pnote{font-size:12.5px;color:var(--gray);line-height:1.6;margin-top:14px;padding:14px 16px;background:var(--green-l);border-left:3px solid var(--green);border-radius:0 8px 8px 0;}
+.pnote.warn{background:#fff7ed;border-left-color:var(--gold);}
+
+/* === КАЛЬКУЛЯТОР === */
+.calc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
+.calc-box{background:var(--white);border:1.5px solid var(--border);border-radius:18px;padding:26px;}
+.calc-box.res{background:linear-gradient(135deg,var(--green-l) 0%,#fff 100%);border-color:var(--green);}
+.calc-field{margin-bottom:16px;}
+.calc-field label{display:block;font-size:12.5px;font-weight:600;color:var(--gray);margin-bottom:6px;}
+.calc-field select,.calc-field input{width:100%;padding:11px 12px;border:1.5px solid var(--border);border-radius:10px;font-family:'Inter',sans-serif;font-size:14px;color:var(--text);background:var(--white);}
+.calc-field select:focus,.calc-field input:focus{outline:none;border-color:var(--green);}
+.calc-row{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--border-l);gap:12px;}
+.calc-row:last-child{border-bottom:none;}
+.calc-row .k{font-size:13px;color:var(--gray);line-height:1.4;}
+.calc-row .v{font-size:16px;font-weight:800;color:var(--dark);white-space:nowrap;}
+.calc-row.hero-row .v{font-size:26px;color:var(--green-d);}
+.calc-disc{font-size:11.5px;color:var(--lgray);line-height:1.55;margin-top:14px;}
+
+/* === СРАВНЕНИЕ === */
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.cmp-card{border-radius:18px;padding:28px;border:1.5px solid var(--border);background:var(--bg);}
+.cmp-card.win{border-color:var(--green);background:linear-gradient(135deg,var(--green-l) 0%,#fff 100%);}
+.cmp-h{font-size:13px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--gray);margin-bottom:10px;}
+.cmp-card.win .cmp-h{color:var(--green);}
+.cmp-v{font-size:38px;font-weight:900;color:var(--dark);letter-spacing:-1px;line-height:1;margin-bottom:6px;}
+.cmp-card.win .cmp-v{color:var(--green-d);}
+.cmp-s{font-size:13px;color:var(--gray);line-height:1.6;}
+.cmp-list{display:flex;flex-direction:column;gap:8px;margin-top:16px;}
+.cmp-li{font-size:12.5px;color:var(--text);display:flex;gap:8px;line-height:1.45;}
+.cmp-li::before{content:'•';color:var(--green);font-weight:700;}
+
+/* === КВАЛИФИКАЦИЯ === */
+.q-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.q-card{background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:22px;display:flex;gap:14px;align-items:flex-start;}
+.q-num{width:30px;height:30px;border-radius:9px;background:var(--green-l);color:var(--green-d);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.q-card h4{font-size:14.5px;font-weight:700;color:var(--dark);margin-bottom:5px;}
+.q-card p{font-size:12.5px;color:var(--gray);line-height:1.6;}
+.disclaimer{max-width:1100px;margin:0 auto;padding:0 40px 40px;font-size:11.5px;color:var(--lgray);line-height:1.7;}
+@media(max-width:900px){
+  .calc-wrap,.cmp-grid,.q-grid{grid-template-columns:1fr;}
+  .ptable{font-size:12px;}
+  .ptable td,.ptable thead th{padding:9px 10px;}
+  .ptable .pcities{display:none;}
+}
+
 </style>
 </head>
 <body>
@@ -219,6 +279,7 @@ footer{background:var(--dark);padding:40px;}
   <ul class="nav-links">
     <li><a href="https://ordogen.education" data-i="nav1">Садики</a></li>
     <li><a href="https://ordo.education" data-i="nav2">Платформа</a></li>
+    <li><a href="#geo" data-i="nav5">Цены и страны</a></li>
     <li><a href="https://aidabintazamat.github.io/ordo360-agent/" target="_blank" rel="noopener" data-i="nav3">Партнёрство</a></li>
     <li><a href="https://t.me/ordoholding" target="_blank" class="nav-cta" data-i="nav4">Записаться</a></li>
   </ul>
@@ -241,11 +302,12 @@ footer{background:var(--dark);padding:40px;}
       <div><div class="hero-stat-num">54<span class="green">+</span></div><div class="hero-stat-label" data-i="hs1">дошкольных организаций открыто</div></div>
       <div><div class="hero-stat-num">$5K<span class="green">+</span></div><div class="hero-stat-label" data-i="hs2">доход в месяц</div></div>
       <div><div class="hero-stat-num">30<span class="green">%</span></div><div class="hero-stat-label" data-i="hs3">средняя прибыль</div></div>
-      <div><div class="hero-stat-num">4</div><div class="hero-stat-label" data-i="hs4">страны присутствия</div></div>
+      <div><div class="hero-stat-num">9</div><div class="hero-stat-label" data-i="hs4">стран открыты для заявок</div></div>
       <div><div class="hero-stat-num">3<span class="green"> мес</span></div><div class="hero-stat-label" data-i="hs5">срок открытия</div></div>
     </div>
   </div>
 </section>
+<div class="disclaimer" data-i="hero_disc">Показатели «доход от $5 000 в месяц» и «средняя прибыль 30%» — усреднённые данные действующих организаций сети. Они не являются офертой, гарантией дохода или обещанием результата: фактические показатели зависят от города, локации, стоимости аренды, загрузки и участия в государственных программах.</div>
 <!-- BRANDS -->
 <section style="padding:20px 40px;background:#fff;border-bottom:1px solid #e5e7eb;">
   <div style="max-width:1100px;margin:0 auto;">
@@ -279,6 +341,7 @@ footer{background:var(--dark);padding:40px;}
     <div class="nums-grid">
       <div class="num-card"><div class="num-val">2020</div><div class="num-label" data-i="n1">год открытия первой организации</div></div>
       <div class="num-card"><div class="num-val">54+</div><div class="num-label" data-i="n2">дошкольных организаций открыто</div></div>
+      <div class="num-card"><div class="num-val">4</div><div class="num-label" data-i="n9">страны, где сеть уже работает</div></div>
       <div class="num-card"><div class="num-val">30</div><div class="num-label" data-i="n3">проданных франшиз</div></div>
       <div class="num-card"><div class="num-val">10 000+</div><div class="num-label" data-i="n4">родителей доверились</div></div>
       <div class="num-card"><div class="num-val">$2.5M</div><div class="num-label" data-i="n5">выручка сети в год</div></div>
@@ -317,8 +380,8 @@ footer{background:var(--dark);padding:40px;}
       <div class="serv-card"><div class="serv-icon">🏠</div><h4 data-i="s2h">Помещение</h4><p data-i="s2p">Помощь в поиске, макет проекта, список оснащения, согласование сметы ремонта</p></div>
       <div class="serv-card"><div class="serv-icon">👩‍🏫</div><h4 data-i="s3h">Персонал</h4><p data-i="s3p">Помощь в собеседовании, обучение через LMS, аттестация команды</p></div>
       <div class="serv-card"><div class="serv-icon">📖</div><h4 data-i="s4h">Учебная деятельность</h4><p data-i="s4p">5 000+ готовых сценариев уроков по 20 предметам для детей</p></div>
-      <div class="serv-card"><div class="serv-icon">📋</div><h4 data-i="s5h">Стандартизация</h4><p data-i="s5p">Госпроверки, субсидии, лицензирование — мы знаем все секреты</p></div>
-      <div class="serv-card"><div class="serv-icon">🎉</div><h4 data-i="s6h">Открытие</h4><p data-i="s6p">Выездная помощь при техническом открытии и дне открытых дверей</p></div>
+      <div class="serv-card"><div class="serv-icon">📋</div><h4 data-i="s5h">Стандартизация</h4><p data-i="s5p">Госпроверки, субсидии, лицензирование — в Казахстане. За рубежом передаём требования и контакты местного подрядчика</p></div>
+      <div class="serv-card"><div class="serv-icon">🎉</div><h4 data-i="s6h">Открытие</h4><p data-i="s6p">В Казахстане — выездная помощь при открытии. За рубежом — дистанционное сопровождение по чек-листу</p></div>
       <div class="serv-card"><div class="serv-icon">📊</div><h4 data-i="s7h">CRM и продажи</h4><p data-i="s7p">Подключение к отделу продаж, CRM, скрипты, воронки зачисления</p></div>
       <div class="serv-card"><div class="serv-icon">📣</div><h4 data-i="s8h">Реклама и маркетинг</h4><p data-i="s8p">Лидогенерация, бренд-менеджмент и федеральный маркетинг — 50% продаж</p></div>
     </div>
@@ -366,17 +429,199 @@ footer{background:var(--dark);padding:40px;}
       </div>
       <div class="price-card">
         <div class="price-tier">BOARD DIRECTOR</div>
-        <div><div class="price-val">$300+<span data-i="p4per">/мес</span></div></div>
+        <div><div class="price-val">от $1 500<span data-i="p4per"> единоразово</span></div></div>
         <div class="price-features">
           <div class="price-feat" data-i="p4f1">Всё из FOUNDER</div>
           <div class="price-feat" data-i="p4f2">Коммерческий отдел</div>
           <div class="price-feat" data-i="p4f3">HR отдел</div>
-          <div class="price-feat" data-i="p4f4">9% ежемесячный взнос</div>
-          <div class="price-feat" data-i="p4f5">Initial fee от $4 000</div>
+          <div class="price-feat" data-i="p4f4">9% ежемесячный переменный платёж от выручки</div>
+          <div class="price-feat" data-i="p4f5">Единоразовая выплата зависит от города — от $1 500</div>
         </div>
         <a href="https://t.me/ordoholding" target="_blank" class="price-btn" data-i="pr_btn">Стать партнёром</a>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- ГЕОГРАФИЯ И ЦЕНЫ -->
+<section class="section" id="geo" style="background:var(--bg);">
+  <div class="si">
+    <div class="sl" data-i="geo_label">География и цены</div>
+    <h2 class="st" data-i="geo_title">Сколько стоит открыть организацию в вашем городе</h2>
+    <p class="ss" data-i="geo_sub">Сеть работает в 4 странах. Лицензии продаются в 9 странах СНГ. Единоразовая выплата зависит от страны и размера города, ежемесячный переменный платёж везде одинаковый — 9% от выручки родительских взносов.</p>
+
+    <div class="geo-toggle">
+      <button class="geo-tab active" onclick="geoTab('kz',this)" data-i="geo_t1">Казахстан</button>
+      <button class="geo-tab" onclick="geoTab('cis',this)" data-i="geo_t2">Другие страны СНГ</button>
+      <button class="geo-tab" onclick="geoTab('pkg',this)" data-i="geo_t3">Что входит в пакет</button>
+    </div>
+
+    <div class="geo-pane active" id="pane-kz">
+    <table class="ptable">
+      <thead><tr><th data-i="th1">Категория</th><th data-i="th2">Единоразовая выплата</th><th data-i="th3">Города</th></tr></thead>
+      <tbody>
+        <tr><td class="pcat">Города-миллионники</td><td class="pprice">$32 000</td><td class="pcities">Алматы, Астана, Шымкент</td></tr>
+        <tr><td class="pcat">Крупные областные центры</td><td class="pprice">$16 000</td><td class="pcities">Актобе, Караганда, Павлодар, Усть-Каменогорск, Кызылорда, Атырау, Актау, Семей</td></tr>
+        <tr><td class="pcat">Средние города</td><td class="pprice">$10 500</td><td class="pcities">Уральск, Костанай, Талдыкорган, Туркестан, Петропавловск, Кокшетау</td></tr>
+        <tr><td class="pcat">Малые города</td><td class="pprice">$4 200</td><td class="pcities">Рудный, Жезказган, Жанаозен, Каскелен, Талгар, Балхаш, Экибастуз</td></tr>
+      </tbody>
+    </table>
+      <div class="pnote" data-i="geo_n1">Полный пакет: разрешительные документы и заключение СЭС, сопровождение конкурса на государственные дотации, выездная помощь при открытии, подключение к колл-центру и отделу продаж Лицензиара.</div>
+    </div>
+
+    <div class="geo-pane" id="pane-cis">
+    <table class="ptable">
+      <thead><tr><th data-i="th1">Категория</th><th data-i="th2">Единоразовая выплата</th><th data-i="th3">Города</th></tr></thead>
+      <tbody>
+        <tr><td class="pcat">Узбекистан — Ташкент</td><td class="pprice">$5 000</td><td class="pcities">Ташкент</td></tr>
+        <tr><td class="pcat">Узбекистан — крупные города</td><td class="pprice">$3 000</td><td class="pcities">Самарканд, Наманган, Андижан, Фергана, Бухара, Нукус, Карши, Коканд</td></tr>
+        <tr><td class="pcat">Узбекистан — средние города</td><td class="pprice">$2 000</td><td class="pcities">Маргилан, Джизак, Термез, Ургенч, Навои, Гулистан, Ангрен, Чирчик, Алмалык, Шахрисабз</td></tr>
+        <tr><td class="pcat">Россия — Москва и Санкт-Петербург</td><td class="pprice">$5 000</td><td class="pcities">Москва, Санкт-Петербург</td></tr>
+        <tr><td class="pcat">Россия — города-миллионники</td><td class="pprice">$4 000</td><td class="pcities">Новосибирск, Екатеринбург, Казань, Нижний Новгород, Челябинск, Самара, Уфа, Ростов-на-Дону, Омск, Красноярск, Воронеж, Пермь, Волгоград, Краснодар</td></tr>
+        <tr><td class="pcat">Россия — крупные города</td><td class="pprice">$3 000</td><td class="pcities">Тюмень, Саратов, Тольятти, Ижевск, Барнаул, Ульяновск, Иркутск, Хабаровск, Владивосток, Томск, Оренбург, Кемерово, Рязань, Астрахань, Пенза, Липецк, Киров, Калининград, Сочи</td></tr>
+        <tr><td class="pcat">Россия — средние города</td><td class="pprice">$2 000</td><td class="pcities">Прочие областные и республиканские центры от 100 тыс. жителей</td></tr>
+        <tr><td class="pcat">Азербайджан — Баку</td><td class="pprice">$5 000</td><td class="pcities">Баку</td></tr>
+        <tr><td class="pcat">Азербайджан — крупные города</td><td class="pprice">$2 500</td><td class="pcities">Гянджа, Сумгаит</td></tr>
+        <tr><td class="pcat">Азербайджан — регионы</td><td class="pprice">$1 500</td><td class="pcities">Мингечаур, Нахчыван, Ширван, Лянкяран, Шеки, Евлах, Хачмаз, Барда</td></tr>
+        <tr><td class="pcat">Кыргызстан — Бишкек</td><td class="pprice">$3 500</td><td class="pcities">Бишкек</td></tr>
+        <tr><td class="pcat">Кыргызстан — Ош</td><td class="pprice">$2 500</td><td class="pcities">Ош</td></tr>
+        <tr><td class="pcat">Кыргызстан — регионы</td><td class="pprice">$1 500</td><td class="pcities">Джалал-Абад, Каракол, Токмок, Узген, Нарын, Талас, Баткен, Кара-Балта</td></tr>
+        <tr><td class="pcat">Беларусь — Минск</td><td class="pprice">$3 500</td><td class="pcities">Минск</td></tr>
+        <tr><td class="pcat">Беларусь — областные центры</td><td class="pprice">$2 000</td><td class="pcities">Гомель, Могилёв, Витебск, Гродно, Брест</td></tr>
+        <tr><td class="pcat">Беларусь — прочие города</td><td class="pprice">$1 500</td><td class="pcities">Бобруйск, Барановичи, Борисов, Пинск, Орша, Мозырь, Солигорск, Лида</td></tr>
+        <tr><td class="pcat">Армения — Ереван</td><td class="pprice">$3 500</td><td class="pcities">Ереван</td></tr>
+        <tr><td class="pcat">Армения — крупные города</td><td class="pprice">$2 000</td><td class="pcities">Гюмри, Ванадзор</td></tr>
+        <tr><td class="pcat">Армения — регионы</td><td class="pprice">$1 500</td><td class="pcities">Вагаршапат, Раздан, Абовян, Капан, Иджеван, Гавар, Армавир</td></tr>
+        <tr><td class="pcat">Таджикистан — Душанбе</td><td class="pprice">$3 000</td><td class="pcities">Душанбе</td></tr>
+        <tr><td class="pcat">Таджикистан — Худжанд</td><td class="pprice">$2 000</td><td class="pcities">Худжанд</td></tr>
+        <tr><td class="pcat">Таджикистан — регионы</td><td class="pprice">$1 500</td><td class="pcities">Бохтар, Куляб, Истаравшан, Пенджикент, Турсунзаде, Исфара, Канибадам</td></tr>
+        <tr><td class="pcat">Молдова — Кишинёв</td><td class="pprice">$3 000</td><td class="pcities">Кишинёв</td></tr>
+        <tr><td class="pcat">Молдова — регионы</td><td class="pprice">$1 500</td><td class="pcities">Бельцы, Кагул, Унгены, Сорока, Орхей, Комрат</td></tr>
+        <tr><td class="pcat">Туркменистан — Ашхабад</td><td class="pprice">$3 000</td><td class="pcities">Ашхабад</td></tr>
+        <tr><td class="pcat">Туркменистан — регионы</td><td class="pprice">$1 500</td><td class="pcities">Туркменабат, Дашогуз, Мары, Балканабат, Байрамали</td></tr>
+      </tbody>
+    </table>
+      <div class="pnote" data-i="geo_n2">Цены ниже казахстанских по двум причинам: сеть в этих странах ещё не представлена, и состав услуг отличается — часть процедур Лицензиат проходит самостоятельно с местным подрядчиком. Полный перечень — во вкладке «Что входит в пакет».</div>
+    </div>
+
+    <div class="geo-pane" id="pane-pkg">
+      <div class="cmp-grid">
+        <div class="cmp-card win">
+          <div class="cmp-h" data-i="pkg_h1">Казахстан — полный пакет</div>
+          <div class="cmp-list">
+            <div class="cmp-li" data-i="pkg_a1">Методика, платформа, брендбук, финансовая модель под город</div>
+            <div class="cmp-li" data-i="pkg_a2">Помещение: поиск, макет проекта, смета, контроль ремонта, приёмка</div>
+            <div class="cmp-li" data-i="pkg_a3">Заключение СЭС и разрешительные документы через юриста Лицензиара</div>
+            <div class="cmp-li" data-i="pkg_a4">Сопровождение конкурса на государственные дотации</div>
+            <div class="cmp-li" data-i="pkg_a5">Очное обучение команды и аттестация</div>
+            <div class="cmp-li" data-i="pkg_a6">Выездная помощь при техническом открытии и дне открытых дверей</div>
+            <div class="cmp-li" data-i="pkg_a7">Подключение к отделу продаж и колл-центру Лицензиара</div>
+          </div>
+        </div>
+        <div class="cmp-card">
+          <div class="cmp-h" data-i="pkg_h2">Другие страны СНГ</div>
+          <div class="cmp-list">
+            <div class="cmp-li" data-i="pkg_b1">Методика, платформа, брендбук, финансовая модель — локализованы под вашу страну</div>
+            <div class="cmp-li" data-i="pkg_b2">Помещение: макет проекта, список оснащения, смета, дистанционный контроль</div>
+            <div class="cmp-li" data-i="pkg_b3">Разрешительные документы — самостоятельно; передаём требования и контакты местного подрядчика</div>
+            <div class="cmp-li" data-i="pkg_b4">Государственные субсидии — передаём условия программы вашей страны, подаёте самостоятельно</div>
+            <div class="cmp-li" data-i="pkg_b5">Обучение команды дистанционно; директор проходит очное обучение в Казахстане за свой счёт</div>
+            <div class="cmp-li" data-i="pkg_b6">Приёмка и открытие — дистанционно, по чек-листу и видеосвязи</div>
+            <div class="cmp-li" data-i="pkg_b7">Вместо подключения к колл-центру — скрипты, регламенты и обучение администратора</div>
+          </div>
+        </div>
+      </div>
+      <div class="pnote warn" data-i="pkg_note">Мы указываем это до сделки, а не после. Состав пакета фиксируется в Договоре, и то, что мы не оказываем за пределами Казахстана, вы увидите здесь, а не в момент открытия.</div>
+    </div>
+  </div>
+</section>
+
+<!-- КАЛЬКУЛЯТОР -->
+<section class="section" id="calc">
+  <div class="si">
+    <div class="sl" data-i="calc_label">Калькулятор</div>
+    <h2 class="st" data-i="calc_title">Расчёт окупаемости для вашего города</h2>
+    <p class="ss" data-i="calc_sub">Предварительный расчёт по средним показателям сети. Точную финансовую модель под ваш город мы делаем на консультации.</p>
+    <div class="calc-wrap">
+      <div class="calc-box">
+        <div class="calc-field">
+          <label for="c-city" data-i="cf1">Страна и город</label>
+          <select id="c-city" onchange="calcRun()"></select>
+        </div>
+        <div class="calc-field">
+          <label for="c-kids" data-i="cf2">Количество детей в организации</label>
+          <input id="c-kids" type="number" min="10" max="200" step="5" value="60" oninput="calcRun()">
+        </div>
+        <div class="calc-field">
+          <label for="c-fee" data-i="cf3">Средний абонемент, $ в месяц</label>
+          <input id="c-fee" type="number" min="30" max="1500" step="10" value="250" oninput="calcRun()">
+        </div>
+        <div class="calc-field">
+          <label for="c-inv" data-i="cf4">Вложения в ремонт и оснащение, $</label>
+          <input id="c-inv" type="number" min="5000" max="300000" step="1000" value="52000" oninput="calcRun()">
+        </div>
+      </div>
+      <div class="calc-box res">
+        <div class="calc-row hero-row"><span class="k" data-i="cr0">Окупаемость</span><span class="v" id="c-payback">—</span></div>
+        <div class="calc-row"><span class="k" data-i="cr1">Единоразовая выплата</span><span class="v" id="c-init">—</span></div>
+        <div class="calc-row"><span class="k" data-i="cr2">Всего на старте</span><span class="v" id="c-total">—</span></div>
+        <div class="calc-row"><span class="k" data-i="cr3">Выручка в месяц</span><span class="v" id="c-rev">—</span></div>
+        <div class="calc-row"><span class="k" data-i="cr4">Ежемесячный переменный платёж (9%)</span><span class="v" id="c-roy">—</span></div>
+        <div class="calc-row"><span class="k" data-i="cr5">Прибыль в месяц</span><span class="v" id="c-profit">—</span></div>
+        <div class="calc-row"><span class="k" data-i="cr6">Собрать те же услуги самостоятельно</span><span class="v" id="c-basket">—</span></div>
+        <div class="calc-row"><span class="k" data-i="cr7">Экономия на старте</span><span class="v" id="c-save">—</span></div>
+        <div class="calc-disc" data-i="calc_disc">Расчёт носит справочный характер и построен на средних показателях действующих организаций сети (рентабельность около 30%). Он не является офертой, гарантией дохода или обещанием результата. Фактические показатели зависят от города, локации, стоимости аренды, загрузки и участия в государственных программах.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- САМ ИЛИ С НАМИ -->
+<section class="section" id="cmp" style="background:var(--bg);">
+  <div class="si">
+    <div class="sl" data-i="cmp_label">Сравнение</div>
+    <h2 class="st" data-i="cmp_title">Собрать самому или работать с нами</h2>
+    <p class="ss" data-i="cmp_sub">Мы посчитали рыночную стоимость каждой услуги, которую даём партнёру, — если бы он покупал их по отдельности у подрядчиков.</p>
+    <div class="cmp-grid">
+      <div class="cmp-card">
+        <div class="cmp-h" data-i="cmp_h1">Самостоятельно</div>
+        <div class="cmp-v">$25 000</div>
+        <div class="cmp-s" data-i="cmp_s1">разово на старте — методика, брендбук, финмодель, сайт, ролики, CRM, разрешительные, подача на субсидии</div>
+        <div class="cmp-list">
+          <div class="cmp-li" data-i="cmp_l1">$4 300 в месяц — методист, SMM, колл-центр, контроль качества, ПО</div>
+          <div class="cmp-li" data-i="cmp_l2">Год-полтора на сбор подрядчиков и первые ошибки</div>
+          <div class="cmp-li" data-i="cmp_l3">Никаких гарантий, что связка заработает</div>
+        </div>
+      </div>
+      <div class="cmp-card win">
+        <div class="cmp-h" data-i="cmp_h2">С ORDO</div>
+        <div class="cmp-v" data-i="cmp_v2">от $1 500</div>
+        <div class="cmp-s" data-i="cmp_s2">единоразовая выплата в зависимости от города — до 6 раз дешевле самостоятельной сборки</div>
+        <div class="cmp-list">
+          <div class="cmp-li" data-i="cmp_l4">9% от выручки вместо $4 300 фиксированных расходов в месяц</div>
+          <div class="cmp-li" data-i="cmp_l5">3 месяца до открытия вместо года</div>
+          <div class="cmp-li" data-i="cmp_l6">Модель, отработанная на 54 организациях</div>
+        </div>
+      </div>
+    </div>
+    <div class="pnote" data-i="cmp_note">Рыночные цены услуг рассчитаны по казахстанскому рынку. В других странах СНГ стоимость подрядчиков ниже — соответственно, ниже и наши тарифы: сравнение сохраняется, но экономия составляет около 2,5 раз, а не 6.</div>
+  </div>
+</section>
+
+<!-- КВАЛИФИКАЦИЯ -->
+<section class="section" id="qual">
+  <div class="si">
+    <div class="sl" data-i="q_label">Кому подходит</div>
+    <h2 class="st" data-i="q_title">Что нужно, чтобы стать партнёром</h2>
+    <p class="ss" data-i="q_sub">Мы сознательно держим невысокую единоразовую выплату — но отбираем партнёров по готовности к запуску. Эти условия проверяются до подписания Договора.</p>
+    <div class="q-grid">
+      <div class="q-card"><div class="q-num">1</div><div><h4 data-i="q1h">Средства на запуск</h4><p data-i="q1p">Выписка со счёта или кредитное решение банка на сумму ремонта и оснащения. Единоразовая выплата — малая часть вложений, и основной риск не в ней.</p></div></div>
+      <div class="q-card"><div class="q-num">2</div><div><h4 data-i="q2h">Подходящее помещение</h4><p data-i="q2p">Помещение с письменным подтверждением соответствия санитарным нормам. Договор аренды подписывается только после такого подтверждения.</p></div></div>
+      <div class="q-card"><div class="q-num">3</div><div><h4 data-i="q3h">Директор организации</h4><p data-i="q3p">Человек с профильной квалификацией, согласованный с нами. Для зарубежных партнёров — готовность пройти очное обучение в Казахстане за свой счёт до открытия.</p></div></div>
+      <div class="q-card"><div class="q-num">4</div><div><h4 data-i="q4h">Готовность открыться за 6 месяцев</h4><p data-i="q4p">Согласованный график запуска. Если организация не открыта в течение 9 месяцев, Договор прекращается, а город освобождается для другого партнёра.</p></div></div>
+    </div>
+    <div class="pnote" data-i="q_note">Первым трём партнёрам в каждой новой стране мы предлагаем статус референса сети: ваша организация становится площадкой, которую видят следующие кандидаты, а мы снимаем о ней материалы для наших каналов.</div>
   </div>
 </section>
 
@@ -388,7 +633,7 @@ footer{background:var(--dark);padding:40px;}
     <p class="ss" data-i="adv_sub">Дошкольные организации — один из самых стабильных видов бизнеса в мире.</p>
     <div class="adv-grid">
       <div class="adv-card"><div class="adv-icon">📈</div><h4 data-i="a1h">Стабильный рынок</h4><p data-i="a1p">Дошкольные организации актуальны всегда — пока рождаются дети. Даже в кризис спрос остаётся стабильным.</p></div>
-      <div class="adv-card"><div class="adv-icon">🏛️</div><h4 data-i="a2h">Субсидии государства</h4><p data-i="a2p">Государство субсидирует дошкольное образование. Мы помогаем пройти все этапы получения господдержки.</p></div>
+      <div class="adv-card"><div class="adv-icon">🏛️</div><h4 data-i="a2h">Субсидии государства</h4><p data-i="a2p">Государство субсидирует дошкольное образование. В Казахстане мы ведём партнёра через все этапы получения господдержки, за рубежом — передаём условия программы вашей страны и требования к организации.</p></div>
       <div class="adv-card"><div class="adv-icon">🔄</div><h4 data-i="a3h">Абонементная модель</h4><p data-i="a3p">Продаёте абонемент один раз — клиент остаётся на 5 лет. Предсказуемый доход без постоянной борьбы за новых клиентов.</p></div>
     </div>
   </div>
@@ -569,11 +814,11 @@ footer{background:var(--dark);padding:40px;}
 
 <script>
 const T = {
-  ru:{nav1:"Организации",nav2:"Платформа",nav3:"Партнёрство",nav4:"Записаться",
+  ru:{nav5:"Цены и страны",n9:"страны, где сеть уже работает",geo_label:"География и цены",geo_title:"Сколько стоит открыть организацию в вашем городе",geo_t1:"Казахстан",geo_t2:"Другие страны СНГ",geo_t3:"Что входит в пакет",th1:"Категория",th2:"Единоразовая выплата",th3:"Города",calc_label:"Калькулятор",calc_title:"Расчёт окупаемости для вашего города",cf1:"Страна и город",cf2:"Количество детей в организации",cf3:"Средний абонемент, $ в месяц",cf4:"Вложения в ремонт и оснащение, $",cr0:"Окупаемость",cr1:"Единоразовая выплата",cr2:"Всего на старте",cr3:"Выручка в месяц",cr4:"Ежемесячный переменный платёж (9%)",cr5:"Прибыль в месяц",cr6:"Собрать те же услуги самостоятельно",cr7:"Экономия на старте",cmp_label:"Сравнение",cmp_title:"Собрать самому или работать с нами",cmp_h1:"Самостоятельно",cmp_h2:"С ORDO",cmp_v2:"от $1 500",q_label:"Кому подходит",q_title:"Что нужно, чтобы стать партнёром",pkg_h1:"Казахстан — полный пакет",pkg_h2:"Другие страны СНГ",nav1:"Организации",nav2:"Платформа",nav3:"Партнёрство",nav4:"Записаться",
     hero_tag:"Франшиза ORDO Holding",hero_h1a:"Откройте дошкольную организацию",hero_h1b:"с готовой системой",
     hero_sub:"Присоединяйтесь к международной сети 54+ дошкольных организаций. Полное сопровождение — от поиска помещения до первого клиента. Доход от $5 000 в месяц.",
     hero_btn1:"Записаться на консультацию",hero_btn2:"▶ Смотреть видео",
-    hs1:"организаций открыто",hs2:"доход в месяц",hs3:"средняя прибыль",hs4:"страны присутствия",hs5:"срок открытия",
+    hs1:"организаций открыто",hs2:"доход в месяц",hs3:"средняя прибыль",hs4:"стран открыты для заявок",hs5:"срок открытия",
     num_label:"Факты и цифры",num_title:"О компании ORDO Holding",num_sub:"Строим международную экосистему дошкольного образования с 2020 года.",
     n1:"год открытия первой организации",n2:"дошкольных организаций открыто",n3:"проданных франшиз",n4:"родителей доверились",n5:"выручка сети в год",n6:"средняя прибыль",n7:"срок открытия организации",n8:"цель — дошкольных организаций в сети",
     why_label:"Наши преимущества",why_title:"Почему выбирают Ordogen?",why_sub:"Готовая бизнес-модель с доказанной эффективностью.",
@@ -588,15 +833,15 @@ const T = {
     s2h:"Помещение",s2p:"Поиск, макет проекта, список оснащения, согласование ремонта",
     s3h:"Персонал",s3p:"Собеседование, обучение через LMS, аттестация команды",
     s4h:"Учебная деятельность",s4p:"5 000+ готовых сценариев уроков по 20 предметам",
-    s5h:"Стандартизация",s5p:"Госпроверки, субсидии, лицензирование",
-    s6h:"Открытие",s6p:"Выездная помощь при техническом открытии и дне открытых дверей",
+    s5h:"Стандартизация",s5p:"Госпроверки, субсидии, лицензирование — в Казахстане",
+    s6h:"Открытие",s6p:"В Казахстане — выездная помощь при открытии, за рубежом — дистанционно",
     s7h:"CRM и продажи",s7p:"Подключение к отделу продаж, CRM, скрипты, воронки",
     s8h:"Маркетинг",s8p:"Лидогенерация, бренд-менеджмент — 50% продаж обеспечивает маркетинг",
     pr_label:"Тарифы",pr_title:"Выберите уровень партнёрства",pr_sub:"Начните с любого уровня и масштабируйтесь вместе с нами.",
     p1per:"/год",p1f1:"Членство в сообществе ORDO",p1f2:"Право продавать все лицензии",p1f3:"Доход до 20% с продаж",
     p2per:"/ребёнок/мес",p2f1:"Всё из MEMBER",p2f2:"Автоматизация через ordo.education",p2f3:"12 кабинетов управления",p2f4:"Кабинет родителя и педагогов",
     p3per:"/мес",p3f1:"Всё из PARTNER",p3f2:"Юрист",p3f3:"Бухгалтер-кадровик",p3f4:"Методист",
-    p4per:"/мес",p4f1:"Всё из FOUNDER",p4f2:"Коммерческий отдел",p4f3:"HR отдел",p4f4:"9% ежемесячный взнос",p4f5:"Initial fee от $4 000",
+    p4per:"/мес",p4f1:"Всё из FOUNDER",p4f2:"Коммерческий отдел",p4f3:"HR отдел",p4f4:"9% ежемесячный переменный платёж от выручки",p4f5:"Единоразовая выплата зависит от города — от $1 500",
     pr_btn:"Узнать подробнее",pr_btn2:"Попробовать бесплатно",
     adv_label:"Преимущества рынка",adv_title:"Почему стоит открыть дошкольную организацию?",adv_sub:"Дошкольные организации — один из самых стабильных видов бизнеса в мире.",
     a1h:"Стабильный рынок",a1p:"Дошкольные организации востребованы всегда — пока рождаются дети.",
@@ -640,7 +885,7 @@ const T = {
     p1per:"/жыл",p1f1:"ORDO қауымдастығына мүшелік",p1f2:"Барлық лицензияларды сату құқығы",p1f3:"Сатудан 20% дейін табыс",
     p2per:"/бала/ай",p2f1:"MEMBER-дан барлығы",p2f2:"ordo.education арқылы автоматтандыру",p2f3:"12 басқару кабинеті",p2f4:"Ата-ана және педагог кабинеті",
     p3per:"/ай",p3f1:"PARTNER-дан барлығы",p3f2:"Заңгер",p3f3:"Бухгалтер-кадровик",p3f4:"Әдіскер",
-    p4per:"/ай",p4f1:"FOUNDER-дан барлығы",p4f2:"Коммерциялық бөлім",p4f3:"HR бөлімі",p4f4:"9% ай сайынғы жарна",p4f5:"$4 000-нан бастап initial fee",
+    p4per:"/ай",p4f1:"FOUNDER-дан барлығы",p4f2:"Коммерциялық бөлім",p4f3:"HR бөлімі",p4f4:"9% ай сайынғы жарна",p4f5:"Единоразовая выплата қаладан тәуелді — $1 500-ден бастап",
     pr_btn:"Толығырақ білу",pr_btn2:"Тегін сынап көру",
     adv_label:"Нарық артықшылықтары",adv_title:"Неліктен мектепке дейінгі ұйым ашу керек?",adv_sub:"Мектепке дейінгі ұйым — дүниежүзіндегі ең тұрақты бизнестердің бірі.",
     a1h:"Тұрақты нарық",a1p:"Балалар туып жатқанша мектепке дейінгі ұйымлар әрқашан өзекті болады.",
@@ -684,7 +929,7 @@ const T = {
     p1per:"/yil",p1f1:"ORDO jamoatchiligiga a'zolik",p1f2:"Barcha litsenziyalarni sotish huquqi",p1f3:"Sotuvdan 20% gacha daromad",
     p2per:"/bola/oy",p2f1:"MEMBER'dan hamma narsa",p2f2:"ordo.education orqali avtomatlashtirish",p2f3:"12 boshqaruv kabineti",p2f4:"Ota-ona va pedagog kabineti",
     p3per:"/oy",p3f1:"PARTNER'dan hamma narsa",p3f2:"Yurist",p3f3:"Buxgalter-kadrlar bo'yicha mutaxassis",p3f4:"Metodist",
-    p4per:"/oy",p4f1:"FOUNDER'dan hamma narsa",p4f2:"Tijorat bo'limi",p4f3:"HR bo'limi",p4f4:"9% oylik badal",p4f5:"$4 000 dan initial fee",
+    p4per:"/oy",p4f1:"FOUNDER'dan hamma narsa",p4f2:"Tijorat bo'limi",p4f3:"HR bo'limi",p4f4:"9% oylik badal",p4f5:"Shahar bo'yicha bir martalik to'lov — $1 500 dan",
     pr_btn:"Batafsil bilish",pr_btn2:"Bepul sinab ko'rish",
     adv_label:"Bozor afzalliklari",adv_title:"Nima uchun maktabgacha tashkilot ochish kerak?",adv_sub:"Maktabgacha tashkilot — dunyodagi eng barqaror bizneslardan biri.",
     a1h:"Barqaror bozor",a1p:"Bolalar tug'ilib turar ekan maktabgacha tashkilotlar doim dolzarb bo'ladi.",
@@ -728,7 +973,7 @@ const T = {
     p1per:"/жыл",p1f1:"ORDO коомдошулугуна мүчөлүк",p1f2:"Бардык лицензияларды сатуу укугу",p1f3:"Сатуудан 20% чейин киреше",
     p2per:"/бала/ай",p2f1:"MEMBER'дан баары",p2f2:"ordo.education аркылуу автоматташтыруу",p2f3:"12 башкаруу кабинети",p2f4:"Ата-эне жана педагог кабинети",
     p3per:"/ай",p3f1:"PARTNER'дан баары",p3f2:"Юрист",p3f3:"Бухгалтер-кадровик",p3f4:"Методист",
-    p4per:"/ай",p4f1:"FOUNDER'дан баары",p4f2:"Коммерциялык бөлүм",p4f3:"HR бөлүмү",p4f4:"9% айлык жарна",p4f5:"$4 000 дан initial fee",
+    p4per:"/ай",p4f1:"FOUNDER'дан баары",p4f2:"Коммерциялык бөлүм",p4f3:"HR бөлүмү",p4f4:"9% айлык жарна",p4f5:"Шаарга жараша бир жолку төлөм — $1 500 дөн",
     pr_btn:"Толугураак билүү",pr_btn2:"Бекер сынап көрүү",
     adv_label:"Рынок артыкчылыктары",adv_title:"Эмне үчүн мектепке чейинки уюм ачуу керек?",adv_sub:"Мектепке чейинки уюм — дүйнөдөгү эң туруктуу бизнестердин бири.",
     a1h:"Туруктуу рынок",a1p:"Балалар туулуп жаткандан тартып мектепке чейинки уюмлар дайым актуалдуу.",
@@ -772,7 +1017,7 @@ const T = {
     p1per:"/сол",p1f1:"Узвият дар ҷомеаи ORDO",p1f2:"Ҳуқуқи фурӯши ҳамаи литсензияҳо",p1f3:"Даромад то 20% аз фурӯш",
     p2per:"/кӯдак/моҳ",p2f1:"Ҳамааш аз MEMBER",p2f2:"Автоматикунонӣ тавассути ordo.education",p2f3:"12 кабинети идоракунӣ",p2f4:"Кабинети волидайн ва педагогон",
     p3per:"/моҳ",p3f1:"Ҳамааш аз PARTNER",p3f2:"Юрист",p3f3:"Ҳисобдор-кадровик",p3f4:"Методист",
-    p4per:"/моҳ",p4f1:"Ҳамааш аз FOUNDER",p4f2:"Бахши тиҷоратӣ",p4f3:"Бахши HR",p4f4:"Ҳаққи моҳонаи 9%",p4f5:"Initial fee аз $4 000",
+    p4per:"/моҳ",p4f1:"Ҳамааш аз FOUNDER",p4f2:"Бахши тиҷоратӣ",p4f3:"Бахши HR",p4f4:"Ҳаққи моҳонаи 9%",p4f5:"Пардохти яквақта вобаста ба шаҳр — аз $1 500",
     pr_btn:"Тафсилот",pr_btn2:"Бепул санҷидан",
     adv_label:"Бартариҳои бозор",adv_title:"Чаро муассисаи томактабӣ кушодан лозим?",adv_sub:"Муассисаи томактабӣ — яке аз устувортарин бизнесҳо дар ҷаҳон.",
     a1h:"Бозори устувор",a1p:"То вақте кӯдакон таваллуд мешаванд, муассисаи томактабӣҳо ҳамеша актуалӣ хоҳанд буд.",
@@ -816,7 +1061,7 @@ const T = {
     p1per:"/il",p1f1:"ORDO icmasına üzvlük",p1f2:"Bütün lisenziyaları satmaq hüququ",p1f3:"Satışdan 20%-ə qədər gəlir",
     p2per:"/uşaq/ay",p2f1:"MEMBER-dan hər şey",p2f2:"ordo.education vasitəsilə avtomatlaşdırma",p2f3:"12 idarəetmə kabineti",p2f4:"Valideyn və pedaqoq kabineti",
     p3per:"/ay",p3f1:"PARTNER-dan hər şey",p3f2:"Hüquqşünas",p3f3:"Mühasib-kadrlar üzrə mütəxəssis",p3f4:"Metodist",
-    p4per:"/ay",p4f1:"FOUNDER-dan hər şey",p4f2:"Kommersiya şöbəsi",p4f3:"HR şöbəsi",p4f4:"9% aylıq ödəniş",p4f5:"$4 000-dan initial fee",
+    p4per:"/ay",p4f1:"FOUNDER-dan hər şey",p4f2:"Kommersiya şöbəsi",p4f3:"HR şöbəsi",p4f4:"9% aylıq ödəniş",p4f5:"Şəhərdən asılı birdəfəlik ödəniş — $1 500-dən",
     pr_btn:"Ətraflı öyrənmək",pr_btn2:"Pulsuz sınaq",
     adv_label:"Bazar üstünlükləri",adv_title:"Niyə məktəbəqədər təşkilat açmaq lazımdır?",adv_sub:"Məktəbəqədər təşkilat — dünyanın ən sabit bizneslərindən biridir.",
     a1h:"Sabit bazar",a1p:"Uşaqlar doğulduqca məktəbəqədər təşkilatlar həmişə aktual olacaq.",
@@ -837,7 +1082,7 @@ const T = {
     hero_tag:"ORDO Holding Franchise",hero_h1a:"Okul öncesi kurum açın",hero_h1b:"hazır teknoloji ile",
     hero_sub:"54+ okul öncesi kurumten oluşan uluslararası ağa katılın. Tam refakat. Ayda $5 000+ kazanç.",
     hero_btn1:"Danışmanlık için kaydol",hero_btn2:"▶ Video izle",
-    hs1:"okul öncesi kurum açıldı",hs2:"aylık gelir",hs3:"ortalama kâr",hs4:"ülke",hs5:"açılış süresi",
+    hs1:"okul öncesi kurum açıldı",hs2:"aylık gelir",hs3:"ortalama kâr",hs4:"başvuruya açık ülke",hs5:"açılış süresi",
     num_label:"Rakamlar ve gerçekler",num_title:"ORDO Holding hakkında",num_sub:"2020'den beri okul öncesi eğitim ekosistemi inşa ediyoruz.",
     n1:"ilk okul öncesi kurumin açıldığı yıl",n2:"okul öncesi kurum açıldı",n3:"satılan franchise",n4:"ebeveyn güvendi",n5:"ağın yıllık geliri",n6:"ortalama kâr",n7:"okul öncesi kurum açılış süresi",n8:"hedef — ağdaki okul öncesi kurum sayısı",
     why_label:"Avantajlarımız",why_title:"Neden Ordogen seçilir?",why_sub:"Kanıtlanmış etkinliğe sahip hazır iş modeli.",
@@ -860,7 +1105,7 @@ const T = {
     p1per:"/yıl",p1f1:"ORDO topluluğuna üyelik",p1f2:"Tüm lisansları satma hakkı",p1f3:"Satıştan %20'ye kadar gelir",
     p2per:"/çocuk/ay",p2f1:"MEMBER'dan her şey",p2f2:"ordo.education ile otomasyon",p2f3:"12 yönetim kabini",p2f4:"Ebeveyn ve pedagog kabini",
     p3per:"/ay",p3f1:"PARTNER'dan her şey",p3f2:"Avukat",p3f3:"Muhasebeci-İK uzmanı",p3f4:"Metodist",
-    p4per:"/ay",p4f1:"FOUNDER'dan her şey",p4f2:"Ticari departman",p4f3:"HR departmanı",p4f4:"Aylık %9 aidat",p4f5:"$4 000'dan başlayan initial fee",
+    p4per:"/ay",p4f1:"FOUNDER'dan her şey",p4f2:"Ticari departman",p4f3:"HR departmanı",p4f4:"Aylık %9 aidat",p4f5:"One-time payment depends on the city — from $1,500",
     pr_btn:"Daha fazla bilgi",pr_btn2:"Ücretsiz dene",
     adv_label:"Pazar avantajları",adv_title:"Neden okul öncesi kurum açmak gerekir?",adv_sub:"Okul öncesi kurum — dünyanın en istikrarlı işletmelerinden biridir.",
     a1h:"İstikrarlı pazar",a1p:"Çocuklar doğduğu sürece okul öncesi kurumler her zaman güncel olacak.",
@@ -881,7 +1126,7 @@ const T = {
     hero_tag:"Francais ORDO Holding",hero_h1a:"Buka organisasi prasekolah anda",hero_h1b:"dengan teknologi sedia ada",
     hero_sub:"Sertai rangkaian antarabangsa 54+ organisasi prasekolah. Sokongan penuh hingga pelanggan pertama. Pendapatan $5 000+/bulan.",
     hero_btn1:"Daftar untuk perundingan",hero_btn2:"▶ Tonton video",
-    hs1:"organisasi prasekolah dibuka",hs2:"pendapatan bulanan",hs3:"keuntungan purata",hs4:"negara",hs5:"tempoh pembukaan",
+    hs1:"organisasi prasekolah dibuka",hs2:"pendapatan bulanan",hs3:"keuntungan purata",hs4:"negara terbuka untuk permohonan",hs5:"tempoh pembukaan",
     num_label:"Angka dan fakta",num_title:"Tentang ORDO Holding",num_sub:"Membina ekosistem pendidikan prasekolah antarabangsa sejak 2020.",
     n1:"tahun organisasi prasekolah pertama dibuka",n2:"organisasi prasekolah dibuka",n3:"francais dijual",n4:"ibu bapa mempercayai",n5:"hasil tahunan rangkaian",n6:"keuntungan purata",n7:"tempoh pembukaan organisasi prasekolah",n8:"sasaran — organisasi prasekolah dalam rangkaian",
     why_label:"Kelebihan kami",why_title:"Mengapa memilih Ordogen?",why_sub:"Model perniagaan sedia ada dengan keberkesanan terbukti.",
@@ -904,7 +1149,7 @@ const T = {
     p1per:"/tahun",p1f1:"Keahlian dalam komuniti ORDO",p1f2:"Hak untuk menjual semua lesen",p1f3:"Pendapatan sehingga 20% daripada jualan",
     p2per:"/kanak-kanak/bulan",p2f1:"Semua dari MEMBER",p2f2:"Automatisasi melalui ordo.education",p2f3:"12 kabinet pengurusan",p2f4:"Kabinet ibu bapa dan pendidik",
     p3per:"/bulan",p3f1:"Semua dari PARTNER",p3f2:"Peguam",p3f3:"Akauntan-HR",p3f4:"Metodis",
-    p4per:"/bulan",p4f1:"Semua dari FOUNDER",p4f2:"Jabatan komersial",p4f3:"Jabatan HR",p4f4:"Yuran bulanan 9%",p4f5:"Initial fee dari $4 000",
+    p4per:"/bulan",p4f1:"Semua dari FOUNDER",p4f2:"Jabatan komersial",p4f3:"Jabatan HR",p4f4:"Yuran bulanan 9%",p4f5:"One-time payment depends on the city — from $1,500",
     pr_btn:"Ketahui lebih lanjut",pr_btn2:"Cuba percuma",
     adv_label:"Kelebihan pasaran",adv_title:"Mengapa buka organisasi prasekolah?",adv_sub:"Organisasi prasekolah — antara perniagaan paling stabil di dunia.",
     a1h:"Pasaran stabil",a1p:"Selagi kanak-kanak dilahirkan, organisasi prasekolah sentiasa relevan.",
@@ -921,11 +1166,11 @@ const T = {
     cta_h:"Bersedia untuk buka organisasi prasekolah anda?",cta_p:"Daftar untuk perundingan percuma. Kami akan menerangkan francais dan membantu mengira pulangan pelaburan.",
     cta_btn:"Tulis di Telegram",t1:"Perundingan percuma",t2:"Pengiraan pulangan untuk bandar anda",t3:"Menerima permohonan dari seluruh dunia",
     f1:"Organisasi prasekolah",f2:"Platform",f3:"Program ejen",f4:"Telegram",brands_label:"Jenama diuruskan ORDO Holding",brand1_sub:"Rangkaian organisasi prasekolah",brand3_sub:"Rangkaian pusat pendidikan",brand4_sub:"Teknologi pendidikan"},
-  en:{nav1:"Preschool organisations",nav2:"Platform",nav3:"Partnership",nav4:"Apply",
+  en:{nav5:"Pricing & countries",n9:"countries where the network operates",geo_label:"Countries & pricing",geo_title:"What it costs to open in your city",geo_sub:"The network operates in 4 countries. Licences are sold in 9 CIS countries. The one-time payment depends on the country and city size; the monthly variable payment is the same everywhere — 9% of parent-fee revenue.",geo_t1:"Kazakhstan",geo_t2:"Other CIS countries",geo_t3:"What's included",th1:"Category",th2:"One-time payment",th3:"Cities",geo_n1:"Full package: permits and sanitary clearance, support with the state subsidy tender, on-site help at opening, connection to our call centre and sales team.",geo_n2:"Prices are lower than in Kazakhstan for two reasons: the network is not yet present in these countries, and the service list differs — some procedures the licensee completes with a local contractor. See the 'What is included' tab.",pkg_h1:"Kazakhstan — full package",pkg_h2:"Other CIS countries",pkg_note:"We state this before the deal, not after. The package is fixed in the agreement, so what we do not provide outside Kazakhstan is visible here rather than at opening.",calc_label:"Calculator",calc_title:"Payback estimate for your city",calc_sub:"A preliminary estimate based on network averages. We build the exact financial model for your city during the consultation.",cf1:"Country and city",cf2:"Number of children",cf3:"Average monthly fee, $",cf4:"Renovation and equipment, $",cr0:"Payback",cr1:"One-time payment",cr2:"Total at start",cr3:"Monthly revenue",cr4:"Monthly variable payment (9%)",cr5:"Monthly profit",cr6:"Same services bought separately",cr7:"Savings at start",calc_disc:"This estimate is for reference only and is based on network averages (about 30% margin). It is not an offer, an income guarantee or a promise of results. Actual figures depend on the city, location, rent, occupancy and state programme participation.",cmp_label:"Comparison",cmp_title:"Build it yourself or work with us",cmp_sub:"We priced every service we give a partner at what it would cost to buy separately from contractors.",cmp_h1:"On your own",cmp_h2:"With ORDO",cmp_v2:"from $1,500",cmp_s1:"one-time at start — methodology, brand book, financial model, website, video, CRM, permits, subsidy application",cmp_s2:"one-time payment depending on the city — up to 6 times cheaper than building it yourself",cmp_l1:"$4,300 a month — methodologist, SMM, call centre, quality control, software",cmp_l2:"A year or more assembling contractors and making the first mistakes",cmp_l3:"No guarantee the whole thing works",cmp_l4:"9% of revenue instead of $4,300 in fixed monthly costs",cmp_l5:"3 months to opening instead of a year",cmp_l6:"A model proven across 54 organisations",cmp_note:"Market prices are calculated for Kazakhstan. In other CIS countries contractors cost less, and so do our fees: the comparison holds, but savings are around 2.5x rather than 6x.",q_label:"Who it suits",q_title:"What you need to become a partner",q_sub:"We deliberately keep the one-time payment low — and select partners on readiness to launch. These conditions are checked before the agreement is signed.",q1h:"Funds for the launch",q1p:"A bank statement or credit approval covering renovation and equipment. The one-time payment is a small part of the investment, and the main risk is not there.",q2h:"A suitable premises",q2p:"Premises with written confirmation of compliance with sanitary standards. The lease is signed only after that confirmation.",q3h:"A director",q3p:"Someone qualified in early childhood education, approved by us. Partners abroad send their director for in-person training in Kazakhstan at their own cost before opening.",q4h:"Ready to open within 6 months",q4p:"An agreed launch schedule. If the organisation has not opened within 9 months, the agreement ends and the city is released to another partner.",q_note:"The first three partners in each new country receive network reference status: your organisation becomes the site future candidates visit, and we produce content about it for our channels.",hero_disc:"Income from $5,000 a month and 30% average margin are averages from operating organisations. They are not an offer, an income guarantee or a promise of results.",nav1:"Preschool organisations",nav2:"Platform",nav3:"Partnership",nav4:"Apply",
     hero_tag:"ORDO Holding Franchise",hero_h1a:"Open your preschool organisation",hero_h1b:"with proven technology",
     hero_sub:"Join an international network of 54+ preschool organisations. Full support — from finding premises to your first client. Earn $5,000+/month.",
     hero_btn1:"Book a free consultation",hero_btn2:"▶ Watch the video",
-    hs1:"preschool organisations opened",hs2:"monthly income",hs3:"average profit",hs4:"countries",hs5:"time to open",
+    hs1:"preschool organisations opened",hs2:"monthly income",hs3:"average profit",hs4:"countries open for applications",hs5:"time to open",
     num_label:"Facts and figures",num_title:"About ORDO Holding",num_sub:"Building an international early childhood education ecosystem since 2020.",
     n1:"year the first preschool organisation opened",n2:"preschool organisations opened",n3:"franchises sold",n4:"parents trusted us",n5:"network annual revenue",n6:"average profit margin",n7:"time to open a preschool organisation",n8:"goal — preschool organisations in the network",
     why_label:"Our advantages",why_title:"Why choose Ordogen?",why_sub:"A ready-made business model with proven effectiveness.",
@@ -948,7 +1193,7 @@ const T = {
     p1per:"/year",p1f1:"Membership in the ORDO community",p1f2:"Right to sell all licences",p1f3:"Earn up to 20% on sales",
     p2per:"/child/month",p2f1:"Everything in MEMBER",p2f2:"Automation via ordo.education",p2f3:"12 management modules",p2f4:"Parent and teacher portals",
     p3per:"/month",p3f1:"Everything in PARTNER",p3f2:"Legal support",p3f3:"Accountant & HR specialist",p3f4:"Methodologist",
-    p4per:"/month",p4f1:"Everything in FOUNDER",p4f2:"Commercial department",p4f3:"HR department",p4f4:"9% monthly royalty",p4f5:"Initial fee from $4,000",
+    p4per:"/month",p4f1:"Everything in FOUNDER",p4f2:"Commercial department",p4f3:"HR department",p4f4:"9% monthly royalty",p4f5:"One-time payment depends on the city — from $1,500",
     pr_btn:"Learn more",pr_btn2:"Try for free",
     adv_label:"Market advantages",adv_title:"Why open a preschool organisation?",adv_sub:"Preschool organisations are one of the most stable businesses in the world.",
     a1h:"Stable market",a1p:"As long as children are born, preschool organisations will always be in demand.",
@@ -980,6 +1225,76 @@ function setLang(lang, btn) {
   const h1b = document.querySelector('.hero h1 .green');
   if (h1b && t.hero_h1b) h1b.textContent = t.hero_h1b;
   document.documentElement.lang = lang === 'kz' ? 'kk' : lang;
+}
+
+
+// --- Вкладки географии ---
+function geoTab(id, btn){
+  document.querySelectorAll('.geo-tab').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('.geo-pane').forEach(function(p){ p.classList.remove('active'); });
+  var el = document.getElementById('pane-' + id);
+  if (el) el.classList.add('active');
+}
+
+// --- Калькулятор окупаемости ---
+var ORDO_CITIES = [{"n": "Казахстан — города-миллионники", "init": 32000, "fee": 250, "inv": 52000, "basket": 25000, "cis": false}, {"n": "Казахстан — крупные областные центры", "init": 16000, "fee": 200, "inv": 52000, "basket": 25000, "cis": false}, {"n": "Казахстан — средние города", "init": 10500, "fee": 170, "inv": 52000, "basket": 25000, "cis": false}, {"n": "Казахстан — малые города", "init": 4200, "fee": 140, "inv": 52000, "basket": 25000, "cis": false}, {"n": "Узбекистан — Ташкент", "init": 5000, "fee": 175, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Узбекистан — крупные города", "init": 3000, "fee": 131, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Узбекистан — средние города", "init": 2000, "fee": 131, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Россия — Москва и Санкт-Петербург", "init": 5000, "fee": 260, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Россия — города-миллионники", "init": 4000, "fee": 260, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Россия — крупные города", "init": 3000, "fee": 195, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Россия — средние города", "init": 2000, "fee": 195, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Азербайджан — Баку", "init": 5000, "fee": 210, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Азербайджан — крупные города", "init": 2500, "fee": 157, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Азербайджан — регионы", "init": 1500, "fee": 157, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Кыргызстан — Бишкек", "init": 3500, "fee": 140, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Кыргызстан — Ош", "init": 2500, "fee": 105, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Кыргызстан — регионы", "init": 1500, "fee": 105, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Беларусь — Минск", "init": 3500, "fee": 200, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Беларусь — областные центры", "init": 2000, "fee": 150, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Беларусь — прочие города", "init": 1500, "fee": 150, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Армения — Ереван", "init": 3500, "fee": 190, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Армения — крупные города", "init": 2000, "fee": 142, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Армения — регионы", "init": 1500, "fee": 142, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Таджикистан — Душанбе", "init": 3000, "fee": 90, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Таджикистан — Худжанд", "init": 2000, "fee": 90, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Таджикистан — регионы", "init": 1500, "fee": 90, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Молдова — Кишинёв", "init": 3000, "fee": 127, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Молдова — регионы", "init": 1500, "fee": 127, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Туркменистан — Ашхабад", "init": 3000, "fee": 97, "inv": 39000, "basket": 12000, "cis": true}, {"n": "Туркменистан — регионы", "init": 1500, "fee": 97, "inv": 39000, "basket": 12000, "cis": true}];
+
+(function initCalc(){
+  var sel = document.getElementById('c-city');
+  if (!sel) return;
+  ORDO_CITIES.forEach(function(c, i){
+    var o = document.createElement('option');
+    o.value = i; o.textContent = c.n;
+    sel.appendChild(o);
+  });
+  sel.value = 0;
+  calcRun();
+})();
+
+function fmtUSD(v){
+  return '$' + Math.round(v).toLocaleString('ru-RU').replace(/\u00A0/g,' ');
+}
+
+function calcRun(){
+  var sel = document.getElementById('c-city');
+  if (!sel) return;
+  var c = ORDO_CITIES[parseInt(sel.value, 10)] || ORDO_CITIES[0];
+  var kids = Math.max(1, parseFloat(document.getElementById('c-kids').value) || 0);
+  var feeEl = document.getElementById('c-fee');
+  var invEl = document.getElementById('c-inv');
+
+  if (sel.dataset.last !== sel.value){
+    feeEl.value = c.fee;
+    invEl.value = c.inv;
+    sel.dataset.last = sel.value;
+  }
+  var fee = Math.max(0, parseFloat(feeEl.value) || 0);
+  var inv = Math.max(0, parseFloat(invEl.value) || 0);
+
+  var rev = kids * fee;
+  var roy = Math.max(rev * 0.09, c.cis ? 500 : 0);
+  var profit = rev * 0.30;
+  var total = inv + c.init;
+  var payback = profit > 0 ? total / profit : 0;
+  var basket = c.basket;
+  var save = basket - c.init;
+
+  document.getElementById('c-init').textContent   = fmtUSD(c.init);
+  document.getElementById('c-total').textContent  = fmtUSD(total);
+  document.getElementById('c-rev').textContent    = fmtUSD(rev);
+  document.getElementById('c-roy').textContent    = fmtUSD(roy);
+  document.getElementById('c-profit').textContent = fmtUSD(profit);
+  document.getElementById('c-basket').textContent = fmtUSD(basket);
+  document.getElementById('c-save').textContent   =
+    (save > 0 ? fmtUSD(save) + ' (' + (basket / c.init).toFixed(1) + 'x)' : '—');
+  // строки сравнения показываем только там, где экономия положительная
+  var hide = save <= 0 ? 'none' : '';
+  var rb = document.getElementById('c-basket'), rs = document.getElementById('c-save');
+  if (rb && rb.parentNode) rb.parentNode.style.display = hide;
+  if (rs && rs.parentNode) rs.parentNode.style.display = hide;
+  document.getElementById('c-payback').textContent =
+    payback > 0 ? Math.round(payback) + ' мес' : '—';
 }
 
 // --- Видеоотзывы: лёгкая загрузка YouTube по клику ---
