@@ -224,6 +224,12 @@ footer{background:var(--dark);padding:40px;}
 .calc-row .k{font-size:13px;color:var(--gray);line-height:1.4;}
 .calc-row .v{font-size:16px;font-weight:800;color:var(--dark);white-space:nowrap;}
 .calc-row.hero-row .v{font-size:26px;color:var(--green-d);}
+.calc-row.big-row .v{font-size:20px;color:var(--green-d);}
+.calc-sec{font-size:11px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;color:var(--lgray);margin:18px 0 2px;padding-top:14px;border-top:1px solid var(--border);}
+.calc-row.sub{padding:7px 0;border-bottom:none;}
+.calc-row.sub .k{font-size:12px;color:var(--lgray);}
+.calc-row.sub .v{font-size:13px;font-weight:600;color:var(--gray);}
+.calc-row.save .v{color:var(--green-d);}
 .calc-disc{font-size:11.5px;color:var(--lgray);line-height:1.55;margin-top:14px;}
 
 /* === СРАВНЕНИЕ === */
@@ -251,6 +257,89 @@ footer{background:var(--dark);padding:40px;}
   .ptable{font-size:12px;}
   .ptable td,.ptable thead th{padding:9px 10px;}
   .ptable .pcities{display:none;}
+}
+
+
+/* ============ МОБИЛЬНАЯ АДАПТАЦИЯ ============ */
+html,body{max-width:100%;overflow-x:hidden;}
+img,svg,iframe,video,table{max-width:100%;}
+.si,.hero-inner,.footer-in,.cta-box{min-width:0;}
+.price-card,.serv-card,.adv-card,.rev-card,.q-card,.cmp-card,.calc-box,.num-card{min-width:0;}
+
+@media(max-width:900px){
+  /* верхняя панель языков */
+  .top-bar{height:auto;min-height:40px;padding:5px 14px;justify-content:center;}
+  .lang-group{justify-content:center;gap:3px;}
+  .lang-btn{padding:3px 7px;font-size:11px;}
+  .lang-flag{font-size:12px;}
+
+  /* навигация: две строки вместо переполнения */
+  nav{height:auto;min-height:56px;padding:8px 16px;flex-wrap:wrap;row-gap:6px;}
+  .nav-links{flex-wrap:wrap;justify-content:flex-end;gap:2px;}
+  .nav-links a{font-size:13px;padding:5px 8px;}
+  .nav-cta{padding:8px 14px!important;font-size:13px;}
+
+  /* герой */
+  .hero{padding:44px 18px;}
+  .hero h1{font-size:clamp(26px,7vw,38px);}
+  .hero-sub{font-size:15px;}
+  .hero-btns{margin-bottom:36px;gap:10px;}
+  .hero-btns a{width:100%;justify-content:center;}
+  .hero-stats{gap:20px 28px;padding-top:28px;}
+  .hero-stat-num{font-size:30px;}
+  .hero-stat-label{font-size:12px;}
+
+  /* секции */
+  .section,.cta-s{padding:44px 18px;}
+  .st{font-size:clamp(22px,5.5vw,30px);}
+  .ss{font-size:15px;margin-bottom:28px;}
+  .disclaimer{padding:0 18px 28px;}
+
+  /* сетки */
+  .nums-grid,.serv-grid,.adv-grid,.why-grid,.price-grid,.rev-grid,
+  .calc-wrap,.cmp-grid,.q-grid{grid-template-columns:1fr!important;}
+  .nums-grid,.serv-grid{grid-template-columns:1fr 1fr!important;}
+  .num-val{font-size:28px;}
+
+  /* тарифные карточки */
+  .price-card{padding:24px 20px;}
+  .price-val{font-size:26px;}
+
+  /* таблица цен: скрываем колонку городов целиком */
+  .ptable{font-size:12.5px;}
+  .ptable td,.ptable thead th{padding:9px 10px;}
+  .ptable td:nth-child(3),.ptable th:nth-child(3){display:none;}
+  .ptable .pcat{white-space:normal;}
+  .geo-tab{padding:9px 14px;font-size:13px;flex:1 1 auto;}
+
+  /* калькулятор: 16px против автозума iOS */
+  .calc-box{padding:20px;}
+  .calc-field select,.calc-field input{font-size:16px;}
+  .calc-row .v{font-size:15px;}
+  .calc-row.hero-row .v{font-size:22px;}
+
+  /* сравнение и квалификация */
+  .cmp-card{padding:22px;}
+  .cmp-v{font-size:30px;}
+  .q-card{padding:18px;}
+
+  /* нижний блок */
+  .cta-box{padding:32px 22px;border-radius:18px;gap:24px;}
+  .cta-actions{min-width:0;width:100%;}
+  .btn-tg{width:100%;}
+  footer{padding:28px 18px;}
+  .footer-links{gap:14px;}
+}
+
+@media(max-width:600px){
+  /* на узких экранах текстовые пункты меню прячем, оставляем логотип и CTA */
+  .nav-links li:not(:last-child){display:none;}
+  nav{justify-content:space-between;}
+  .hero-stats{gap:18px 24px;}
+  .hero-stats>div{flex:1 1 40%;}
+  .serv-grid,.nums-grid{grid-template-columns:1fr!important;}
+  .partner-logo{font-size:12px;padding:9px 14px;}
+  .vid-head h3{font-size:16px;}
 }
 
 </style>
@@ -564,13 +653,15 @@ footer{background:var(--dark);padding:40px;}
       </div>
       <div class="calc-box res">
         <div class="calc-row hero-row"><span class="k" data-i="cr0">Окупаемость</span><span class="v" id="c-payback">—</span></div>
-        <div class="calc-row"><span class="k" data-i="cr1">Единоразовая выплата</span><span class="v" id="c-init">—</span></div>
-        <div class="calc-row"><span class="k" data-i="cr2">Всего на старте</span><span class="v" id="c-total">—</span></div>
+        <div class="calc-row big-row"><span class="k" data-i="cr5">Прибыль в месяц</span><span class="v" id="c-profit">—</span></div>
         <div class="calc-row"><span class="k" data-i="cr3">Выручка в месяц</span><span class="v" id="c-rev">—</span></div>
         <div class="calc-row"><span class="k" data-i="cr4">Ежемесячный переменный платёж (9%)</span><span class="v" id="c-roy">—</span></div>
-        <div class="calc-row"><span class="k" data-i="cr5">Прибыль в месяц</span><span class="v" id="c-profit">—</span></div>
-        <div class="calc-row"><span class="k" data-i="cr6">Собрать те же услуги самостоятельно</span><span class="v" id="c-basket">—</span></div>
-        <div class="calc-row"><span class="k" data-i="cr7">Экономия на старте</span><span class="v" id="c-save">—</span></div>
+        <div class="calc-sec" data-i="cr_sec">Вложения на старте</div>
+        <div class="calc-row sub"><span class="k" data-i="cr1">Единоразовая выплата</span><span class="v" id="c-init">—</span></div>
+        <div class="calc-row sub save"><span class="k" data-i="cr7">Дешевле самостоятельной сборки</span><span class="v" id="c-save">—</span></div>
+        <div class="calc-row sub"><span class="k" data-i="cr8">Ремонт и оснащение</span><span class="v" id="c-invout">—</span></div>
+        <div class="calc-row sub"><span class="k" data-i="cr2">Всего на старте</span><span class="v" id="c-total">—</span></div>
+        <div class="calc-row sub" style="display:none"><span class="k" data-i="cr6">Те же услуги самостоятельно</span><span class="v" id="c-basket">—</span></div>
         <div class="calc-disc" data-i="calc_disc">Расчёт носит справочный характер и построен на средних показателях действующих организаций сети (рентабельность около 30%). Он не является офертой, гарантией дохода или обещанием результата. Фактические показатели зависят от города, локации, стоимости аренды, загрузки и участия в государственных программах.</div>
       </div>
     </div>
@@ -814,7 +905,7 @@ footer{background:var(--dark);padding:40px;}
 
 <script>
 const T = {
-  ru:{nav5:"Цены и страны",n9:"страны, где сеть уже работает",geo_label:"География и цены",geo_title:"Сколько стоит открыть организацию в вашем городе",geo_t1:"Казахстан",geo_t2:"Другие страны СНГ",geo_t3:"Что входит в пакет",th1:"Категория",th2:"Единоразовая выплата",th3:"Города",calc_label:"Калькулятор",calc_title:"Расчёт окупаемости для вашего города",cf1:"Страна и город",cf2:"Количество детей в организации",cf3:"Средний абонемент, $ в месяц",cf4:"Вложения в ремонт и оснащение, $",cr0:"Окупаемость",cr1:"Единоразовая выплата",cr2:"Всего на старте",cr3:"Выручка в месяц",cr4:"Ежемесячный переменный платёж (9%)",cr5:"Прибыль в месяц",cr6:"Собрать те же услуги самостоятельно",cr7:"Экономия на старте",cmp_label:"Сравнение",cmp_title:"Собрать самому или работать с нами",cmp_h1:"Самостоятельно",cmp_h2:"С ORDO",cmp_v2:"от $1 500",q_label:"Кому подходит",q_title:"Что нужно, чтобы стать партнёром",pkg_h1:"Казахстан — полный пакет",pkg_h2:"Другие страны СНГ",nav1:"Организации",nav2:"Платформа",nav3:"Партнёрство",nav4:"Записаться",
+  ru:{nav5:"Цены и страны",n9:"страны, где сеть уже работает",geo_label:"География и цены",geo_title:"Сколько стоит открыть организацию в вашем городе",geo_t1:"Казахстан",geo_t2:"Другие страны СНГ",geo_t3:"Что входит в пакет",th1:"Категория",th2:"Единоразовая выплата",th3:"Города",calc_label:"Калькулятор",calc_title:"Расчёт окупаемости для вашего города",cf1:"Страна и город",cf2:"Количество детей в организации",cf3:"Средний абонемент, $ в месяц",cf4:"Вложения в ремонт и оснащение, $",cr0:"Окупаемость",cr1:"Единоразовая выплата",cr2:"Всего на старте",cr3:"Выручка в месяц",cr4:"Ежемесячный переменный платёж (9%)",cr5:"Прибыль в месяц",cr6:"Собрать те же услуги самостоятельно",cr7:"Дешевле самостоятельной сборки",cr8:"Ремонт и оснащение",cr_sec:"Вложения на старте",cmp_label:"Сравнение",cmp_title:"Собрать самому или работать с нами",cmp_h1:"Самостоятельно",cmp_h2:"С ORDO",cmp_v2:"от $1 500",q_label:"Кому подходит",q_title:"Что нужно, чтобы стать партнёром",pkg_h1:"Казахстан — полный пакет",pkg_h2:"Другие страны СНГ",nav1:"Организации",nav2:"Платформа",nav3:"Партнёрство",nav4:"Записаться",
     hero_tag:"Франшиза ORDO Holding",hero_h1a:"Откройте дошкольную организацию",hero_h1b:"с готовой системой",
     hero_sub:"Присоединяйтесь к международной сети 54+ дошкольных организаций. Полное сопровождение — от поиска помещения до первого клиента. Доход от $5 000 в месяц.",
     hero_btn1:"Записаться на консультацию",hero_btn2:"▶ Смотреть видео",
@@ -1166,7 +1257,7 @@ const T = {
     cta_h:"Bersedia untuk buka organisasi prasekolah anda?",cta_p:"Daftar untuk perundingan percuma. Kami akan menerangkan francais dan membantu mengira pulangan pelaburan.",
     cta_btn:"Tulis di Telegram",t1:"Perundingan percuma",t2:"Pengiraan pulangan untuk bandar anda",t3:"Menerima permohonan dari seluruh dunia",
     f1:"Organisasi prasekolah",f2:"Platform",f3:"Program ejen",f4:"Telegram",brands_label:"Jenama diuruskan ORDO Holding",brand1_sub:"Rangkaian organisasi prasekolah",brand3_sub:"Rangkaian pusat pendidikan",brand4_sub:"Teknologi pendidikan"},
-  en:{nav5:"Pricing & countries",n9:"countries where the network operates",geo_label:"Countries & pricing",geo_title:"What it costs to open in your city",geo_sub:"The network operates in 4 countries. Licences are sold in 9 CIS countries. The one-time payment depends on the country and city size; the monthly variable payment is the same everywhere — 9% of parent-fee revenue.",geo_t1:"Kazakhstan",geo_t2:"Other CIS countries",geo_t3:"What's included",th1:"Category",th2:"One-time payment",th3:"Cities",geo_n1:"Full package: permits and sanitary clearance, support with the state subsidy tender, on-site help at opening, connection to our call centre and sales team.",geo_n2:"Prices are lower than in Kazakhstan for two reasons: the network is not yet present in these countries, and the service list differs — some procedures the licensee completes with a local contractor. See the 'What is included' tab.",pkg_h1:"Kazakhstan — full package",pkg_h2:"Other CIS countries",pkg_note:"We state this before the deal, not after. The package is fixed in the agreement, so what we do not provide outside Kazakhstan is visible here rather than at opening.",calc_label:"Calculator",calc_title:"Payback estimate for your city",calc_sub:"A preliminary estimate based on network averages. We build the exact financial model for your city during the consultation.",cf1:"Country and city",cf2:"Number of children",cf3:"Average monthly fee, $",cf4:"Renovation and equipment, $",cr0:"Payback",cr1:"One-time payment",cr2:"Total at start",cr3:"Monthly revenue",cr4:"Monthly variable payment (9%)",cr5:"Monthly profit",cr6:"Same services bought separately",cr7:"Savings at start",calc_disc:"This estimate is for reference only and is based on network averages (about 30% margin). It is not an offer, an income guarantee or a promise of results. Actual figures depend on the city, location, rent, occupancy and state programme participation.",cmp_label:"Comparison",cmp_title:"Build it yourself or work with us",cmp_sub:"We priced every service we give a partner at what it would cost to buy separately from contractors.",cmp_h1:"On your own",cmp_h2:"With ORDO",cmp_v2:"from $1,500",cmp_s1:"one-time at start — methodology, brand book, financial model, website, video, CRM, permits, subsidy application",cmp_s2:"one-time payment depending on the city — up to 6 times cheaper than building it yourself",cmp_l1:"$4,300 a month — methodologist, SMM, call centre, quality control, software",cmp_l2:"A year or more assembling contractors and making the first mistakes",cmp_l3:"No guarantee the whole thing works",cmp_l4:"9% of revenue instead of $4,300 in fixed monthly costs",cmp_l5:"3 months to opening instead of a year",cmp_l6:"A model proven across 54 organisations",cmp_note:"Market prices are calculated for Kazakhstan. In other CIS countries contractors cost less, and so do our fees: the comparison holds, but savings are around 2.5x rather than 6x.",q_label:"Who it suits",q_title:"What you need to become a partner",q_sub:"We deliberately keep the one-time payment low — and select partners on readiness to launch. These conditions are checked before the agreement is signed.",q1h:"Funds for the launch",q1p:"A bank statement or credit approval covering renovation and equipment. The one-time payment is a small part of the investment, and the main risk is not there.",q2h:"A suitable premises",q2p:"Premises with written confirmation of compliance with sanitary standards. The lease is signed only after that confirmation.",q3h:"A director",q3p:"Someone qualified in early childhood education, approved by us. Partners abroad send their director for in-person training in Kazakhstan at their own cost before opening.",q4h:"Ready to open within 6 months",q4p:"An agreed launch schedule. If the organisation has not opened within 9 months, the agreement ends and the city is released to another partner.",q_note:"The first three partners in each new country receive network reference status: your organisation becomes the site future candidates visit, and we produce content about it for our channels.",hero_disc:"Income from $5,000 a month and 30% average margin are averages from operating organisations. They are not an offer, an income guarantee or a promise of results.",nav1:"Preschool organisations",nav2:"Platform",nav3:"Partnership",nav4:"Apply",
+  en:{nav5:"Pricing & countries",n9:"countries where the network operates",geo_label:"Countries & pricing",geo_title:"What it costs to open in your city",geo_sub:"The network operates in 4 countries. Licences are sold in 9 CIS countries. The one-time payment depends on the country and city size; the monthly variable payment is the same everywhere — 9% of parent-fee revenue.",geo_t1:"Kazakhstan",geo_t2:"Other CIS countries",geo_t3:"What's included",th1:"Category",th2:"One-time payment",th3:"Cities",geo_n1:"Full package: permits and sanitary clearance, support with the state subsidy tender, on-site help at opening, connection to our call centre and sales team.",geo_n2:"Prices are lower than in Kazakhstan for two reasons: the network is not yet present in these countries, and the service list differs — some procedures the licensee completes with a local contractor. See the 'What is included' tab.",pkg_h1:"Kazakhstan — full package",pkg_h2:"Other CIS countries",pkg_note:"We state this before the deal, not after. The package is fixed in the agreement, so what we do not provide outside Kazakhstan is visible here rather than at opening.",calc_label:"Calculator",calc_title:"Payback estimate for your city",calc_sub:"A preliminary estimate based on network averages. We build the exact financial model for your city during the consultation.",cf1:"Country and city",cf2:"Number of children",cf3:"Average monthly fee, $",cf4:"Renovation and equipment, $",cr0:"Payback",cr1:"One-time payment",cr2:"Total at start",cr3:"Monthly revenue",cr4:"Monthly variable payment (9%)",cr5:"Monthly profit",cr6:"Same services bought separately",cr7:"Cheaper than doing it yourself",cr8:"Renovation and equipment",cr_sec:"Investment at start",calc_disc:"This estimate is for reference only and is based on network averages (about 30% margin). It is not an offer, an income guarantee or a promise of results. Actual figures depend on the city, location, rent, occupancy and state programme participation.",cmp_label:"Comparison",cmp_title:"Build it yourself or work with us",cmp_sub:"We priced every service we give a partner at what it would cost to buy separately from contractors.",cmp_h1:"On your own",cmp_h2:"With ORDO",cmp_v2:"from $1,500",cmp_s1:"one-time at start — methodology, brand book, financial model, website, video, CRM, permits, subsidy application",cmp_s2:"one-time payment depending on the city — up to 6 times cheaper than building it yourself",cmp_l1:"$4,300 a month — methodologist, SMM, call centre, quality control, software",cmp_l2:"A year or more assembling contractors and making the first mistakes",cmp_l3:"No guarantee the whole thing works",cmp_l4:"9% of revenue instead of $4,300 in fixed monthly costs",cmp_l5:"3 months to opening instead of a year",cmp_l6:"A model proven across 54 organisations",cmp_note:"Market prices are calculated for Kazakhstan. In other CIS countries contractors cost less, and so do our fees: the comparison holds, but savings are around 2.5x rather than 6x.",q_label:"Who it suits",q_title:"What you need to become a partner",q_sub:"We deliberately keep the one-time payment low — and select partners on readiness to launch. These conditions are checked before the agreement is signed.",q1h:"Funds for the launch",q1p:"A bank statement or credit approval covering renovation and equipment. The one-time payment is a small part of the investment, and the main risk is not there.",q2h:"A suitable premises",q2p:"Premises with written confirmation of compliance with sanitary standards. The lease is signed only after that confirmation.",q3h:"A director",q3p:"Someone qualified in early childhood education, approved by us. Partners abroad send their director for in-person training in Kazakhstan at their own cost before opening.",q4h:"Ready to open within 6 months",q4p:"An agreed launch schedule. If the organisation has not opened within 9 months, the agreement ends and the city is released to another partner.",q_note:"The first three partners in each new country receive network reference status: your organisation becomes the site future candidates visit, and we produce content about it for our channels.",hero_disc:"Income from $5,000 a month and 30% average margin are averages from operating organisations. They are not an offer, an income guarantee or a promise of results.",nav1:"Preschool organisations",nav2:"Platform",nav3:"Partnership",nav4:"Apply",
     hero_tag:"ORDO Holding Franchise",hero_h1a:"Open your preschool organisation",hero_h1b:"with proven technology",
     hero_sub:"Join an international network of 54+ preschool organisations. Full support — from finding premises to your first client. Earn $5,000+/month.",
     hero_btn1:"Book a free consultation",hero_btn2:"▶ Watch the video",
@@ -1281,18 +1372,17 @@ function calcRun(){
   var save = basket - c.init;
 
   document.getElementById('c-init').textContent   = fmtUSD(c.init);
+  document.getElementById('c-invout').textContent = fmtUSD(inv);
   document.getElementById('c-total').textContent  = fmtUSD(total);
   document.getElementById('c-rev').textContent    = fmtUSD(rev);
   document.getElementById('c-roy').textContent    = fmtUSD(roy);
   document.getElementById('c-profit').textContent = fmtUSD(profit);
   document.getElementById('c-basket').textContent = fmtUSD(basket);
   document.getElementById('c-save').textContent   =
-    (save > 0 ? fmtUSD(save) + ' (' + (basket / c.init).toFixed(1) + 'x)' : '—');
+    (save > 0 ? 'в ' + (basket / c.init).toFixed(1) + ' раза — на ' + fmtUSD(save) : '—');
   // строки сравнения показываем только там, где экономия положительная
-  var hide = save <= 0 ? 'none' : '';
-  var rb = document.getElementById('c-basket'), rs = document.getElementById('c-save');
-  if (rb && rb.parentNode) rb.parentNode.style.display = hide;
-  if (rs && rs.parentNode) rs.parentNode.style.display = hide;
+  var rs = document.getElementById('c-save');
+  if (rs && rs.parentNode) rs.parentNode.style.display = (save <= 0 ? 'none' : '');
   document.getElementById('c-payback').textContent =
     payback > 0 ? Math.round(payback) + ' мес' : '—';
 }
