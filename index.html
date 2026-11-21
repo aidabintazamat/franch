@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Франшиза Ordogen — ORDO Holding</title>
-<meta name="description" content="Откройте дошкольную организацию с франшизой Ordogen. Доход от $5 000/мес. 54 дошкольных организации в 4 странах. Полное сопровождение.">
+<meta name="description" content="Откройте дошкольную организацию с франшизой ORDOGEN: 60+ проданных франшиз, авторская методика, платформа ordo.education и полное сопровождение. Свободные города и районы — на карте.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -280,7 +280,7 @@ img,svg,iframe,video,table{max-width:100%;}
   .nav-cta{padding:8px 14px!important;font-size:13px;}
 
   /* герой */
-  .hero{padding:44px 18px;}
+  .hero{padding:44px 16px;}
   .hero h1{font-size:clamp(26px,7vw,38px);}
   .hero-sub{font-size:15px;}
   .hero-btns{margin-bottom:36px;gap:10px;}
@@ -290,10 +290,10 @@ img,svg,iframe,video,table{max-width:100%;}
   .hero-stat-label{font-size:12px;}
 
   /* секции */
-  .section,.cta-s{padding:44px 18px;}
+  .section,.cta-s{padding:44px 16px;}
   .st{font-size:clamp(22px,5.5vw,30px);}
   .ss{font-size:15px;margin-bottom:28px;}
-  .disclaimer{padding:0 18px 28px;}
+  .disclaimer{padding:0 16px 28px;}
 
   /* сетки */
   .nums-grid,.serv-grid,.adv-grid,.why-grid,.price-grid,.rev-grid,
@@ -342,6 +342,85 @@ img,svg,iframe,video,table{max-width:100%;}
   .vid-head h3{font-size:16px;}
 }
 
+/* 21.11: карта городов, заявка, отбор */
+.hero-stat-num.ico{color:#6ee37a;}
+.btn-tg.btn-lead{background:var(--green);box-shadow:0 4px 20px rgba(61,181,74,.4);}
+.btn-tg.btn-lead:hover{background:var(--green-d);}
+#lead,#map{scroll-margin-top:72px;}
+.map-s{background:var(--white);}
+.map-legend{display:flex;gap:10px 20px;flex-wrap:wrap;font-size:13px;color:var(--gray);margin:-24px 0 8px;}
+.map-legend span{display:inline-flex;align-items:center;gap:6px;}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex-shrink:0;}
+.dot.has{background:var(--green);}
+.dot.free{background:#fff;border:2px dashed var(--green);}
+.map-h{font-size:16px;font-weight:700;color:var(--dark);margin:28px 0 14px;}
+.map-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.map-grid.sm{grid-template-columns:repeat(4,1fr);margin-top:16px;}
+.map-grid.free{grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;}
+.city-card{background:var(--bg);border:1.5px solid var(--border);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px;min-width:0;transition:border-color .2s;}
+.city-card:hover{border-color:var(--green);}
+.city-card.free{background:var(--green-l);border-color:var(--green-m);padding:16px;gap:8px;}
+.city-name{font-size:19px;font-weight:800;color:var(--dark);letter-spacing:-.3px;overflow-wrap:anywhere;}
+.city-card.free .city-name{font-size:16px;}
+.city-sub{font-size:12px;color:var(--lgray);margin-top:2px;}
+.city-badge{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;font-size:12px;font-weight:600;color:var(--green-d);background:var(--green-l);border:1px solid var(--green-m);border-radius:100px;padding:4px 10px;}
+.city-badge.free{background:#fff;}
+.city-sec{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--lgray);margin-top:4px;}
+.city-cnt,.city-free{font-size:13px;color:var(--gray);}
+.city-free{color:var(--green-d);font-weight:600;}
+.chips{display:flex;flex-wrap:wrap;gap:6px;}
+.chip{font-family:inherit;font-size:13px;line-height:1.3;padding:6px 11px;border-radius:8px;}
+.chip.has{background:var(--green);color:#fff;border:1.5px solid var(--green);}
+.chip.free{background:#fff;color:var(--green-d);border:1.5px dashed var(--green);cursor:pointer;transition:background .15s;}
+.chip.free:hover{background:var(--green-l);}
+.city-btn{margin-top:auto;background:var(--dark);color:#fff;border:0;border-radius:10px;padding:11px 14px;font-family:inherit;font-weight:600;font-size:14px;cursor:pointer;transition:background .2s;}
+.city-btn:hover{background:var(--green-d);}
+.city-card.free .city-btn{background:var(--green);padding:9px 12px;font-size:13px;}
+.city-card.free .city-btn:hover{background:var(--green-d);}
+.map-s .pnote{margin-top:24px;}
+.lead-s{background:var(--bg);}
+.lead-wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;}
+.sel-box{background:linear-gradient(135deg,#0f2417 0%,#1e4a28 60%,#0f2417 100%);border-radius:20px;padding:32px;color:#fff;min-width:0;}
+.sel-box .sl{color:#6ee37a;}
+.sel-box h3{font-size:clamp(21px,2.4vw,26px);font-weight:800;line-height:1.2;letter-spacing:-.3px;margin-bottom:10px;}
+.sel-box>p{font-size:14.5px;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:12px;}
+.sel-item{display:flex;gap:14px;padding:16px 0 4px;border-top:1px solid rgba(255,255,255,.1);margin-top:12px;}
+.sel-ico{width:40px;height:40px;border-radius:11px;background:rgba(61,181,74,.18);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
+.sel-item h4{font-size:15px;font-weight:700;margin-bottom:4px;}
+.sel-item p{font-size:13.5px;color:rgba(255,255,255,.6);line-height:1.55;}
+.lead-form{background:#fff;border:1.5px solid var(--green);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px;box-shadow:0 10px 30px rgba(61,181,74,.08);min-width:0;}
+.lf-field label{display:block;font-size:13px;font-weight:600;color:var(--dark);margin-bottom:6px;}
+.lf-field input{width:100%;border:1.5px solid var(--border);border-radius:10px;padding:12px 14px;font-family:inherit;font-size:16px;color:var(--text);background:#fff;}
+.lf-field input:focus{outline:none;border-color:var(--green);}
+.lead-form .bad{border-color:#dc2626!important;outline:2px solid rgba(220,38,38,.25);}
+.lf-check{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.45;color:var(--text);cursor:pointer;}
+.lf-check input{width:18px;height:18px;margin-top:1px;accent-color:var(--green);flex-shrink:0;}
+.lf-check.main{background:var(--green-l);border-radius:10px;padding:12px;font-weight:600;color:var(--dark);}
+.lf-err{font-size:13px;color:#dc2626;line-height:1.45;}
+.lf-err:empty{display:none;}
+.lf-btn{background:var(--green);color:#fff;border:0;border-radius:12px;padding:15px;font-family:inherit;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(61,181,74,.3);transition:background .2s;}
+.lf-btn:hover{background:var(--green-d);}
+.lf-btn:disabled{opacity:.6;cursor:wait;}
+.lf-ok{display:none;background:var(--green-l);border:1.5px solid var(--green);border-radius:12px;padding:18px;font-size:15px;font-weight:600;line-height:1.5;color:var(--green-d);}
+.lf-ok a{display:none;margin-top:10px;font-size:13.5px;font-weight:500;color:var(--green-d);}
+.lead-form.done>*{display:none;}
+.lead-form.done>.lf-ok{display:block;}
+@media(max-width:900px){
+  .map-grid,.map-grid.sm{grid-template-columns:1fr 1fr;}
+  .lead-wrap{grid-template-columns:1fr;gap:20px;}
+  .sel-box,.lead-form{padding:22px;}
+  .map-legend{margin-top:-12px;}
+}
+@media(max-width:600px){
+  .map-grid{grid-template-columns:1fr;}
+  .map-grid.sm{grid-template-columns:1fr 1fr;gap:10px;}
+  .map-grid.free{grid-template-columns:1fr 1fr;gap:10px;}
+  .city-card{padding:18px;}
+  .city-card.free{padding:14px;}
+}
+@media(max-width:420px){.map-grid.sm{grid-template-columns:1fr;}}
+@media(max-width:360px){.map-grid.free{grid-template-columns:1fr;}}
+
 </style>
 </head>
 <body>
@@ -370,7 +449,7 @@ img,svg,iframe,video,table{max-width:100%;}
     <li><a href="https://ordo.education" data-i="nav2">Платформа</a></li>
     <li><a href="#geo" data-i="nav5">Цены и страны</a></li>
     <li><a href="https://aidabintazamat.github.io/ordo360-agent/" target="_blank" rel="noopener" data-i="nav3">Партнёрство</a></li>
-    <li><a href="https://t.me/ordoholding" target="_blank" class="nav-cta" data-i="nav4">Записаться</a></li>
+    <li><a href="#lead" class="nav-cta js-lead" data-i="nav4">Записаться</a></li>
   </ul>
 </nav>
 
@@ -379,24 +458,20 @@ img,svg,iframe,video,table{max-width:100%;}
   <div class="hero-inner">
     <div class="hero-tag" data-i="hero_tag">Франшиза ORDO Holding</div>
     <h1><span data-i="hero_h1a">Откройте дошкольную организацию</span><br><span class="green" data-i="hero_h1b">с готовой технологией</span></h1>
-    <p class="hero-sub" data-i="hero_sub">Присоединяйтесь к международной сети из 54+ дошкольных организаций. Полное сопровождение — от поиска помещения до первого клиента. Зарабатывайте от $5 000 в месяц.</p>
+    <p class="hero-sub" data-i="hero_sub">Присоединяйтесь к международной сети дошкольных организаций ORDOGEN. Полное сопровождение — от поиска помещения до первого клиента.</p>
     <div class="hero-btns">
-      <a href="https://t.me/ordoholding" target="_blank" class="btn-primary">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.018 9.516c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.26 14.723l-2.948-.924c-.64-.203-.654-.64.136-.953l11.52-4.44c.532-.194 1 .13.594.842z"/></svg>
+      <a href="#lead" class="btn-primary js-lead">
         <span data-i="hero_btn1">Записаться на консультацию</span>
       </a>
       <a href="https://youtu.be/JLWUSZhWrKU" target="_blank" class="btn-outline-w" data-i="hero_btn2">▶ Смотреть видео</a>
     </div>
     <div class="hero-stats">
-      <div><div class="hero-stat-num">54<span class="green">+</span></div><div class="hero-stat-label" data-i="hs1">дошкольных организаций открыто</div></div>
-      <div><div class="hero-stat-num">$5K<span class="green">+</span></div><div class="hero-stat-label" data-i="hs2">доход в месяц</div></div>
-      <div><div class="hero-stat-num">30<span class="green">%</span></div><div class="hero-stat-label" data-i="hs3">средняя прибыль</div></div>
-      <div><div class="hero-stat-num">9</div><div class="hero-stat-label" data-i="hs4">стран открыты для заявок</div></div>
-      <div><div class="hero-stat-num">3<span class="green"> мес</span></div><div class="hero-stat-label" data-i="hs5">срок открытия</div></div>
+      <div><div class="hero-stat-num">60<span class="green">+</span></div><div class="hero-stat-label" data-i="n3">проданных франшиз</div></div>
+      <div><div class="hero-stat-num ico">✓</div><div class="hero-stat-label" data-i="w1h">Авторская методика</div></div>
+      <div><div class="hero-stat-num ico">✓</div><div class="hero-stat-label" data-i="w4h">Полное сопровождение</div></div>
     </div>
   </div>
 </section>
-<div class="disclaimer" data-i="hero_disc">Показатели «доход от $5 000 в месяц» и «средняя прибыль 30%» — усреднённые данные действующих организаций сети. Они не являются офертой, гарантией дохода или обещанием результата: фактические показатели зависят от города, локации, стоимости аренды, загрузки и участия в государственных программах.</div>
 <!-- BRANDS -->
 <section style="padding:20px 40px;background:#fff;border-bottom:1px solid #e5e7eb;">
   <div style="max-width:1100px;margin:0 auto;">
@@ -421,22 +496,17 @@ img,svg,iframe,video,table{max-width:100%;}
 </section>
 
 
-<!-- NUMBERS -->
+<!-- NUMBERS (21.11: единственная цифра — 60+ проданных франшиз) -->
 <section class="section nums">
   <div class="si">
-    <div class="sl" data-i="num_label">Факты и цифры</div>
+    <div class="sl" data-i="num_label">Коротко о нас</div>
     <h2 class="st" data-i="num_title">О компании ORDO Holding</h2>
-    <p class="ss" data-i="num_sub">Мы строим международную экосистему дошкольного образования с 2020 года.</p>
+    <p class="ss" data-i="num_sub">Строим международную экосистему дошкольного образования: методика, платформа и сопровождение партнёров.</p>
     <div class="nums-grid">
-      <div class="num-card"><div class="num-val">2020</div><div class="num-label" data-i="n1">год открытия первой организации</div></div>
-      <div class="num-card"><div class="num-val">54+</div><div class="num-label" data-i="n2">дошкольных организаций открыто</div></div>
-      <div class="num-card"><div class="num-val">4</div><div class="num-label" data-i="n9">страны, где сеть уже работает</div></div>
-      <div class="num-card"><div class="num-val">30</div><div class="num-label" data-i="n3">проданных франшиз</div></div>
-      <div class="num-card"><div class="num-val">10 000+</div><div class="num-label" data-i="n4">родителей доверились</div></div>
-      <div class="num-card"><div class="num-val">$2.5M</div><div class="num-label" data-i="n5">выручка сети в год</div></div>
-      <div class="num-card"><div class="num-val">30%</div><div class="num-label" data-i="n6">средняя прибыль</div></div>
-      <div class="num-card"><div class="num-val">3 мес</div><div class="num-label" data-i="n7">срок открытия организации</div></div>
-      <div class="num-card"><div class="num-val">1 000</div><div class="num-label" data-i="n8">цель — дошкольных организаций в сети</div></div>
+      <div class="num-card"><div class="num-val">60+</div><div class="num-label" data-i="n3">проданных франшиз</div></div>
+      <div class="num-card"><div class="num-val">📚</div><div class="num-label" data-i="w1h">Авторская методика</div></div>
+      <div class="num-card"><div class="num-val">💻</div><div class="num-label" data-i="w2h">ERP-платформа Ordo.education</div></div>
+      <div class="num-card"><div class="num-val">🤝</div><div class="num-label" data-i="w4h">Полное сопровождение</div></div>
     </div>
   </div>
 </section>
@@ -472,7 +542,7 @@ img,svg,iframe,video,table{max-width:100%;}
       <div class="serv-card"><div class="serv-icon">📋</div><h4 data-i="s5h">Стандартизация</h4><p data-i="s5p">Госпроверки, субсидии, лицензирование — в Казахстане. За рубежом передаём требования и контакты местного подрядчика</p></div>
       <div class="serv-card"><div class="serv-icon">🎉</div><h4 data-i="s6h">Открытие</h4><p data-i="s6p">В Казахстане — выездная помощь при открытии. За рубежом — дистанционное сопровождение по чек-листу</p></div>
       <div class="serv-card"><div class="serv-icon">📊</div><h4 data-i="s7h">CRM и продажи</h4><p data-i="s7p">Подключение к отделу продаж, CRM, скрипты, воронки зачисления</p></div>
-      <div class="serv-card"><div class="serv-icon">📣</div><h4 data-i="s8h">Реклама и маркетинг</h4><p data-i="s8p">Лидогенерация, бренд-менеджмент и федеральный маркетинг — 50% продаж</p></div>
+      <div class="serv-card"><div class="serv-icon">📣</div><h4 data-i="s8h">Реклама и маркетинг</h4><p data-i="s8p">Лидогенерация, бренд-менеджмент и федеральный маркетинг</p></div>
     </div>
   </div>
 </section>
@@ -492,7 +562,7 @@ img,svg,iframe,video,table{max-width:100%;}
           <div class="price-feat" data-i="p1f2">Право продавать все лицензии</div>
           <div class="price-feat" data-i="p1f3">Доход до 20% с продаж</div>
         </div>
-        <a href="https://t.me/ordoholding" target="_blank" class="price-btn" data-i="pr_btn">Узнать подробнее</a>
+        <a href="#lead" class="price-btn js-lead" data-i="pr_btn">Узнать подробнее</a>
       </div>
       <div class="price-card featured">
         <div class="price-tier">PARTNER</div>
@@ -503,7 +573,7 @@ img,svg,iframe,video,table{max-width:100%;}
           <div class="price-feat" data-i="p2f3">12 кабинетов управления дошкольной организацией</div>
           <div class="price-feat" data-i="p2f4">Кабинет родителя и педагогов</div>
         </div>
-        <a href="https://t.me/ordoholding" target="_blank" class="price-btn" data-i="pr_btn2">Попробовать бесплатно</a>
+        <a href="#lead" class="price-btn js-lead" data-i="pr_btn2">Попробовать бесплатно</a>
       </div>
       <div class="price-card">
         <div class="price-tier">FOUNDER</div>
@@ -514,7 +584,7 @@ img,svg,iframe,video,table{max-width:100%;}
           <div class="price-feat" data-i="p3f3">Бухгалтер-кадровик</div>
           <div class="price-feat" data-i="p3f4">Методист</div>
         </div>
-        <a href="https://t.me/ordoholding" target="_blank" class="price-btn" data-i="pr_btn">Узнать подробнее</a>
+        <a href="#lead" class="price-btn js-lead" data-i="pr_btn">Узнать подробнее</a>
       </div>
       <div class="price-card">
         <div class="price-tier">BOARD DIRECTOR</div>
@@ -526,7 +596,7 @@ img,svg,iframe,video,table{max-width:100%;}
           <div class="price-feat" data-i="p4f4">9% ежемесячный переменный платёж от выручки</div>
           <div class="price-feat" data-i="p4f5">Единоразовая выплата зависит от города — от $1 500</div>
         </div>
-        <a href="https://t.me/ordoholding" target="_blank" class="price-btn" data-i="pr_btn">Стать партнёром</a>
+        <a href="#lead" class="price-btn js-lead" data-i="pr_btn">Стать партнёром</a>
       </div>
     </div>
   </div>
@@ -538,7 +608,7 @@ img,svg,iframe,video,table{max-width:100%;}
   <div class="si">
     <div class="sl" data-i="geo_label">География и цены</div>
     <h2 class="st" data-i="geo_title">Сколько стоит открыть организацию в вашем городе</h2>
-    <p class="ss" data-i="geo_sub">Сеть работает в 4 странах. Лицензии продаются в 9 странах СНГ. Единоразовая выплата зависит от страны и размера города, ежемесячный переменный платёж везде одинаковый — 9% от выручки родительских взносов.</p>
+    <p class="ss" data-i="geo_sub">Единоразовая выплата зависит от страны и размера города, ежемесячный переменный платёж везде одинаковый — 9% от выручки родительских взносов.</p>
 
     <div class="geo-toggle">
       <button class="geo-tab active" onclick="geoTab('kz',this)" data-i="geo_t1">Казахстан</button>
@@ -626,6 +696,17 @@ img,svg,iframe,video,table{max-width:100%;}
   </div>
 </section>
 
+<!-- КАРТА ГОРОДОВ (свободные территории). Данные — массивы MAP_* в скрипте; источник: ORDO API, 22.11.2026 -->
+<section class="section map-s" id="map">
+  <div class="si">
+    <div class="sl" data-i="map_label">Карта городов</div>
+    <h2 class="st" data-i="map_title">Свободные территории для партнёров</h2>
+    <p class="ss" data-i="map_sub">Где уже работают сады ORDOGEN и какие районы и города свободны. Выберите свой — менеджер подтвердит, что территория свободна, и расскажет об условиях.</p>
+    <div id="map-root"></div>
+    <div class="pnote" data-i="map_note">Сады — по данным системы ORDO на 22.11.2026. Районы указаны по официальному делению городов. Окончательно свободность территории подтверждает менеджер после заявки.</div>
+  </div>
+</section>
+
 <!-- КАЛЬКУЛЯТОР -->
 <section class="section" id="calc">
   <div class="si">
@@ -662,7 +743,7 @@ img,svg,iframe,video,table{max-width:100%;}
         <div class="calc-row sub"><span class="k" data-i="cr8">Ремонт и оснащение</span><span class="v" id="c-invout">—</span></div>
         <div class="calc-row sub"><span class="k" data-i="cr2">Всего на старте</span><span class="v" id="c-total">—</span></div>
         <div class="calc-row sub" style="display:none"><span class="k" data-i="cr6">Те же услуги самостоятельно</span><span class="v" id="c-basket">—</span></div>
-        <div class="calc-disc" data-i="calc_disc">Расчёт носит справочный характер и построен на средних показателях действующих организаций сети (рентабельность около 30%). Он не является офертой, гарантией дохода или обещанием результата. Фактические показатели зависят от города, локации, стоимости аренды, загрузки и участия в государственных программах.</div>
+        <div class="calc-disc" data-i="calc_disc">Расчёт носит справочный характер и построен на усреднённых допущениях. Он не является офертой, гарантией дохода или обещанием результата. Фактические показатели зависят от города, локации, стоимости аренды, загрузки и участия в государственных программах.</div>
       </div>
     </div>
   </div>
@@ -691,8 +772,8 @@ img,svg,iframe,video,table{max-width:100%;}
         <div class="cmp-s" data-i="cmp_s2">единоразовая выплата в зависимости от города — до 6 раз дешевле самостоятельной сборки</div>
         <div class="cmp-list">
           <div class="cmp-li" data-i="cmp_l4">9% от выручки вместо $4 300 фиксированных расходов в месяц</div>
-          <div class="cmp-li" data-i="cmp_l5">3 месяца до открытия вместо года</div>
-          <div class="cmp-li" data-i="cmp_l6">Модель, отработанная на 54 организациях</div>
+          <div class="cmp-li" data-i="cmp_l5">Запуск по готовому чек-листу вместо долгого поиска решений</div>
+          <div class="cmp-li" data-i="cmp_l6">Модель, отработанная в действующих садах сети</div>
         </div>
       </div>
     </div>
@@ -850,6 +931,35 @@ img,svg,iframe,video,table{max-width:100%;}
   </div>
 </section>
 
+<!-- ЗАЯВКА НА ФРАНШИЗУ + ОТБОР ПАРТНЁРОВ. Отправка: LEAD_ENDPOINT в начале скрипта, иначе WhatsApp 3070 -->
+<section class="section lead-s" id="lead">
+  <div class="si">
+    <div class="sl" data-i="lead_label">Заявка</div>
+    <h2 class="st" data-i="lead_title">Заявка на франшизу</h2>
+    <p class="ss" data-i="lead_sub">Оставьте контакты — менеджер свяжется с вами, ответит на вопросы и рассчитает окупаемость для вашего города.</p>
+    <div class="lead-wrap">
+      <div class="sel-box" id="selection">
+        <div class="sl" data-i="sel_label">Отбор партнёров</div>
+        <h3 data-i="sel_title">Только семейные пары с детьми</h3>
+        <p data-i="sel_sub">Мы открываем сады вместе с семьями — это главное условие отбора. Почему:</p>
+        <div class="sel-item"><div class="sel-ico">🏡</div><div><h4 data-i="sel1h">Сад — семейное дело</h4><p data-i="sel1p">Сад работает каждый день и годами. В семье решения принимаются быстрее, а ответственность делится на двоих.</p></div></div>
+        <div class="sel-item"><div class="sel-ico">👨‍👩‍👧</div><div><h4 data-i="sel2h">Родители понимают родителей</h4><p data-i="sel2p">Вы сами выбирали сад своим детям — знаете, чего ждут мамы и папы, и говорите с ними на одном языке.</p></div></div>
+        <div class="sel-item"><div class="sel-ico">🌱</div><div><h4 data-i="sel3h">Долгий горизонт</h4><p data-i="sel3p">Семья строит дело на годы, а не ради быстрой продажи. Детям в саду нужна именно такая стабильность.</p></div></div>
+      </div>
+      <form class="lead-form" id="lead-form" novalidate>
+        <div class="lf-field"><label for="lf-name" data-i="lf_name">Имя</label><input id="lf-name" name="name" type="text" autocomplete="name" maxlength="80" required data-ip="lf_name_ph" placeholder="Как к вам обращаться"></div>
+        <div class="lf-field"><label for="lf-phone" data-i="lf_phone">Телефон с кодом страны</label><input id="lf-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="24" required data-ip="lf_phone_ph" placeholder="+7 777 123 45 67"></div>
+        <div class="lf-field"><label for="lf-city" data-i="lf_city">Город</label><input id="lf-city" name="city" type="text" list="lf-cities" autocomplete="address-level2" maxlength="80" required data-ip="lf_city_ph" placeholder="Например, Астана"><datalist id="lf-cities"></datalist></div>
+        <label class="lf-check main"><input type="checkbox" id="lf-family" name="family" required><span data-i="lf_family">Мы семейная пара с детьми</span></label>
+        <label class="lf-check"><input type="checkbox" id="lf-consent" name="consent" required><span data-i="lf_consent">Согласен(на) на обработку персональных данных для связи по заявке</span></label>
+        <div class="lf-err" id="lf-err" role="alert" aria-live="polite"></div>
+        <button type="submit" class="lf-btn" id="lf-btn" data-i="lf_btn">Отправить заявку</button>
+        <div class="lf-ok" id="lf-ok" role="status"><span data-i="lf_ok">Спасибо! Менеджер свяжется с вами в течение 15 минут</span><a id="lf-wa" href="https://wa.me/77767233070" target="_blank" rel="noopener" data-i="lf_wa">Если WhatsApp не открылся, нажмите здесь, чтобы отправить заявку</a></div>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-s">
   <div class="cta-box">
@@ -858,9 +968,8 @@ img,svg,iframe,video,table{max-width:100%;}
       <p data-i="cta_p">Запишитесь на бесплатную консультацию. Расскажем всё о франшизе, поможем выбрать тариф и рассчитаем окупаемость для вашего города.</p>
     </div>
     <div class="cta-actions">
-      <a href="https://t.me/ordoholding" target="_blank" class="btn-tg">
-        <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.018 9.516c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.26 14.723l-2.948-.924c-.64-.203-.654-.64.136-.953l11.52-4.44c.532-.194 1 .13.594.842z"/></svg>
-        <span data-i="cta_btn">Написать в Telegram</span>
+      <a href="#lead" class="btn-tg btn-lead js-lead">
+        <span data-i="cta_btn">Оставить заявку</span>
       </a>
       <div class="trust-items">
         <span class="trust-item" data-i="t1">Бесплатная консультация</span>
@@ -904,14 +1013,17 @@ img,svg,iframe,video,table{max-width:100%;}
 </footer>
 
 <script>
+// Куда отправлять заявки с формы «Заявка на франшизу» (POST JSON). Пусто → заявка уходит в WhatsApp 3070.
+const LEAD_ENDPOINT = "";
+
 const T = {
-  ru:{nav5:"Цены и страны",n9:"страны, где сеть уже работает",geo_label:"География и цены",geo_title:"Сколько стоит открыть организацию в вашем городе",geo_t1:"Казахстан",geo_t2:"Другие страны СНГ",geo_t3:"Что входит в пакет",th1:"Категория",th2:"Единоразовая выплата",th3:"Города",calc_label:"Калькулятор",calc_title:"Расчёт окупаемости для вашего города",cf1:"Страна и город",cf2:"Количество детей в организации",cf3:"Средний абонемент, $ в месяц",cf4:"Вложения в ремонт и оснащение, $",cr0:"Окупаемость",cr1:"Единоразовая выплата",cr2:"Всего на старте",cr3:"Выручка в месяц",cr4:"Ежемесячный переменный платёж (9%)",cr5:"Прибыль в месяц",cr6:"Собрать те же услуги самостоятельно",cr7:"Дешевле самостоятельной сборки",cr8:"Ремонт и оснащение",cr_sec:"Вложения на старте",cmp_label:"Сравнение",cmp_title:"Собрать самому или работать с нами",cmp_h1:"Самостоятельно",cmp_h2:"С ORDO",cmp_v2:"от $1 500",q_label:"Кому подходит",q_title:"Что нужно, чтобы стать партнёром",pkg_h1:"Казахстан — полный пакет",pkg_h2:"Другие страны СНГ",nav1:"Организации",nav2:"Платформа",nav3:"Партнёрство",nav4:"Записаться",
+  ru:{nav5:"Цены и страны",geo_label:"География и цены",geo_title:"Сколько стоит открыть организацию в вашем городе",geo_t1:"Казахстан",geo_t2:"Другие страны СНГ",geo_t3:"Что входит в пакет",th1:"Категория",th2:"Единоразовая выплата",th3:"Города",calc_label:"Калькулятор",calc_title:"Расчёт окупаемости для вашего города",cf1:"Страна и город",cf2:"Количество детей в организации",cf3:"Средний абонемент, $ в месяц",cf4:"Вложения в ремонт и оснащение, $",cr0:"Окупаемость",cr1:"Единоразовая выплата",cr2:"Всего на старте",cr3:"Выручка в месяц",cr4:"Ежемесячный переменный платёж (9%)",cr5:"Прибыль в месяц",cr6:"Собрать те же услуги самостоятельно",cr7:"Дешевле самостоятельной сборки",cr8:"Ремонт и оснащение",cr_sec:"Вложения на старте",cmp_label:"Сравнение",cmp_title:"Собрать самому или работать с нами",cmp_h1:"Самостоятельно",cmp_h2:"С ORDO",cmp_v2:"от $1 500",q_label:"Кому подходит",q_title:"Что нужно, чтобы стать партнёром",pkg_h1:"Казахстан — полный пакет",pkg_h2:"Другие страны СНГ",nav1:"Организации",nav2:"Платформа",nav3:"Партнёрство",nav4:"Записаться",
     hero_tag:"Франшиза ORDO Holding",hero_h1a:"Откройте дошкольную организацию",hero_h1b:"с готовой системой",
-    hero_sub:"Присоединяйтесь к международной сети 54+ дошкольных организаций. Полное сопровождение — от поиска помещения до первого клиента. Доход от $5 000 в месяц.",
+    
     hero_btn1:"Записаться на консультацию",hero_btn2:"▶ Смотреть видео",
-    hs1:"организаций открыто",hs2:"доход в месяц",hs3:"средняя прибыль",hs4:"стран открыты для заявок",hs5:"срок открытия",
-    num_label:"Факты и цифры",num_title:"О компании ORDO Holding",num_sub:"Строим международную экосистему дошкольного образования с 2020 года.",
-    n1:"год открытия первой организации",n2:"дошкольных организаций открыто",n3:"проданных франшиз",n4:"родителей доверились",n5:"выручка сети в год",n6:"средняя прибыль",n7:"срок открытия организации",n8:"цель — дошкольных организаций в сети",
+    
+    num_title:"О компании ORDO Holding",
+    n3:"проданных франшиз",
     why_label:"Наши преимущества",why_title:"Почему выбирают Ordogen?",why_sub:"Готовая бизнес-модель с доказанной эффективностью.",
     w1h:"Авторская методика",w1p:"5 000+ готовых сценариев уроков по 20 предметам. Циклограммы на весь учебный год.",
     w2h:"ERP-платформа Ordo.education",w2p:"12 кабинетов автоматизации: методист, повар, HR, финансы, родители.",
@@ -927,7 +1039,7 @@ const T = {
     s5h:"Стандартизация",s5p:"Госпроверки, субсидии, лицензирование — в Казахстане",
     s6h:"Открытие",s6p:"В Казахстане — выездная помощь при открытии, за рубежом — дистанционно",
     s7h:"CRM и продажи",s7p:"Подключение к отделу продаж, CRM, скрипты, воронки",
-    s8h:"Маркетинг",s8p:"Лидогенерация, бренд-менеджмент — 50% продаж обеспечивает маркетинг",
+    s8h:"Маркетинг",
     pr_label:"Тарифы",pr_title:"Выберите уровень партнёрства",pr_sub:"Начните с любого уровня и масштабируйтесь вместе с нами.",
     p1per:"/год",p1f1:"Членство в сообществе ORDO",p1f2:"Право продавать все лицензии",p1f3:"Доход до 20% с продаж",
     p2per:"/ребёнок/мес",p2f1:"Всё из MEMBER",p2f2:"Автоматизация через ordo.education",p2f3:"12 кабинетов управления",p2f4:"Кабинет родителя и педагогов",
@@ -947,15 +1059,15 @@ const T = {
     r3r:"Партнёр, Атырау",
     part_label:"Партнёры",part_title:"Наши партнёры",part_sub:"Сотрудничаем с ведущими организациями Казахстана и СНГ.",
     cta_h:"Готовы открыть свою дошкольную организацию?",cta_p:"Запишитесь на бесплатную консультацию. Расскажем о франшизе, поможем выбрать тариф и рассчитаем окупаемость.",
-    cta_btn:"Написать в Telegram",t1:"Бесплатная консультация",t2:"Расчёт окупаемости для вашего города",t3:"Принимаем заявки со всего мира",
+    t1:"Бесплатная консультация",t2:"Расчёт окупаемости для вашего города",t3:"Принимаем заявки со всего мира",
     f1:"Дошкольные организации",f2:"Платформа",f3:"Агентская программа",f4:"Telegram",brands_label:"Бренды под управлением ORDO Holding",brand1_sub:"Сеть дошкольных организаций",brand3_sub:"Сеть образовательных центров",brand4_sub:"Технологии для образования"},
   kz:{nav1:"Мектепке дейінгі ұйымлар",nav2:"Платформа",nav3:"Серіктестік",nav4:"Жазылу",
     hero_tag:"ORDO Holding франшизасы",hero_h1a:"Мектепке дейінгі ұйым ашыңыз",hero_h1b:"дайын технологиямен",
-    hero_sub:"54+ мектепке дейінгі ұйымдан тұратын халықаралық желіге қосылыңыз. Алғашқы клиентке дейін толық қолдау. Айына $5 000+ табыс.",
+    
     hero_btn1:"Консультацияға жазылу",hero_btn2:"▶ Видеоны көру",
-    hs1:"мектепке дейінгі ұйым ашылды",hs2:"ай сайынғы табыс",hs3:"орташа пайда",hs4:"ел",hs5:"ашылу мерзімі",
-    num_label:"Сандар мен деректер",num_title:"ORDO Holding туралы",num_sub:"2020 жылдан бастап халықаралық мектепке дейінгі білім экожүйесін құрып жатырмыз.",
-    n1:"бірінші мектепке дейінгі ұйым ашылған жыл",n2:"мектепке дейінгі ұйым ашылды",n3:"сатылған франшиза",n4:"ата-ана сенімін тапты",n5:"желінің жылдық табысы",n6:"орташа пайда",n7:"мектепке дейінгі ұйым ашылу мерзімі",n8:"мақсат — желідегі мектепке дейінгі ұйымлар",
+    
+    num_title:"ORDO Holding туралы",
+    n3:"сатылған франшиза",
     why_label:"Біздің артықшылықтар",why_title:"Неліктен Ordogen таңдайды?",why_sub:"Дәлелденген тиімділігі бар дайын бизнес-модель.",
     w1h:"Авторлық әдістеме",w1p:"20 пән бойынша 5 000+ дайын сабақ сценарийлері. Бүкіл оқу жылына циклограммалар.",
     w2h:"ERP-платформа Ordo.education",w2p:"12 автоматтандыру кабинеті: әдіскер, аспаз, HR, қаржы, ата-ана.",
@@ -971,7 +1083,7 @@ const T = {
     s5h:"Стандарттау",s5p:"Мемлекеттік тексерулер, субсидиялар, лицензиялау",
     s6h:"Ашылу",s6p:"Техникалық ашылу және тұсаукесер күніне шығу көмегі",
     s7h:"CRM және сату",s7p:"Сату бөліміне қосылу, CRM, скриптер, воронкалар",
-    s8h:"Маркетинг",s8p:"Лидогенерация, бренд-менеджмент — сатудың 50%",
+    s8h:"Маркетинг",
     pr_label:"Тарифтер",pr_title:"Серіктестік деңгейін таңдаңыз",pr_sub:"Кез келген деңгейден бастаңыз және бізбен бірге масштабтаңыз.",
     p1per:"/жыл",p1f1:"ORDO қауымдастығына мүшелік",p1f2:"Барлық лицензияларды сату құқығы",p1f3:"Сатудан 20% дейін табыс",
     p2per:"/бала/ай",p2f1:"MEMBER-дан барлығы",p2f2:"ordo.education арқылы автоматтандыру",p2f3:"12 басқару кабинеті",p2f4:"Ата-ана және педагог кабинеті",
@@ -991,15 +1103,15 @@ const T = {
     r3r:"Серіктес, Атырау",
     part_label:"Серіктестер",part_title:"Біздің серіктестер",part_sub:"Қазақстан мен ТМД-ның жетекші ұйымдарымен ынтымақтасамыз.",
     cta_h:"Мектепке дейінгі ұйым ашуға дайынсыз ба?",cta_p:"Тегін консультацияға жазылыңыз. Франшиза туралы айтамыз, тариф таңдауға және өтелімді есептеуге көмектесеміз.",
-    cta_btn:"Telegram-ға жазу",t1:"Тегін консультация",t2:"Сіздің қала үшін өтелімді есептеу",t3:"Бүкіл дүниежүзінен өтінімдер қабылдаймыз",
+    t1:"Тегін консультация",t2:"Сіздің қала үшін өтелімді есептеу",t3:"Бүкіл дүниежүзінен өтінімдер қабылдаймыз",
     f1:"Мектепке дейінгі ұйымлар",f2:"Платформа",f3:"Агенттік бағдарлама",f4:"Telegram",brands_label:"ORDO Holding басқаратын брендтер",brand1_sub:"Мектепке дейінгі ұйымлар желісі",brand3_sub:"Білім орталықтары желісі",brand4_sub:"Білім беру технологиялары"},
   uz:{nav1:"Maktabgacha tashkilotlar",nav2:"Platforma",nav3:"Hamkorlik",nav4:"Yozilish",
     hero_tag:"ORDO Holding franshayzasi",hero_h1a:"Maktabgacha tashkilot oching",hero_h1b:"tayyor texnologiya bilan",
-    hero_sub:"54+ maktabgacha tashkilotdan iborat xalqaro tarmoqqa qo'shiling. To'liq qo'llab-quvvatlash — joy topishdan birinchi mijozgacha. Oyiga $5 000+ daromad.",
+    
     hero_btn1:"Maslahatga yozilish",hero_btn2:"▶ Videoni ko'rish",
-    hs1:"maktabgacha tashkilot ochildi",hs2:"oylik daromad",hs3:"o'rtacha foyda",hs4:"davlat",hs5:"ochilish muddati",
-    num_label:"Raqamlar va faktlar",num_title:"ORDO Holding haqida",num_sub:"2020 yildan maktabgacha ta'lim ekotizimini qurib kelmoqdamiz.",
-    n1:"birinchi maktabgacha tashkilot ochilgan yil",n2:"maktabgacha tashkilot ochildi",n3:"sotilgan franshayzalar",n4:"ota-ona ishondi",n5:"tarmoqning yillik daromadi",n6:"o'rtacha foyda",n7:"maktabgacha tashkilot ochilish muddati",n8:"maqsad — tarmoqdagi maktabgacha tashkilotlar",
+    
+    num_title:"ORDO Holding haqida",
+    n3:"sotilgan franshayzalar",
     why_label:"Bizning afzalliklarimiz",why_title:"Nima uchun Ordogenni tanlashadi?",why_sub:"Isbotlangan samaradorlikka ega tayyor biznes-model.",
     w1h:"Mualliflik metodikasi",w1p:"20 fan bo'yicha 5 000+ tayyor dars stsenariysi. Butun o'quv yiliga siklogramma.",
     w2h:"ERP-platforma Ordo.education",w2p:"12 avtomatlashtirish kabineti: metodist, oshpaz, HR, moliya, ota-ona.",
@@ -1015,7 +1127,7 @@ const T = {
     s5h:"Standartlashtirish",s5p:"Davlat tekshiruvlari, subsidiyalar, litsenziyalash",
     s6h:"Ochilish",s6p:"Texnik ochilish va ochiq eshiklar kuniga yordamchi chiqish",
     s7h:"CRM va sotuv",s7p:"Sotuv bo'limiga ulanish, CRM, skriptlar, voronkalar",
-    s8h:"Marketing",s8p:"Lidogeneratsiya, brend-menejment — sotuvning 50%",
+    s8h:"Marketing",
     pr_label:"Tariflar",pr_title:"Hamkorlik darajasini tanlang",pr_sub:"Istalgan darajadan boshlang va biz bilan birga rivojlaning.",
     p1per:"/yil",p1f1:"ORDO jamoatchiligiga a'zolik",p1f2:"Barcha litsenziyalarni sotish huquqi",p1f3:"Sotuvdan 20% gacha daromad",
     p2per:"/bola/oy",p2f1:"MEMBER'dan hamma narsa",p2f2:"ordo.education orqali avtomatlashtirish",p2f3:"12 boshqaruv kabineti",p2f4:"Ota-ona va pedagog kabineti",
@@ -1035,15 +1147,15 @@ const T = {
     r3r:"Hamkor, Namangan",
     part_label:"Hamkorlar",part_title:"Bizning hamkorlarimiz",part_sub:"Qozog'iston va MDHning yetakchi tashkilotlari bilan hamkorlik qilamiz.",
     cta_h:"Maktabgacha tashkilotngizni ochishga tayyormisiz?",cta_p:"Bepul maslahatga yoziling. Franshayzani aytib beramiz, tarif tanlashga va o'zini qoplashni hisoblashga yordam beramiz.",
-    cta_btn:"Telegramga yozish",t1:"Bepul maslahat",t2:"Sizning shahar uchun o'zini qoplashni hisoblash",t3:"Butun dunyodan arizalar qabul qilamiz",
+    t1:"Bepul maslahat",t2:"Sizning shahar uchun o'zini qoplashni hisoblash",t3:"Butun dunyodan arizalar qabul qilamiz",
     f1:"Maktabgacha tashkilotlar",f2:"Platforma",f3:"Agent dasturi",f4:"Telegram",brands_label:"ORDO Holding boshqaradigan brendlar",brand1_sub:"Maktabgacha tashkilotlar tarmog'i",brand3_sub:"Ta'lim markazlari tarmog'i",brand4_sub:"Ta'lim texnologiyalari"},
   ky:{nav1:"Мектепке чейинки уюмлар",nav2:"Платформа",nav3:"Өнөктөштүк",nav4:"Жазылуу",
     hero_tag:"ORDO Holding франчайзинги",hero_h1a:"Мектепке чейинки уюм ачыңыз",hero_h1b:"даяр технология менен",
-    hero_sub:"54+ мектепке чейинки уюмдан тураган эл аралык тармакка кошулуңуз. Биринчи кардарга чейин толук колдоо. Айына $5 000+ киреше.",
+    
     hero_btn1:"Консультацияга жазылуу",hero_btn2:"▶ Видеону көрүү",
-    hs1:"мектепке чейинки уюм ачылды",hs2:"айлык киреше",hs3:"орточо пайда",hs4:"өлкө",hs5:"ачылуу мөөнөтү",
-    num_label:"Сандар жана фактылар",num_title:"ORDO Holding жөнүндө",num_sub:"2020-жылдан мектепке чейинки билим берүү экотутумун куруп жатабыз.",
-    n1:"биринчи мектепке чейинки уюм ачылган жыл",n2:"мектепке чейинки уюм ачылды",n3:"сатылган франчайзинг",n4:"ата-эне ишенди",n5:"тармактын жылдык кирешеси",n6:"орточо пайда",n7:"мектепке чейинки уюм ачылуу мөөнөтү",n8:"максат — тармактагы мектепке чейинки уюмлар",
+    
+    num_title:"ORDO Holding жөнүндө",
+    n3:"сатылган франчайзинг",
     why_label:"Биздин артыкчылыктар",why_title:"Эмне үчүн Ordogenди тандашат?",why_sub:"Далилденген натыйжалуулугу бар даяр бизнес-модель.",
     w1h:"Авторлук методика",w1p:"20 пән боюнча 5 000+ даяр сабак сценарийлери.",
     w2h:"ERP-платформа Ordo.education",w2p:"12 автоматташтыруу кабинети: методист, аспаз, HR, каржы, ата-эне.",
@@ -1059,7 +1171,7 @@ const T = {
     s5h:"Стандартташтыруу",s5p:"Мамлекеттик текшерүүлөр, субсидиялар, лицензиялоо",
     s6h:"Ачылуу",s6p:"Техникалык ачылуу жана ачык эшиктер күнүнө жардам",
     s7h:"CRM жана сатуу",s7p:"Сатуу бөлүмүнө кошулуу, CRM, скрипттер, воронкалар",
-    s8h:"Маркетинг",s8p:"Лидогенерация, бренд-менеджмент — сатуунун 50%",
+    s8h:"Маркетинг",
     pr_label:"Тарифтер",pr_title:"Өнөктөштүк деңгээлин тандаңыз",pr_sub:"Каалаган деңгээлден баштаңыз жана биз менен чогуу масштабтаңыз.",
     p1per:"/жыл",p1f1:"ORDO коомдошулугуна мүчөлүк",p1f2:"Бардык лицензияларды сатуу укугу",p1f3:"Сатуудан 20% чейин киреше",
     p2per:"/бала/ай",p2f1:"MEMBER'дан баары",p2f2:"ordo.education аркылуу автоматташтыруу",p2f3:"12 башкаруу кабинети",p2f4:"Ата-эне жана педагог кабинети",
@@ -1079,15 +1191,15 @@ const T = {
     r3r:"Өнөктөш, Жалал-Абад",
     part_label:"Өнөктөштөр",part_title:"Биздин өнөктөштөр",part_sub:"Кыргызстан жана МАКнын жетекчи уюмдары менен кызматташабыз.",
     cta_h:"Мектепке чейинки уюмңызды ачууга даярсызбы?",cta_p:"Бекер консультацияга жазылыңыз. Франчайзинг жөнүндө айтабыз, тариф тандоого жана өзүн актоону эсептөөгө жардам беребиз.",
-    cta_btn:"Telegramга жазуу",t1:"Бекер консультация",t2:"Сиздин шаар үчүн өзүн актоону эсептөө",t3:"Бүткүл дүйнөдөн арыздар кабыл алабыз",
+    t1:"Бекер консультация",t2:"Сиздин шаар үчүн өзүн актоону эсептөө",t3:"Бүткүл дүйнөдөн арыздар кабыл алабыз",
     f1:"Мектепке чейинки уюмлар",f2:"Платформа",f3:"Агент программасы",f4:"Telegram",brands_label:"ORDO Holding башкарган брендтер",brand1_sub:"Мектепке чейинки уюмлар тармагы",brand3_sub:"Билим борборлору тармагы",brand4_sub:"Билим берүү технологиялары"},
   tj:{nav1:"Муассисаи томактабӣҳо",nav2:"Платформа",nav3:"Шарикӣ",nav4:"Сабти ном",
     hero_tag:"Франшизаи ORDO Holding",hero_h1a:"Муассисаи томактабӣи кӯдакон кушоед",hero_h1b:"бо технологияи омода",
-    hero_sub:"Ба шабакаи байналмилалии 54+ муассисаи томактабӣ ҳамроҳ шавед. Дастгирии пурра то аввалин мизоҷ. Ҳар моҳ аз $5 000 даромад.",
+    
     hero_btn1:"Ба маслиҳат сабти ном кунед",hero_btn2:"▶ Видеоро бинед",
-    hs1:"муассисаи томактабӣ кушода шуд",hs2:"даромади моҳона",hs3:"фоидаи миёна",hs4:"кишвар",hs5:"мӯҳлати кушодан",
-    num_label:"Рақамҳо ва далелҳо",num_title:"Дар бораи ORDO Holding",num_sub:"Аз соли 2020 экотизими таҳсилоти мактабӣ сохта истодаем.",
-    n1:"соли кушодани аввалин муассисаи томактабӣ",n2:"муассисаи томактабӣ кушода шуд",n3:"франшизаи фурӯхташуда",n4:"волидайн эътимод карданд",n5:"даромади солонаи шабака",n6:"фоидаи миёна",n7:"мӯҳлати кушодани муассисаи томактабӣ",n8:"ҳадаф — муассисаи томактабӣҳо дар шабака",
+    
+    num_title:"Дар бораи ORDO Holding",
+    n3:"франшизаи фурӯхташуда",
     why_label:"Бартариҳои мо",why_title:"Чаро Ordogenро интихоб мекунанд?",why_sub:"Модели тайёри бизнес бо самаранокии исботшуда.",
     w1h:"Методикаи муаллифӣ",w1p:"5 000+ сенарияи тайёри дарс аз 20 фан. Сиклограмма барои тамоми соли таълимӣ.",
     w2h:"ERP-платформаи Ordo.education",w2p:"12 кабинети автоматикунонӣ: методист, ошпаз, HR, молия, волидайн.",
@@ -1103,7 +1215,7 @@ const T = {
     s5h:"Стандартикунонӣ",s5p:"Санҷишҳои давлатӣ, субсидияҳо, литсензиядиҳӣ",
     s6h:"Кушодан",s6p:"Кӯмак ҳангоми кушодани техникӣ ва рӯзи дари кушод",
     s7h:"CRM ва фурӯш",s7p:"Пайвастшавӣ ба бахши фурӯш, CRM, скриптҳо, воронкаҳо",
-    s8h:"Маркетинг",s8p:"Лидогенератсия, бренд-менеҷмент — 50% фурӯш",
+    s8h:"Маркетинг",
     pr_label:"Тарифҳо",pr_title:"Сатҳи шарикиро интихоб кунед",pr_sub:"Аз ҳар сатҳе оғоз кунед ва бо мо масштаб гиред.",
     p1per:"/сол",p1f1:"Узвият дар ҷомеаи ORDO",p1f2:"Ҳуқуқи фурӯши ҳамаи литсензияҳо",p1f3:"Даромад то 20% аз фурӯш",
     p2per:"/кӯдак/моҳ",p2f1:"Ҳамааш аз MEMBER",p2f2:"Автоматикунонӣ тавассути ordo.education",p2f3:"12 кабинети идоракунӣ",p2f4:"Кабинети волидайн ва педагогон",
@@ -1123,15 +1235,15 @@ const T = {
     r3r:"Шарик, Бохтар",
     part_label:"Шарикон",part_title:"Шарикони мо",part_sub:"Бо ташкилотҳои пешрафтаи Қазоқистон ва ИДМ ҳамкорӣ мекунем.",
     cta_h:"Барои кушодани муассисаи томактабӣ омодаед?",cta_p:"Ба маслиҳати бепул сабти ном кунед. Дар бораи франшиза мегӯем ва дар интихоби тариф кӯмак мекунем.",
-    cta_btn:"Ба Telegram навиштан",t1:"Маслиҳати бепул",t2:"Ҳисоби бозгашт барои шаҳри шумо",t3:"Аризаҳо аз тамоми ҷаҳон қабул мекунем",
+    t1:"Маслиҳати бепул",t2:"Ҳисоби бозгашт барои шаҳри шумо",t3:"Аризаҳо аз тамоми ҷаҳон қабул мекунем",
     f1:"Муассисаи томактабӣҳо",f2:"Платформа",f3:"Барномаи агент",f4:"Telegram",brands_label:"Брендҳои идоракардаи ORDO Holding",brand1_sub:"Шабакаи муассисаи томактабӣҳо",brand3_sub:"Шабакаи марказҳои таълимӣ",brand4_sub:"Технологияҳои таълим"},
   az:{nav1:"Məktəbəqədər təşkilatlar",nav2:"Platforma",nav3:"Tərəfdaşlıq",nav4:"Yazılmaq",
     hero_tag:"ORDO Holding fransayzası",hero_h1a:"Məktəbəqədər təşkilat açın",hero_h1b:"hazır texnologiya ilə",
-    hero_sub:"54+ məktəbəqədər təşkilatndan ibarət beynəlxalq şəbəkəyə qoşulun. Tam müşayiət. Ayda $5 000+ gəlir.",
+    
     hero_btn1:"Məsləhətə yazılmaq",hero_btn2:"▶ Video izlə",
-    hs1:"məktəbəqədər təşkilat açıldı",hs2:"aylıq gəlir",hs3:"orta mənfəət",hs4:"ölkə",hs5:"açılış müddəti",
-    num_label:"Rəqəmlər və faktlar",num_title:"ORDO Holding haqqında",num_sub:"2020-ci ildən məktəbəqədər təhsil ekosistemi qururuq.",
-    n1:"ilk məktəbəqədər təşkilatnın açıldığı il",n2:"məktəbəqədər təşkilat açıldı",n3:"satılmış fransayza",n4:"valideyn etibar etdi",n5:"şəbəkənin illik gəliri",n6:"orta mənfəət",n7:"məktəbəqədər təşkilat açılış müddəti",n8:"hədəf — şəbəkədəki məktəbəqədər təşkilatlar",
+    
+    num_title:"ORDO Holding haqqında",
+    n3:"satılmış fransayza",
     why_label:"Bizim üstünlüklərimiz",why_title:"Niyə Ordogen seçirlər?",why_sub:"Sübut olunmuş effektivliyə malik hazır biznes modeli.",
     w1h:"Müəllif metodikası",w1p:"20 fənn üzrə 5 000+ hazır dərs ssenarisi. Bütün tədris ili üçün siklogramma.",
     w2h:"ERP-platforma Ordo.education",w2p:"12 avtomatlaşdırma kabineti: metodist, aşpaz, HR, maliyyə, valideyn.",
@@ -1147,7 +1259,7 @@ const T = {
     s5h:"Standartlaşdırma",s5p:"Dövlət yoxlamaları, subsidiyalar, lisenziyalaşdırma",
     s6h:"Açılış",s6p:"Texniki açılış və açıq qapılar gününə çıxış",
     s7h:"CRM və satış",s7p:"Satış şöbəsinə qoşulma, CRM, skriptlər, hunilər",
-    s8h:"Marketinq",s8p:"Lidogenerasiya, brend-menecment — satışın 50%-ni marketinq təmin edir",
+    s8h:"Marketinq",
     pr_label:"Tariflər",pr_title:"Tərəfdaşlıq səviyyəsini seçin",pr_sub:"İstənilən səviyyədən başlayın və bizimlə birlikdə miqyas alın.",
     p1per:"/il",p1f1:"ORDO icmasına üzvlük",p1f2:"Bütün lisenziyaları satmaq hüququ",p1f3:"Satışdan 20%-ə qədər gəlir",
     p2per:"/uşaq/ay",p2f1:"MEMBER-dan hər şey",p2f2:"ordo.education vasitəsilə avtomatlaşdırma",p2f3:"12 idarəetmə kabineti",p2f4:"Valideyn və pedaqoq kabineti",
@@ -1167,15 +1279,15 @@ const T = {
     r3r:"Tərəfdaş, Sumqayıt",
     part_label:"Tərəfdaşlar",part_title:"Bizim tərəfdaşlarımız",part_sub:"Qazaxıstan və MDB-nin aparıcı təşkilatları ilə əməkdaşlıq edirik.",
     cta_h:"Məktəbəqədər təşkilatnızı açmağa hazırsınız?",cta_p:"Pulsuz məsləhətə yazılın. Fransayza haqqında danışacağıq, tarif seçməyə kömək edəcəyik.",
-    cta_btn:"Telegramda yazmaq",t1:"Pulsuz məsləhət",t2:"Şəhəriniz üçün geri ödəmə hesabı",t3:"Bütün dünyadan müraciətlər qəbul edirik",
+    t1:"Pulsuz məsləhət",t2:"Şəhəriniz üçün geri ödəmə hesabı",t3:"Bütün dünyadan müraciətlər qəbul edirik",
     f1:"Məktəbəqədər təşkilatlar",f2:"Platforma",f3:"Agent proqramı",f4:"Telegram",brands_label:"ORDO Holding idarə etdiyi brendlər",brand1_sub:"Məktəbəqədər təşkilatlar şəbəkəsi",brand3_sub:"Təhsil mərkəzləri şəbəkəsi",brand4_sub:"Təhsil texnologiyaları"},
   tr:{nav1:"Okul öncesi kurumler",nav2:"Platform",nav3:"Ortaklık",nav4:"Kaydol",
     hero_tag:"ORDO Holding Franchise",hero_h1a:"Okul öncesi kurum açın",hero_h1b:"hazır teknoloji ile",
-    hero_sub:"54+ okul öncesi kurumten oluşan uluslararası ağa katılın. Tam refakat. Ayda $5 000+ kazanç.",
+    
     hero_btn1:"Danışmanlık için kaydol",hero_btn2:"▶ Video izle",
-    hs1:"okul öncesi kurum açıldı",hs2:"aylık gelir",hs3:"ortalama kâr",hs4:"başvuruya açık ülke",hs5:"açılış süresi",
-    num_label:"Rakamlar ve gerçekler",num_title:"ORDO Holding hakkında",num_sub:"2020'den beri okul öncesi eğitim ekosistemi inşa ediyoruz.",
-    n1:"ilk okul öncesi kurumin açıldığı yıl",n2:"okul öncesi kurum açıldı",n3:"satılan franchise",n4:"ebeveyn güvendi",n5:"ağın yıllık geliri",n6:"ortalama kâr",n7:"okul öncesi kurum açılış süresi",n8:"hedef — ağdaki okul öncesi kurum sayısı",
+    
+    num_title:"ORDO Holding hakkında",
+    n3:"satılan franchise",
     why_label:"Avantajlarımız",why_title:"Neden Ordogen seçilir?",why_sub:"Kanıtlanmış etkinliğe sahip hazır iş modeli.",
     w1h:"Özgün metodoloji",w1p:"20 ders üzerinde 5 000+ hazır ders senaryosu. Tüm yıl için siklogram.",
     w2h:"ERP-platform Ordo.education",w2p:"12 otomasyon kabini: metodist, aşçı, HR, finans, ebeveyn.",
@@ -1191,7 +1303,7 @@ const T = {
     s5h:"Standardizasyon",s5p:"Devlet denetimleri, sübvansiyonlar, lisanslama",
     s6h:"Açılış",s6p:"Teknik açılış ve açık kapı gününe saha desteği",
     s7h:"CRM ve satış",s7p:"Satış departmanına bağlanma, CRM, scriptler, huniler",
-    s8h:"Pazarlama",s8p:"Lead generation, marka yönetimi — satışın %50'si",
+    s8h:"Pazarlama",
     pr_label:"Tarifeler",pr_title:"Ortaklık seviyenizi seçin",pr_sub:"Herhangi bir seviyeden başlayın ve bizimle büyüyün.",
     p1per:"/yıl",p1f1:"ORDO topluluğuna üyelik",p1f2:"Tüm lisansları satma hakkı",p1f3:"Satıştan %20'ye kadar gelir",
     p2per:"/çocuk/ay",p2f1:"MEMBER'dan her şey",p2f2:"ordo.education ile otomasyon",p2f3:"12 yönetim kabini",p2f4:"Ebeveyn ve pedagog kabini",
@@ -1211,15 +1323,15 @@ const T = {
     r3r:"Ortak, Atyrau",
     part_label:"Ortaklar",part_title:"Ortaklarımız",part_sub:"Kazakistan ve BDT'nin önde gelen kuruluşlarıyla işbirliği yapıyoruz.",
     cta_h:"Okul öncesi kuruminizi açmaya hazır mısınız?",cta_p:"Ücretsiz danışmanlığa kaydolun. Franchise hakkında anlatacağız ve geri ödemeyi hesaplayacağız.",
-    cta_btn:"Telegram'da yaz",t1:"Ücretsiz danışmanlık",t2:"Şehriniz için geri ödeme hesabı",t3:"Tüm dünyadan başvurular kabul ediyoruz",
+    t1:"Ücretsiz danışmanlık",t2:"Şehriniz için geri ödeme hesabı",t3:"Tüm dünyadan başvurular kabul ediyoruz",
     f1:"Okul öncesi kurumler",f2:"Platform",f3:"Acente programı",f4:"Telegram",brands_label:"ORDO Holding tarafından yönetilen markalar",brand1_sub:"Okul öncesi kurum zinciri",brand3_sub:"Eğitim merkezleri zinciri",brand4_sub:"Eğitim teknolojileri"},
   ms:{nav1:"Organisasi prasekolah",nav2:"Platform",nav3:"Perkongsian",nav4:"Daftar",
     hero_tag:"Francais ORDO Holding",hero_h1a:"Buka organisasi prasekolah anda",hero_h1b:"dengan teknologi sedia ada",
-    hero_sub:"Sertai rangkaian antarabangsa 54+ organisasi prasekolah. Sokongan penuh hingga pelanggan pertama. Pendapatan $5 000+/bulan.",
+    
     hero_btn1:"Daftar untuk perundingan",hero_btn2:"▶ Tonton video",
-    hs1:"organisasi prasekolah dibuka",hs2:"pendapatan bulanan",hs3:"keuntungan purata",hs4:"negara terbuka untuk permohonan",hs5:"tempoh pembukaan",
-    num_label:"Angka dan fakta",num_title:"Tentang ORDO Holding",num_sub:"Membina ekosistem pendidikan prasekolah antarabangsa sejak 2020.",
-    n1:"tahun organisasi prasekolah pertama dibuka",n2:"organisasi prasekolah dibuka",n3:"francais dijual",n4:"ibu bapa mempercayai",n5:"hasil tahunan rangkaian",n6:"keuntungan purata",n7:"tempoh pembukaan organisasi prasekolah",n8:"sasaran — organisasi prasekolah dalam rangkaian",
+    
+    num_title:"Tentang ORDO Holding",
+    n3:"francais dijual",
     why_label:"Kelebihan kami",why_title:"Mengapa memilih Ordogen?",why_sub:"Model perniagaan sedia ada dengan keberkesanan terbukti.",
     w1h:"Metodologi asli",w1p:"5 000+ senario pelajaran siap untuk 20 mata pelajaran. Siklogram untuk seluruh tahun akademik.",
     w2h:"Platform ERP Ordo.education",w2p:"12 kabinet automatisasi: metodis, tukang masak, HR, kewangan, ibu bapa.",
@@ -1235,7 +1347,7 @@ const T = {
     s5h:"Piawaian",s5p:"Pemeriksaan kerajaan, subsidi, pelesenan",
     s6h:"Pembukaan",s6p:"Bantuan tapak untuk pembukaan teknikal dan hari pintu terbuka",
     s7h:"CRM dan jualan",s7p:"Sambungan ke jabatan jualan, CRM, skrip, corong",
-    s8h:"Pemasaran",s8p:"Jana petunjuk, pengurusan jenama — 50% jualan",
+    s8h:"Pemasaran",
     pr_label:"Pelan harga",pr_title:"Pilih tahap perkongsian",pr_sub:"Mulakan dari mana-mana tahap dan berkembang bersama kami.",
     p1per:"/tahun",p1f1:"Keahlian dalam komuniti ORDO",p1f2:"Hak untuk menjual semua lesen",p1f3:"Pendapatan sehingga 20% daripada jualan",
     p2per:"/kanak-kanak/bulan",p2f1:"Semua dari MEMBER",p2f2:"Automatisasi melalui ordo.education",p2f3:"12 kabinet pengurusan",p2f4:"Kabinet ibu bapa dan pendidik",
@@ -1255,15 +1367,15 @@ const T = {
     r3r:"Rakan kongsi, Atyrau",
     part_label:"Rakan kongsi",part_title:"Rakan kongsi kami",part_sub:"Bekerjasama dengan organisasi terkemuka di Kazakhstan dan CIS.",
     cta_h:"Bersedia untuk buka organisasi prasekolah anda?",cta_p:"Daftar untuk perundingan percuma. Kami akan menerangkan francais dan membantu mengira pulangan pelaburan.",
-    cta_btn:"Tulis di Telegram",t1:"Perundingan percuma",t2:"Pengiraan pulangan untuk bandar anda",t3:"Menerima permohonan dari seluruh dunia",
+    t1:"Perundingan percuma",t2:"Pengiraan pulangan untuk bandar anda",t3:"Menerima permohonan dari seluruh dunia",
     f1:"Organisasi prasekolah",f2:"Platform",f3:"Program ejen",f4:"Telegram",brands_label:"Jenama diuruskan ORDO Holding",brand1_sub:"Rangkaian organisasi prasekolah",brand3_sub:"Rangkaian pusat pendidikan",brand4_sub:"Teknologi pendidikan"},
-  en:{nav5:"Pricing & countries",n9:"countries where the network operates",geo_label:"Countries & pricing",geo_title:"What it costs to open in your city",geo_sub:"The network operates in 4 countries. Licences are sold in 9 CIS countries. The one-time payment depends on the country and city size; the monthly variable payment is the same everywhere — 9% of parent-fee revenue.",geo_t1:"Kazakhstan",geo_t2:"Other CIS countries",geo_t3:"What's included",th1:"Category",th2:"One-time payment",th3:"Cities",geo_n1:"Full package: permits and sanitary clearance, support with the state subsidy tender, on-site help at opening, connection to our call centre and sales team.",geo_n2:"Prices are lower than in Kazakhstan for two reasons: the network is not yet present in these countries, and the service list differs — some procedures the licensee completes with a local contractor. See the 'What is included' tab.",pkg_h1:"Kazakhstan — full package",pkg_h2:"Other CIS countries",pkg_note:"We state this before the deal, not after. The package is fixed in the agreement, so what we do not provide outside Kazakhstan is visible here rather than at opening.",calc_label:"Calculator",calc_title:"Payback estimate for your city",calc_sub:"A preliminary estimate based on network averages. We build the exact financial model for your city during the consultation.",cf1:"Country and city",cf2:"Number of children",cf3:"Average monthly fee, $",cf4:"Renovation and equipment, $",cr0:"Payback",cr1:"One-time payment",cr2:"Total at start",cr3:"Monthly revenue",cr4:"Monthly variable payment (9%)",cr5:"Monthly profit",cr6:"Same services bought separately",cr7:"Cheaper than doing it yourself",cr8:"Renovation and equipment",cr_sec:"Investment at start",calc_disc:"This estimate is for reference only and is based on network averages (about 30% margin). It is not an offer, an income guarantee or a promise of results. Actual figures depend on the city, location, rent, occupancy and state programme participation.",cmp_label:"Comparison",cmp_title:"Build it yourself or work with us",cmp_sub:"We priced every service we give a partner at what it would cost to buy separately from contractors.",cmp_h1:"On your own",cmp_h2:"With ORDO",cmp_v2:"from $1,500",cmp_s1:"one-time at start — methodology, brand book, financial model, website, video, CRM, permits, subsidy application",cmp_s2:"one-time payment depending on the city — up to 6 times cheaper than building it yourself",cmp_l1:"$4,300 a month — methodologist, SMM, call centre, quality control, software",cmp_l2:"A year or more assembling contractors and making the first mistakes",cmp_l3:"No guarantee the whole thing works",cmp_l4:"9% of revenue instead of $4,300 in fixed monthly costs",cmp_l5:"3 months to opening instead of a year",cmp_l6:"A model proven across 54 organisations",cmp_note:"Market prices are calculated for Kazakhstan. In other CIS countries contractors cost less, and so do our fees: the comparison holds, but savings are around 2.5x rather than 6x.",q_label:"Who it suits",q_title:"What you need to become a partner",q_sub:"We deliberately keep the one-time payment low — and select partners on readiness to launch. These conditions are checked before the agreement is signed.",q1h:"Funds for the launch",q1p:"A bank statement or credit approval covering renovation and equipment. The one-time payment is a small part of the investment, and the main risk is not there.",q2h:"A suitable premises",q2p:"Premises with written confirmation of compliance with sanitary standards. The lease is signed only after that confirmation.",q3h:"A director",q3p:"Someone qualified in early childhood education, approved by us. Partners abroad send their director for in-person training in Kazakhstan at their own cost before opening.",q4h:"Ready to open within 6 months",q4p:"An agreed launch schedule. If the organisation has not opened within 9 months, the agreement ends and the city is released to another partner.",q_note:"The first three partners in each new country receive network reference status: your organisation becomes the site future candidates visit, and we produce content about it for our channels.",hero_disc:"Income from $5,000 a month and 30% average margin are averages from operating organisations. They are not an offer, an income guarantee or a promise of results.",nav1:"Preschool organisations",nav2:"Platform",nav3:"Partnership",nav4:"Apply",
+  en:{nav5:"Pricing & countries",geo_label:"Countries & pricing",geo_title:"What it costs to open in your city",geo_t1:"Kazakhstan",geo_t2:"Other CIS countries",geo_t3:"What's included",th1:"Category",th2:"One-time payment",th3:"Cities",geo_n1:"Full package: permits and sanitary clearance, support with the state subsidy tender, on-site help at opening, connection to our call centre and sales team.",geo_n2:"Prices are lower than in Kazakhstan for two reasons: the network is not yet present in these countries, and the service list differs — some procedures the licensee completes with a local contractor. See the 'What is included' tab.",pkg_h1:"Kazakhstan — full package",pkg_h2:"Other CIS countries",pkg_note:"We state this before the deal, not after. The package is fixed in the agreement, so what we do not provide outside Kazakhstan is visible here rather than at opening.",calc_label:"Calculator",calc_title:"Payback estimate for your city",calc_sub:"A preliminary estimate based on network averages. We build the exact financial model for your city during the consultation.",cf1:"Country and city",cf2:"Number of children",cf3:"Average monthly fee, $",cf4:"Renovation and equipment, $",cr0:"Payback",cr1:"One-time payment",cr2:"Total at start",cr3:"Monthly revenue",cr4:"Monthly variable payment (9%)",cr5:"Monthly profit",cr6:"Same services bought separately",cr7:"Cheaper than doing it yourself",cr8:"Renovation and equipment",cr_sec:"Investment at start",cmp_label:"Comparison",cmp_title:"Build it yourself or work with us",cmp_sub:"We priced every service we give a partner at what it would cost to buy separately from contractors.",cmp_h1:"On your own",cmp_h2:"With ORDO",cmp_v2:"from $1,500",cmp_s1:"one-time at start — methodology, brand book, financial model, website, video, CRM, permits, subsidy application",cmp_s2:"one-time payment depending on the city — up to 6 times cheaper than building it yourself",cmp_l1:"$4,300 a month — methodologist, SMM, call centre, quality control, software",cmp_l2:"A year or more assembling contractors and making the first mistakes",cmp_l3:"No guarantee the whole thing works",cmp_l4:"9% of revenue instead of $4,300 in fixed monthly costs",cmp_note:"Market prices are calculated for Kazakhstan. In other CIS countries contractors cost less, and so do our fees: the comparison holds, but savings are around 2.5x rather than 6x.",q_label:"Who it suits",q_title:"What you need to become a partner",q_sub:"We deliberately keep the one-time payment low — and select partners on readiness to launch. These conditions are checked before the agreement is signed.",q1h:"Funds for the launch",q1p:"A bank statement or credit approval covering renovation and equipment. The one-time payment is a small part of the investment, and the main risk is not there.",q2h:"A suitable premises",q2p:"Premises with written confirmation of compliance with sanitary standards. The lease is signed only after that confirmation.",q3h:"A director",q3p:"Someone qualified in early childhood education, approved by us. Partners abroad send their director for in-person training in Kazakhstan at their own cost before opening.",q4h:"Ready to open within 6 months",q4p:"An agreed launch schedule. If the organisation has not opened within 9 months, the agreement ends and the city is released to another partner.",q_note:"The first three partners in each new country receive network reference status: your organisation becomes the site future candidates visit, and we produce content about it for our channels.",nav1:"Preschool organisations",nav2:"Platform",nav3:"Partnership",nav4:"Apply",
     hero_tag:"ORDO Holding Franchise",hero_h1a:"Open your preschool organisation",hero_h1b:"with proven technology",
-    hero_sub:"Join an international network of 54+ preschool organisations. Full support — from finding premises to your first client. Earn $5,000+/month.",
+    
     hero_btn1:"Book a free consultation",hero_btn2:"▶ Watch the video",
-    hs1:"preschool organisations opened",hs2:"monthly income",hs3:"average profit",hs4:"countries open for applications",hs5:"time to open",
-    num_label:"Facts and figures",num_title:"About ORDO Holding",num_sub:"Building an international early childhood education ecosystem since 2020.",
-    n1:"year the first preschool organisation opened",n2:"preschool organisations opened",n3:"franchises sold",n4:"parents trusted us",n5:"network annual revenue",n6:"average profit margin",n7:"time to open a preschool organisation",n8:"goal — preschool organisations in the network",
+    
+    num_title:"About ORDO Holding",
+    n3:"franchises sold",
     why_label:"Our advantages",why_title:"Why choose Ordogen?",why_sub:"A ready-made business model with proven effectiveness.",
     w1h:"Proprietary methodology",w1p:"5,000+ ready-made lesson scenarios across 20 subjects. Full-year cyclogram.",
     w2h:"ERP platform Ordo.education",w2p:"12 automation modules: methodologist, chef, HR, finance, parent portal.",
@@ -1279,7 +1391,7 @@ const T = {
     s5h:"Compliance",s5p:"Government inspections, subsidies, licensing — we know the secrets",
     s6h:"Grand opening",s6p:"On-site support for technical launch and open-day event",
     s7h:"CRM and sales",s7p:"Integration with the sales department, CRM, scripts, enrolment funnels",
-    s8h:"Marketing",s8p:"Lead generation, brand management — 50% of sales come from marketing",
+    s8h:"Marketing",
     pr_label:"Pricing",pr_title:"Choose your partnership level",pr_sub:"Start at any level and scale up with us.",
     p1per:"/year",p1f1:"Membership in the ORDO community",p1f2:"Right to sell all licences",p1f3:"Earn up to 20% on sales",
     p2per:"/child/month",p2f1:"Everything in MEMBER",p2f2:"Automation via ordo.education",p2f3:"12 management modules",p2f4:"Parent and teacher portals",
@@ -1299,23 +1411,37 @@ const T = {
     r3r:"Partner, Atyrau",
     part_label:"Partners",part_title:"Our partners",part_sub:"We collaborate with leading organisations in Kazakhstan and CIS.",
     cta_h:"Ready to open your preschool organisation?",cta_p:"Book a free consultation. We'll walk you through the franchise, help choose a tier, and calculate ROI for your city.",
-    cta_btn:"Write on Telegram",t1:"Free consultation",t2:"ROI calculation for your city",t3:"Accepting applications from worldwide",
+    t1:"Free consultation",t2:"ROI calculation for your city",t3:"Accepting applications from worldwide",
     f1:"Preschool organisations",f2:"Platform",f3:"Agent programme",f4:"Telegram",brands_label:"Brands managed by ORDO Holding",brand1_sub:"Preschool organisation network",brand3_sub:"Educational centre network",brand4_sub:"Education technology"}
 };
 
+// Текущий язык и исходные (RU) тексты разметки — запасной вариант, если ключа нет в выбранном языке
+var CUR_LANG = 'ru';
+var I18N_DEF = {};
+document.querySelectorAll('[data-i]').forEach(function(el){ var k = el.getAttribute('data-i'); if (!(k in I18N_DEF)) I18N_DEF[k] = el.textContent; });
+document.querySelectorAll('[data-ip]').forEach(function(el){ var k = el.getAttribute('data-ip'); if (!(k in I18N_DEF)) I18N_DEF[k] = el.getAttribute('placeholder') || ''; });
+
 function setLang(lang, btn) {
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
   const t = T[lang];
   if (!t) return;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  CUR_LANG = lang;
   document.querySelectorAll('[data-i]').forEach(el => {
     const k = el.getAttribute('data-i');
-    if (t[k] !== undefined) el.textContent = t[k];
+    const v = t[k] !== undefined ? t[k] : I18N_DEF[k];
+    if (v !== undefined) el.textContent = v;
+  });
+  document.querySelectorAll('[data-ip]').forEach(el => {
+    const k = el.getAttribute('data-ip');
+    const v = t[k] !== undefined ? t[k] : I18N_DEF[k];
+    if (v !== undefined) el.setAttribute('placeholder', v);
   });
   // Hero H1 green span
   const h1b = document.querySelector('.hero h1 .green');
   if (h1b && t.hero_h1b) h1b.textContent = t.hero_h1b;
   document.documentElement.lang = lang === 'kz' ? 'kk' : lang;
+  if (typeof renderMap === 'function') renderMap();
 }
 
 
@@ -1398,6 +1524,335 @@ document.querySelectorAll('.vid-thumb').forEach(function(t){
   t.addEventListener('click', function(){ ordoPlay(t); });
   t.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); ordoPlay(t); } });
 });
+
+// --- Новые строки (21.11): заявка в CRM, карта городов, отбор семейных пар, цифры только «60+ франшиз» ---
+var T_ADD = {
+  ru:{hero_sub:"Присоединяйтесь к международной сети дошкольных организаций ORDOGEN. Полное сопровождение — от поиска помещения до первого клиента.",
+    num_label:"Коротко о нас",num_sub:"Строим международную экосистему дошкольного образования: методика, платформа и сопровождение партнёров.",
+    geo_sub:"Единоразовая выплата зависит от страны и размера города, ежемесячный переменный платёж везде одинаковый — 9% от выручки родительских взносов.",
+    calc_disc:"Расчёт носит справочный характер и построен на усреднённых допущениях. Он не является офертой, гарантией дохода или обещанием результата. Фактические показатели зависят от города, локации, стоимости аренды, загрузки и участия в государственных программах.",
+    cmp_l5:"Запуск по готовому чек-листу вместо долгого поиска решений",cmp_l6:"Модель, отработанная в действующих садах сети",
+    s8p:"Лидогенерация, бренд-менеджмент и федеральный маркетинг",cta_btn:"Оставить заявку",
+    map_label:"Карта городов",map_title:"Свободные территории для партнёров",map_sub:"Где уже работают сады ORDOGEN и какие районы и города свободны. Выберите свой — менеджер подтвердит, что территория свободна, и расскажет об условиях.",
+    map_with_h:"Города, где уже работает ORDOGEN",map_free_h:"Города без сада ORDOGEN",map_has:"Есть сад ORDOGEN",map_has_d:"Районы с садом ORDOGEN",map_free:"Свободные районы",map_partner:"Свободно для партнёра",map_city_free:"Свободен весь город",map_cnt:"Садов ORDOGEN в городе:",map_btn:"Занять район",map_btn_city:"Занять город",map_leg_has:"есть сад ORDOGEN",map_leg_free:"свободно — нажмите на район, чтобы выбрать",
+    map_note:"Сады — по данным системы ORDO на 22.11.2026. Районы указаны по официальному делению городов. Окончательно свободность территории подтверждает менеджер после заявки.",
+    sel_label:"Отбор партнёров",sel_title:"Только семейные пары с детьми",sel_sub:"Мы открываем сады вместе с семьями — это главное условие отбора. Почему:",
+    sel1h:"Сад — семейное дело",sel1p:"Сад работает каждый день и годами. В семье решения принимаются быстрее, а ответственность делится на двоих.",
+    sel2h:"Родители понимают родителей",sel2p:"Вы сами выбирали сад своим детям — знаете, чего ждут мамы и папы, и говорите с ними на одном языке.",
+    sel3h:"Долгий горизонт",sel3p:"Семья строит дело на годы, а не ради быстрой продажи. Детям в саду нужна именно такая стабильность.",
+    lead_label:"Заявка",lead_title:"Заявка на франшизу",lead_sub:"Оставьте контакты — менеджер свяжется с вами, ответит на вопросы и рассчитает окупаемость для вашего города.",
+    lf_name:"Имя",lf_name_ph:"Как к вам обращаться",lf_phone:"Телефон с кодом страны",lf_phone_ph:"+7 777 123 45 67",lf_city:"Город",lf_city_ph:"Например, Астана",
+    lf_family:"Мы семейная пара с детьми",lf_consent:"Согласен(на) на обработку персональных данных для связи по заявке",lf_btn:"Отправить заявку",lf_sending:"Отправляем…",
+    lf_ok:"Спасибо! Менеджер свяжется с вами в течение 15 минут",lf_err_name:"Укажите имя",lf_err_phone:"Укажите телефон с кодом страны, например +7 777 123 45 67",lf_err_city:"Укажите город",
+    lf_err_family:"Франшизу мы предлагаем семейным парам с детьми — отметьте, пожалуйста, этот пункт",lf_err_consent:"Отметьте согласие на обработку данных",lf_wa:"Если WhatsApp не открылся, нажмите здесь, чтобы отправить заявку"},
+  kz:{hero_sub:"ORDOGEN мектепке дейінгі ұйымдарының халықаралық желісіне қосылыңыз. Үй-жай іздеуден алғашқы клиентке дейін толық сүйемелдеу.",
+    num_label:"Біз туралы қысқаша",num_sub:"Мектепке дейінгі білім берудің халықаралық экожүйесін құрып жатырмыз: әдістеме, платформа және серіктестерді сүйемелдеу.",
+    geo_sub:"Біржолғы төлем ел мен қаланың көлеміне байланысты, ай сайынғы айнымалы төлем барлық жерде бірдей — ата-аналар төлемдерінен түсетін түсімнің 9%.",
+    calc_disc:"Есеп анықтамалық сипатта және орташаланған болжамдарға негізделген. Ол оферта, табыс кепілдігі немесе нәтиже уәдесі болып табылмайды. Нақты көрсеткіштер қалаға, орналасуға, жалдау құнына, толымдылыққа және мемлекеттік бағдарламаларға қатысуға байланысты.",
+    cmp_l5:"Шешім іздеуге ұзақ уақыт жұмсаудың орнына дайын чек-парақ бойынша іске қосу",cmp_l6:"Желінің жұмыс істеп тұрған балабақшаларында сыналған модель",
+    s8p:"Лидогенерация, бренд-менеджмент және федералдық маркетинг",cta_btn:"Өтінім қалдыру",
+    map_label:"Қалалар картасы",map_title:"Серіктестерге арналған бос аумақтар",map_sub:"ORDOGEN балабақшалары қай жерде жұмыс істейді және қай аудандар мен қалалар бос. Өзіңізге керегін таңдаңыз — менеджер аумақтың бос екенін растап, шарттары туралы айтып береді.",
+    map_with_h:"ORDOGEN жұмыс істейтін қалалар",map_free_h:"ORDOGEN балабақшасы жоқ қалалар",map_has:"ORDOGEN балабақшасы бар",map_has_d:"ORDOGEN балабақшасы бар аудандар",map_free:"Бос аудандар",map_partner:"Серіктес үшін бос",map_city_free:"Бүкіл қала бос",map_cnt:"Қаладағы ORDOGEN балабақшалары:",map_btn:"Ауданды алу",map_btn_city:"Қаланы алу",map_leg_has:"ORDOGEN балабақшасы бар",map_leg_free:"бос — таңдау үшін ауданды басыңыз",
+    map_note:"Балабақшалар — ORDO жүйесінің 22.11.2026 жылғы деректері бойынша. Аудандар қалалардың ресми бөлінісі бойынша көрсетілген. Аумақтың бос екенін өтінімнен кейін менеджер түпкілікті растайды.",
+    sel_label:"Серіктестерді іріктеу",sel_title:"Тек балалы отбасылық жұптар",sel_sub:"Біз балабақшаларды отбасылармен бірге ашамыз — бұл іріктеудің басты шарты. Себебі:",
+    sel1h:"Балабақша — отбасылық іс",sel1p:"Балабақша күн сайын және жылдар бойы жұмыс істейді. Отбасында шешімдер тезірек қабылданады, ал жауапкершілік екіге бөлінеді.",
+    sel2h:"Ата-ана ата-ананы түсінеді",sel2p:"Сіз өз балаларыңызға балабақшаны өзіңіз таңдадыңыз — аналар мен әкелердің не күтетінін білесіз және олармен бір тілде сөйлесесіз.",
+    sel3h:"Ұзақ мерзімді көзқарас",sel3p:"Отбасы істі тез сату үшін емес, жылдарға құрады. Балабақшадағы балаларға дәл осындай тұрақтылық қажет.",
+    lead_label:"Өтінім",lead_title:"Франшизаға өтінім",lead_sub:"Байланыс деректеріңізді қалдырыңыз — менеджер сізбен хабарласып, сұрақтарға жауап береді және қалаңыз үшін өтелімді есептейді.",
+    lf_name:"Аты",lf_name_ph:"Сізге қалай жүгінейік",lf_phone:"Ел коды бар телефон",lf_phone_ph:"+7 777 123 45 67",lf_city:"Қала",lf_city_ph:"Мысалы, Астана",
+    lf_family:"Біз балалы отбасылық жұппыз",lf_consent:"Өтінім бойынша байланысу үшін дербес деректерімді өңдеуге келісемін",lf_btn:"Өтінім жіберу",lf_sending:"Жіберілуде…",
+    lf_ok:"Рақмет! Менеджер 15 минут ішінде сізбен хабарласады",lf_err_name:"Атыңызды көрсетіңіз",lf_err_phone:"Телефонды ел кодымен көрсетіңіз, мысалы +7 777 123 45 67",lf_err_city:"Қаланы көрсетіңіз",
+    lf_err_family:"Франшизаны балалы отбасылық жұптарға ұсынамыз — осы тармақты белгілеңіз",lf_err_consent:"Деректерді өңдеуге келісімді белгілеңіз",lf_wa:"WhatsApp ашылмаса, өтінімді жіберу үшін осында басыңыз"},
+  uz:{hero_sub:"ORDOGEN maktabgacha ta'lim tashkilotlarining xalqaro tarmog'iga qo'shiling. Joy topishdan birinchi mijozgacha to'liq hamrohlik.",
+    num_label:"Biz haqimizda qisqacha",num_sub:"Maktabgacha ta'limning xalqaro ekotizimini qurmoqdamiz: metodika, platforma va hamkorlarga hamrohlik.",
+    geo_sub:"Bir martalik to'lov mamlakat va shahar kattaligiga bog'liq, oylik o'zgaruvchan to'lov hamma joyda bir xil — ota-onalar to'lovlaridan tushumning 9%.",
+    calc_disc:"Hisob-kitob ma'lumot uchun va o'rtacha taxminlarga asoslangan. U oferta, daromad kafolati yoki natija va'dasi emas. Haqiqiy ko'rsatkichlar shahar, joylashuv, ijara narxi, to'lishi va davlat dasturlarida ishtirokka bog'liq.",
+    cmp_l5:"Uzoq izlanishlar o'rniga tayyor chek-list bo'yicha ishga tushirish",cmp_l6:"Tarmoqning amaldagi bog'chalarida sinovdan o'tgan model",
+    s8p:"Lidogeneratsiya, brend-menejment va federal marketing",cta_btn:"Ariza qoldirish",
+    map_label:"Shaharlar xaritasi",map_title:"Hamkorlar uchun bo'sh hududlar",map_sub:"ORDOGEN bog'chalari qayerda ishlayapti va qaysi tumanlar hamda shaharlar bo'sh. O'zingiznikini tanlang — menejer hudud bo'shligini tasdiqlaydi va shartlar haqida aytib beradi.",
+    map_with_h:"ORDOGEN ishlayotgan shaharlar",map_free_h:"ORDOGEN bog'chasi yo'q shaharlar",map_has:"ORDOGEN bog'chasi bor",map_has_d:"ORDOGEN bog'chasi bor tumanlar",map_free:"Bo'sh tumanlar",map_partner:"Hamkor uchun bo'sh",map_city_free:"Butun shahar bo'sh",map_cnt:"Shahardagi ORDOGEN bog'chalari:",map_btn:"Tumanni band qilish",map_btn_city:"Shaharni band qilish",map_leg_has:"ORDOGEN bog'chasi bor",map_leg_free:"bo'sh — tanlash uchun tumanni bosing",
+    map_note:"Bog'chalar — ORDO tizimining 22.11.2026 holatidagi ma'lumotlari bo'yicha. Tumanlar shaharlarning rasmiy bo'linishi bo'yicha ko'rsatilgan. Hudud bo'shligini arizadan so'ng menejer yakuniy tasdiqlaydi.",
+    sel_label:"Hamkorlarni tanlash",sel_title:"Faqat farzandli oilaviy juftliklar",sel_sub:"Biz bog'chalarni oilalar bilan birga ochamiz — bu tanlovning asosiy sharti. Sababi:",
+    sel1h:"Bog'cha — oilaviy ish",sel1p:"Bog'cha har kuni va yillar davomida ishlaydi. Oilada qarorlar tezroq qabul qilinadi, mas'uliyat esa ikkiga bo'linadi.",
+    sel2h:"Ota-onalar ota-onalarni tushunadi",sel2p:"Farzandlaringizga bog'chani o'zingiz tanlagansiz — onalar va otalar nimani kutishini bilasiz va ular bilan bir tilda gaplashasiz.",
+    sel3h:"Uzoq muddatli nazar",sel3p:"Oila ishni tez sotish uchun emas, yillar uchun quradi. Bog'chadagi bolalarga aynan shunday barqarorlik kerak.",
+    lead_label:"Ariza",lead_title:"Franshizaga ariza",lead_sub:"Kontaktlaringizni qoldiring — menejer siz bilan bog'lanadi, savollarga javob beradi va shahringiz uchun qoplanish muddatini hisoblaydi.",
+    lf_name:"Ism",lf_name_ph:"Sizga qanday murojaat qilaylik",lf_phone:"Mamlakat kodi bilan telefon",lf_phone_ph:"+998 90 123 45 67",lf_city:"Shahar",lf_city_ph:"Masalan, Toshkent",
+    lf_family:"Biz farzandli oilaviy juftlikmiz",lf_consent:"Ariza bo'yicha bog'lanish uchun shaxsiy ma'lumotlarimni qayta ishlashga roziman",lf_btn:"Arizani yuborish",lf_sending:"Yuborilmoqda…",
+    lf_ok:"Rahmat! Menejer 15 daqiqa ichida siz bilan bog'lanadi",lf_err_name:"Ismingizni kiriting",lf_err_phone:"Telefonni mamlakat kodi bilan kiriting, masalan +998 90 123 45 67",lf_err_city:"Shaharni kiriting",
+    lf_err_family:"Franshizani farzandli oilaviy juftliklarga taklif qilamiz — iltimos, ushbu bandni belgilang",lf_err_consent:"Ma'lumotlarni qayta ishlashga rozilikni belgilang",lf_wa:"Agar WhatsApp ochilmasa, arizani yuborish uchun shu yerni bosing"},
+  ky:{hero_sub:"ORDOGEN мектепке чейинки уюмдарынын эл аралык тармагына кошулуңуз. Жай издөөдөн биринчи кардарга чейин толук коштоо.",
+    num_label:"Биз жөнүндө кыскача",num_sub:"Мектепке чейинки билим берүүнүн эл аралык экосистемасын куруп жатабыз: методика, платформа жана өнөктөштөрдү коштоо.",
+    geo_sub:"Бир жолку төлөм өлкөгө жана шаардын көлөмүнө жараша болот, ай сайынкы өзгөрмө төлөм бардык жерде бирдей — ата-энелердин төлөмдөрүнөн түшкөн кирешенин 9%.",
+    calc_disc:"Эсеп маалымат үчүн гана жана орточо божомолдорго негизделген. Ал оферта, киреше кепилдиги же натыйжа убадасы эмес. Иш жүзүндөгү көрсөткүчтөр шаарга, жайгашкан жерге, ижара баасына, толуктугуна жана мамлекеттик программаларга катышууга жараша болот.",
+    cmp_l5:"Узак издөөнүн ордуна даяр чек-тизме боюнча ишке киргизүү",cmp_l6:"Тармактын иштеп жаткан бакчаларында сыналган модель",
+    s8p:"Лидогенерация, бренд-менеджмент жана федералдык маркетинг",cta_btn:"Өтүнмө калтыруу",
+    map_label:"Шаарлар картасы",map_title:"Өнөктөштөр үчүн бош аймактар",map_sub:"ORDOGEN бакчалары кайда иштейт жана кайсы райондор менен шаарлар бош. Өзүңүздүкүн тандаңыз — менеджер аймактын бош экенин ырастап, шарттары тууралуу айтып берет.",
+    map_with_h:"ORDOGEN иштеген шаарлар",map_free_h:"ORDOGEN бакчасы жок шаарлар",map_has:"ORDOGEN бакчасы бар",map_has_d:"ORDOGEN бакчасы бар райондор",map_free:"Бош райондор",map_partner:"Өнөктөш үчүн бош",map_city_free:"Бүт шаар бош",map_cnt:"Шаардагы ORDOGEN бакчалары:",map_btn:"Районду ээлөө",map_btn_city:"Шаарды ээлөө",map_leg_has:"ORDOGEN бакчасы бар",map_leg_free:"бош — тандоо үчүн районду басыңыз",
+    map_note:"Бакчалар — ORDO системасынын 22.11.2026-жылдагы маалыматы боюнча. Райондор шаарлардын расмий бөлүнүшү боюнча көрсөтүлгөн. Аймактын бош экенин өтүнмөдөн кийин менеджер акыркы жолу ырастайт.",
+    sel_label:"Өнөктөштөрдү тандоо",sel_title:"Балалуу үй-бүлөлүк жубайлар гана",sel_sub:"Биз бакчаларды үй-бүлөлөр менен бирге ачабыз — бул тандоонун негизги шарты. Себеби:",
+    sel1h:"Бакча — үй-бүлөлүк иш",sel1p:"Бакча күн сайын жана жылдар бою иштейт. Үй-бүлөдө чечимдер тезирээк кабыл алынат, ал эми жоопкерчилик экиге бөлүнөт.",
+    sel2h:"Ата-эне ата-энени түшүнөт",sel2p:"Балдарыңызга бакчаны өзүңүз тандагансыз — апалар менен аталар эмнени күтөрүн билесиз жана алар менен бир тилде сүйлөшөсүз.",
+    sel3h:"Узак мөөнөттүү көз караш",sel3p:"Үй-бүлө ишти тез сатуу үчүн эмес, жылдарга курат. Бакчадагы балдарга дал ушундай туруктуулук керек.",
+    lead_label:"Өтүнмө",lead_title:"Франшизага өтүнмө",lead_sub:"Байланыштарыңызды калтырыңыз — менеджер сиз менен байланышып, суроолорго жооп берет жана шаарыңыз үчүн өзүн актоо мөөнөтүн эсептейт.",
+    lf_name:"Аты",lf_name_ph:"Сизге кантип кайрылалы",lf_phone:"Өлкө коду менен телефон",lf_phone_ph:"+996 555 123 456",lf_city:"Шаар",lf_city_ph:"Мисалы, Бишкек",
+    lf_family:"Биз балалуу үй-бүлөлүк жубайларбыз",lf_consent:"Өтүнмө боюнча байланышуу үчүн жеке маалыматтарымды иштетүүгө макулмун",lf_btn:"Өтүнмө жөнөтүү",lf_sending:"Жөнөтүлүүдө…",
+    lf_ok:"Рахмат! Менеджер 15 мүнөттүн ичинде сиз менен байланышат",lf_err_name:"Атыңызды жазыңыз",lf_err_phone:"Телефонду өлкө коду менен жазыңыз, мисалы +996 555 123 456",lf_err_city:"Шаарды жазыңыз",
+    lf_err_family:"Франшизаны балалуу үй-бүлөлүк жубайларга сунуштайбыз — бул пунктту белгилеңиз",lf_err_consent:"Маалыматтарды иштетүүгө макулдукту белгилеңиз",lf_wa:"WhatsApp ачылбаса, өтүнмөнү жөнөтүү үчүн бул жерди басыңыз"},
+  tj:{hero_sub:"Ба шабакаи байналмилалии муассисаҳои томактабии ORDOGEN ҳамроҳ шавед. Дастгирии пурра — аз ҷустуҷӯи бино то мизоҷи аввал.",
+    num_label:"Мухтасар дар бораи мо",num_sub:"Мо экосистемаи байналмилалии таълими томактабиро месозем: методика, платформа ва ҳамроҳии шарикон.",
+    geo_sub:"Пардохти яккарата аз кишвар ва андозаи шаҳр вобаста аст, пардохти тағйирёбандаи моҳона дар ҳама ҷо якхела аст — 9% аз даромади пардохтҳои волидон.",
+    calc_disc:"Ҳисоб хусусияти маълумотӣ дорад ва ба фарзияҳои миёна асос ёфтааст. Он оферта, кафолати даромад ё ваъдаи натиҷа нест. Нишондиҳандаҳои воқеӣ аз шаҳр, макон, нархи иҷора, пуршавӣ ва иштирок дар барномаҳои давлатӣ вобастаанд.",
+    cmp_l5:"Оғоз аз рӯи чек-листи тайёр ба ҷои ҷустуҷӯи тӯлонӣ",cmp_l6:"Модели дар боғчаҳои амалкунандаи шабака санҷидашуда",
+    s8p:"Лидогенератсия, бренд-менеҷмент ва маркетинги федералӣ",cta_btn:"Дархост гузоштан",
+    map_label:"Харитаи шаҳрҳо",map_title:"Ҳудудҳои озод барои шарикон",map_sub:"Боғчаҳои ORDOGEN дар куҷо кор мекунанд ва кадом ноҳияҳо ва шаҳрҳо озоданд. Ҳудуди худро интихоб кунед — менеҷер озод будани онро тасдиқ мекунад ва дар бораи шартҳо нақл мекунад.",
+    map_with_h:"Шаҳрҳое, ки ORDOGEN дар онҳо кор мекунад",map_free_h:"Шаҳрҳои бе боғчаи ORDOGEN",map_has:"Боғчаи ORDOGEN ҳаст",map_has_d:"Ноҳияҳо бо боғчаи ORDOGEN",map_free:"Ноҳияҳои озод",map_partner:"Барои шарик озод",map_city_free:"Тамоми шаҳр озод",map_cnt:"Боғчаҳои ORDOGEN дар шаҳр:",map_btn:"Ишғоли ноҳия",map_btn_city:"Ишғоли шаҳр",map_leg_has:"боғчаи ORDOGEN ҳаст",map_leg_free:"озод — барои интихоб ноҳияро пахш кунед",
+    map_note:"Боғчаҳо — аз рӯи маълумоти системаи ORDO то 22.11.2026. Ноҳияҳо аз рӯи тақсимоти расмии шаҳрҳо нишон дода шудаанд. Озод будани ҳудудро пас аз дархост менеҷер ниҳоӣ тасдиқ мекунад.",
+    sel_label:"Интихоби шарикон",sel_title:"Танҳо ҷуфтҳои оилавии фарзанддор",sel_sub:"Мо боғчаҳоро якҷоя бо оилаҳо мекушоем — ин шарти асосии интихоб аст. Сабаб:",
+    sel1h:"Боғча — кори оилавӣ",sel1p:"Боғча ҳар рӯз ва солҳо кор мекунад. Дар оила қарорҳо тезтар қабул мешаванд ва масъулият байни ду нафар тақсим мешавад.",
+    sel2h:"Волидон волидонро мефаҳманд",sel2p:"Шумо худ барои фарзандонатон боғча интихоб кардаед — медонед, ки модарон ва падарон чӣ интизоранд, ва бо онҳо бо як забон гап мезанед.",
+    sel3h:"Нигоҳи дарозмуддат",sel3p:"Оила корро барои солҳо месозад, на барои фурӯши зуд. Ба кӯдакони боғча маҳз ҳамин гуна суботкорӣ лозим аст.",
+    lead_label:"Дархост",lead_title:"Дархост барои франшиза",lead_sub:"Тамосҳои худро гузоред — менеҷер бо шумо тамос мегирад, ба саволҳо ҷавоб медиҳад ва муддати баргардонидани маблағро барои шаҳратон ҳисоб мекунад.",
+    lf_name:"Ном",lf_name_ph:"Ба шумо чӣ тавр муроҷиат кунем",lf_phone:"Телефон бо рамзи кишвар",lf_phone_ph:"+992 90 123 4567",lf_city:"Шаҳр",lf_city_ph:"Масалан, Душанбе",
+    lf_family:"Мо ҷуфти оилавии фарзанддор ҳастем",lf_consent:"Ба коркарди маълумоти шахсиам барои тамос аз рӯи дархост розӣ ҳастам",lf_btn:"Фиристодани дархост",lf_sending:"Фиристода мешавад…",
+    lf_ok:"Ташаккур! Менеҷер дар давоми 15 дақиқа бо шумо тамос мегирад",lf_err_name:"Номатонро нависед",lf_err_phone:"Телефонро бо рамзи кишвар нависед, масалан +992 90 123 4567",lf_err_city:"Шаҳрро нависед",
+    lf_err_family:"Франшизаро ба ҷуфтҳои оилавии фарзанддор пешниҳод мекунем — лутфан ин бандро қайд кунед",lf_err_consent:"Розигӣ ба коркарди маълумотро қайд кунед",lf_wa:"Агар WhatsApp кушода нашуд, барои фиристодани дархост ин ҷоро пахш кунед"},
+  az:{hero_sub:"ORDOGEN məktəbəqədər təşkilatlarının beynəlxalq şəbəkəsinə qoşulun. Bina axtarışından ilk müştəriyə qədər tam müşayiət.",
+    num_label:"Qısaca bizim haqqımızda",num_sub:"Məktəbəqədər təhsilin beynəlxalq ekosistemini qururuq: metodika, platforma və tərəfdaşların müşayiəti.",
+    geo_sub:"Birdəfəlik ödəniş ölkədən və şəhərin ölçüsündən asılıdır, aylıq dəyişkən ödəniş hər yerdə eynidir — valideyn ödənişlərindən gələn gəlirin 9%-i.",
+    calc_disc:"Hesablama məlumat xarakterlidir və orta fərziyyələrə əsaslanır. O, oferta, gəlir zəmanəti və ya nəticə vədi deyil. Faktiki göstəricilər şəhərdən, məkandan, icarə dəyərindən, doluluqdan və dövlət proqramlarında iştirakdan asılıdır.",
+    cmp_l5:"Uzun axtarışlar əvəzinə hazır yoxlama siyahısı ilə başlanğıc",cmp_l6:"Şəbəkənin fəaliyyət göstərən bağçalarında sınaqdan keçmiş model",
+    s8p:"Lidogenerasiya, brend-menecment və federal marketinq",cta_btn:"Müraciət göndərmək",
+    map_label:"Şəhərlər xəritəsi",map_title:"Tərəfdaşlar üçün boş ərazilər",map_sub:"ORDOGEN bağçaları harada fəaliyyət göstərir və hansı rayonlar və şəhərlər boşdur. Özünüzünkünü seçin — menecer ərazinin boş olduğunu təsdiqləyəcək və şərtlər barədə danışacaq.",
+    map_with_h:"ORDOGEN fəaliyyət göstərən şəhərlər",map_free_h:"ORDOGEN bağçası olmayan şəhərlər",map_has:"ORDOGEN bağçası var",map_has_d:"ORDOGEN bağçası olan rayonlar",map_free:"Boş rayonlar",map_partner:"Tərəfdaş üçün boşdur",map_city_free:"Bütün şəhər boşdur",map_cnt:"Şəhərdə ORDOGEN bağçaları:",map_btn:"Rayonu tutmaq",map_btn_city:"Şəhəri tutmaq",map_leg_has:"ORDOGEN bağçası var",map_leg_free:"boşdur — seçmək üçün rayona klikləyin",
+    map_note:"Bağçalar — ORDO sisteminin 22.11.2026 tarixinə olan məlumatlarına görə. Rayonlar şəhərlərin rəsmi bölgüsünə görə göstərilib. Ərazinin boş olduğunu müraciətdən sonra menecer yekun təsdiqləyir.",
+    sel_label:"Tərəfdaşların seçimi",sel_title:"Yalnız uşaqlı ailə cütlükləri",sel_sub:"Bağçaları ailələrlə birlikdə açırıq — bu, seçimin əsas şərtidir. Səbəbi:",
+    sel1h:"Bağça — ailə işidir",sel1p:"Bağça hər gün və illərlə işləyir. Ailədə qərarlar daha tez qəbul olunur, məsuliyyət isə ikiyə bölünür.",
+    sel2h:"Valideynlər valideynləri anlayır",sel2p:"Uşaqlarınız üçün bağçanı özünüz seçmisiniz — anaların və ataların nə gözlədiyini bilirsiniz və onlarla eyni dildə danışırsınız.",
+    sel3h:"Uzunmüddətli baxış",sel3p:"Ailə işi tez satış üçün deyil, illər üçün qurur. Bağçadakı uşaqlara məhz belə sabitlik lazımdır.",
+    lead_label:"Müraciət",lead_title:"Françayzinq müraciəti",lead_sub:"Əlaqə məlumatlarınızı qoyun — menecer sizinlə əlaqə saxlayacaq, suallara cavab verəcək və şəhəriniz üçün geri qaytarılma müddətini hesablayacaq.",
+    lf_name:"Ad",lf_name_ph:"Sizə necə müraciət edək",lf_phone:"Ölkə kodu ilə telefon",lf_phone_ph:"+994 50 123 45 67",lf_city:"Şəhər",lf_city_ph:"Məsələn, Bakı",
+    lf_family:"Biz uşaqlı ailə cütlüyüyük",lf_consent:"Müraciət üzrə əlaqə üçün şəxsi məlumatlarımın emalına razıyam",lf_btn:"Müraciəti göndərmək",lf_sending:"Göndərilir…",
+    lf_ok:"Təşəkkür edirik! Menecer 15 dəqiqə ərzində sizinlə əlaqə saxlayacaq",lf_err_name:"Adınızı qeyd edin",lf_err_phone:"Telefonu ölkə kodu ilə qeyd edin, məsələn +994 50 123 45 67",lf_err_city:"Şəhəri qeyd edin",
+    lf_err_family:"Françayzinqi uşaqlı ailə cütlüklərinə təklif edirik — zəhmət olmasa, bu bəndi qeyd edin",lf_err_consent:"Məlumatların emalına razılığı qeyd edin",lf_wa:"WhatsApp açılmadısa, müraciəti göndərmək üçün buraya klikləyin"},
+  tr:{hero_sub:"ORDOGEN okul öncesi kurumlarının uluslararası ağına katılın. Mekân aramadan ilk müşteriye kadar tam destek.",
+    num_label:"Kısaca biz",num_sub:"Uluslararası bir okul öncesi eğitim ekosistemi kuruyoruz: metodoloji, platform ve ortaklara refakat.",
+    geo_sub:"Tek seferlik ödeme ülkeye ve şehrin büyüklüğüne bağlıdır; aylık değişken ödeme her yerde aynıdır — veli ödemelerinden elde edilen gelirin %9'u.",
+    calc_disc:"Hesaplama bilgi amaçlıdır ve ortalama varsayımlara dayanır. Teklif, gelir garantisi veya sonuç vaadi değildir. Gerçek rakamlar şehre, konuma, kira bedeline, doluluğa ve devlet programlarına katılıma bağlıdır.",
+    cmp_l5:"Uzun arayışlar yerine hazır kontrol listesiyle başlangıç",cmp_l6:"Ağın faaliyetteki anaokullarında denenmiş model",
+    s8p:"Lead generation, marka yönetimi ve ulusal pazarlama",cta_btn:"Başvuru bırakın",
+    map_label:"Şehir haritası",map_title:"Ortaklar için boş bölgeler",map_sub:"ORDOGEN anaokulları nerede faaliyette ve hangi ilçeler ile şehirler boş. Size uygun olanı seçin — yöneticimiz bölgenin boş olduğunu teyit edip koşulları anlatacak.",
+    map_with_h:"ORDOGEN'in faaliyette olduğu şehirler",map_free_h:"ORDOGEN anaokulu olmayan şehirler",map_has:"ORDOGEN anaokulu var",map_has_d:"ORDOGEN anaokulu olan ilçeler",map_free:"Boş ilçeler",map_partner:"Ortak için boş",map_city_free:"Şehrin tamamı boş",map_cnt:"Şehirdeki ORDOGEN anaokulları:",map_btn:"İlçeyi ayırt",map_btn_city:"Şehri ayırt",map_leg_has:"ORDOGEN anaokulu var",map_leg_free:"boş — seçmek için ilçeye tıklayın",
+    map_note:"Anaokulları — ORDO sisteminin 22.11.2026 tarihli verilerine göre. İlçeler şehirlerin resmî idari bölünüşüne göre gösterilmiştir. Bölgenin boş olduğunu başvurudan sonra yöneticimiz kesin olarak teyit eder.",
+    sel_label:"Ortak seçimi",sel_title:"Yalnızca çocuklu evli çiftler",sel_sub:"Anaokullarını ailelerle birlikte açıyoruz — bu, seçimin ana şartı. Nedeni:",
+    sel1h:"Anaokulu bir aile işidir",sel1p:"Anaokulu her gün ve yıllarca çalışır. Ailede kararlar daha hızlı alınır, sorumluluk ikiye bölünür.",
+    sel2h:"Ebeveyn ebeveyni anlar",sel2p:"Çocuklarınız için anaokulunu kendiniz seçtiniz — annelerin ve babaların ne beklediğini bilir, onlarla aynı dili konuşursunuz.",
+    sel3h:"Uzun vadeli bakış",sel3p:"Aile işini hızlı satış için değil, yıllar için kurar. Anaokulundaki çocukların ihtiyaç duyduğu da tam olarak bu istikrardır.",
+    lead_label:"Başvuru",lead_title:"Franchise başvurusu",lead_sub:"İletişim bilgilerinizi bırakın — yöneticimiz sizinle iletişime geçecek, sorularınızı yanıtlayacak ve şehriniz için geri dönüş süresini hesaplayacak.",
+    lf_name:"Ad",lf_name_ph:"Size nasıl hitap edelim",lf_phone:"Ülke kodlu telefon",lf_phone_ph:"+90 532 123 45 67",lf_city:"Şehir",lf_city_ph:"Örneğin, İstanbul",
+    lf_family:"Çocuklu evli bir çiftiz",lf_consent:"Başvurumla ilgili iletişim için kişisel verilerimin işlenmesini kabul ediyorum",lf_btn:"Başvuruyu gönder",lf_sending:"Gönderiliyor…",
+    lf_ok:"Teşekkürler! Yöneticimiz 15 dakika içinde sizinle iletişime geçecek",lf_err_name:"Adınızı yazın",lf_err_phone:"Telefonu ülke koduyla yazın, örneğin +90 532 123 45 67",lf_err_city:"Şehri yazın",
+    lf_err_family:"Franchise'ı çocuklu evli çiftlere sunuyoruz — lütfen bu maddeyi işaretleyin",lf_err_consent:"Veri işleme onayını işaretleyin",lf_wa:"WhatsApp açılmadıysa başvuruyu göndermek için buraya tıklayın"},
+  ms:{hero_sub:"Sertai rangkaian antarabangsa organisasi prasekolah ORDOGEN. Sokongan penuh — daripada mencari premis hingga pelanggan pertama.",
+    num_label:"Ringkasan tentang kami",num_sub:"Kami membina ekosistem pendidikan prasekolah antarabangsa: metodologi, platform dan sokongan rakan kongsi.",
+    geo_sub:"Bayaran sekali bergantung pada negara dan saiz bandar; bayaran bulanan berubah adalah sama di mana-mana — 9% daripada hasil yuran ibu bapa.",
+    calc_disc:"Pengiraan ini hanya sebagai rujukan dan berdasarkan andaian purata. Ia bukan tawaran, jaminan pendapatan atau janji hasil. Angka sebenar bergantung pada bandar, lokasi, sewa, kadar pengisian dan penyertaan dalam program kerajaan.",
+    cmp_l5:"Pelancaran mengikut senarai semak sedia ada, bukan pencarian yang panjang",cmp_l6:"Model yang telah diuji di tadika rangkaian yang sedang beroperasi",
+    s8p:"Penjanaan petunjuk, pengurusan jenama dan pemasaran persekutuan",cta_btn:"Hantar permohonan",
+    map_label:"Peta bandar",map_title:"Wilayah kosong untuk rakan kongsi",map_sub:"Di mana tadika ORDOGEN sudah beroperasi dan daerah serta bandar mana yang masih kosong. Pilih kawasan anda — pengurus akan mengesahkan ia kosong dan menerangkan syaratnya.",
+    map_with_h:"Bandar yang sudah ada ORDOGEN",map_free_h:"Bandar tanpa tadika ORDOGEN",map_has:"Ada tadika ORDOGEN",map_has_d:"Daerah dengan tadika ORDOGEN",map_free:"Daerah kosong",map_partner:"Kosong untuk rakan kongsi",map_city_free:"Seluruh bandar kosong",map_cnt:"Tadika ORDOGEN di bandar:",map_btn:"Tempah daerah",map_btn_city:"Tempah bandar",map_leg_has:"ada tadika ORDOGEN",map_leg_free:"kosong — klik daerah untuk memilih",
+    map_note:"Tadika — berdasarkan data sistem ORDO pada 22.11.2026. Daerah mengikut pembahagian rasmi bandar. Status kosong wilayah disahkan oleh pengurus selepas permohonan.",
+    sel_label:"Pemilihan rakan kongsi",sel_title:"Hanya pasangan suami isteri yang mempunyai anak",sel_sub:"Kami membuka tadika bersama keluarga — ini syarat utama pemilihan. Sebabnya:",
+    sel1h:"Tadika ialah perniagaan keluarga",sel1p:"Tadika beroperasi setiap hari selama bertahun-tahun. Dalam keluarga, keputusan dibuat lebih cepat dan tanggungjawab dikongsi berdua.",
+    sel2h:"Ibu bapa memahami ibu bapa",sel2p:"Anda sendiri pernah memilih tadika untuk anak — anda tahu apa yang diharapkan oleh ibu dan bapa dan bercakap dalam bahasa yang sama dengan mereka.",
+    sel3h:"Pandangan jangka panjang",sel3p:"Keluarga membina perniagaan untuk bertahun-tahun, bukan untuk jualan cepat. Kanak-kanak di tadika memerlukan kestabilan seperti ini.",
+    lead_label:"Permohonan",lead_title:"Permohonan francais",lead_sub:"Tinggalkan maklumat hubungan anda — pengurus akan menghubungi anda, menjawab soalan dan mengira tempoh pulangan modal untuk bandar anda.",
+    lf_name:"Nama",lf_name_ph:"Bagaimana kami patut memanggil anda",lf_phone:"Telefon dengan kod negara",lf_phone_ph:"+60 12 345 6789",lf_city:"Bandar",lf_city_ph:"Contoh: Kuala Lumpur",
+    lf_family:"Kami pasangan suami isteri yang mempunyai anak",lf_consent:"Saya bersetuju data peribadi saya diproses untuk dihubungi berkaitan permohonan ini",lf_btn:"Hantar permohonan",lf_sending:"Sedang menghantar…",
+    lf_ok:"Terima kasih! Pengurus akan menghubungi anda dalam masa 15 minit",lf_err_name:"Sila nyatakan nama",lf_err_phone:"Sila nyatakan telefon dengan kod negara, contohnya +60 12 345 6789",lf_err_city:"Sila nyatakan bandar",
+    lf_err_family:"Kami menawarkan francais kepada pasangan suami isteri yang mempunyai anak — sila tandakan perkara ini",lf_err_consent:"Sila tandakan persetujuan pemprosesan data",lf_wa:"Jika WhatsApp tidak terbuka, klik di sini untuk menghantar permohonan"},
+  en:{hero_sub:"Join the international ORDOGEN network of preschool organisations. Full support — from finding premises to your first client.",
+    num_label:"About us in brief",num_sub:"We are building an international early childhood education ecosystem: methodology, platform and partner support.",
+    geo_sub:"The one-time payment depends on the country and city size; the monthly variable payment is the same everywhere — 9% of parent-fee revenue.",
+    calc_disc:"This estimate is for reference only and is based on averaged assumptions. It is not an offer, an income guarantee or a promise of results. Actual figures depend on the city, location, rent, occupancy and state programme participation.",
+    cmp_l5:"Launch with a ready-made checklist instead of a long trial-and-error search",cmp_l6:"A model proven in the network's operating kindergartens",
+    s8p:"Lead generation, brand management and national marketing",cta_btn:"Leave a request",
+    map_label:"City map",map_title:"Open territories for partners",map_sub:"Where ORDOGEN kindergartens already operate and which districts and cities are open. Pick yours — a manager will confirm it is available and explain the terms.",
+    map_with_h:"Cities where ORDOGEN already operates",map_free_h:"Cities without an ORDOGEN kindergarten",map_has:"ORDOGEN kindergarten here",map_has_d:"Districts with an ORDOGEN kindergarten",map_free:"Open districts",map_partner:"Open for a partner",map_city_free:"Whole city open",map_cnt:"ORDOGEN kindergartens in the city:",map_btn:"Claim a district",map_btn_city:"Claim the city",map_leg_has:"ORDOGEN kindergarten",map_leg_free:"open — tap a district to choose it",
+    map_note:"Kindergartens are based on ORDO system data as of 22.11.2026. Districts follow the official city divisions. A manager gives final confirmation that a territory is open after your request.",
+    sel_label:"Partner selection",sel_title:"Married couples with children only",sel_sub:"We open kindergartens together with families — this is our main selection criterion. Here's why:",
+    sel1h:"A kindergarten is a family business",sel1p:"A kindergarten runs every day, for years. In a family, decisions are made faster and responsibility is shared by two.",
+    sel2h:"Parents understand parents",sel2p:"You have chosen a kindergarten for your own children — you know what mums and dads expect and speak their language.",
+    sel3h:"A long horizon",sel3p:"A family builds a business for years, not for a quick sale. Children in a kindergarten need exactly that kind of stability.",
+    lead_label:"Request",lead_title:"Franchise request",lead_sub:"Leave your contacts — a manager will get in touch, answer your questions and calculate the payback for your city.",
+    lf_name:"Name",lf_name_ph:"How should we address you",lf_phone:"Phone with country code",lf_phone_ph:"+7 777 123 45 67",lf_city:"City",lf_city_ph:"e.g. Astana",
+    lf_family:"We are a married couple with children",lf_consent:"I agree to the processing of my personal data so you can contact me about this request",lf_btn:"Send request",lf_sending:"Sending…",
+    lf_ok:"Thank you! A manager will contact you within 15 minutes",lf_err_name:"Please enter your name",lf_err_phone:"Please enter a phone number with country code, e.g. +7 777 123 45 67",lf_err_city:"Please enter your city",
+    lf_err_family:"We offer the franchise to married couples with children — please tick this box",lf_err_consent:"Please tick the consent box",lf_wa:"If WhatsApp did not open, click here to send your request"}
+};
+Object.keys(T_ADD).forEach(function(l){ if (T[l]) { Object.keys(T_ADD[l]).forEach(function(k){ T[l][k] = T_ADD[l][k]; }); } });
+
+function tt(k){ var t = T[CUR_LANG] || T.ru; return (t && t[k] !== undefined) ? t[k] : (T.ru[k] !== undefined ? T.ru[k] : (I18N_DEF[k] || '')); }
+function escH(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+
+// --- Карта городов. Источник: ORDO agent API (organizations), 22.11.2026; районы Астаны — проверка 15.11 (organizations.regions + OSM).
+// Исключены: Шымкент #63 (договор расторгнут), Руставели 2В #106 (закрыт), Байтурсынулы 9 #119 (закрыт), Мамыр-7 #83 (закрыт),
+// Молдагулова 56Е #125 (закрыт), Актобе #126 (статус неясен — город не показываем), Павлодар #133 (лицензия без адреса — не показываем).
+// d: [кириллица (офиц. каз.), латиница, 1 = есть сад ORDOGEN]
+var MAP_DISTRICT_CITIES = [
+  {n:{ru:'Астана',kz:'Астана',lat:'Astana'}, d:[['Есіл','Esil',1],['Нұра','Nura',1],['Байқоңыр','Baikonyr',1],['Алматы','Almaty',0],['Сарыарқа','Saryarka',0]]},
+  {n:{ru:'Алматы',kz:'Алматы',lat:'Almaty'}, d:[['Бостандық','Bostandyk',1],['Медеу','Medeu',1],['Алатау','Alatau',0],['Алмалы','Almaly',0],['Әуезов','Auezov',0],['Жетісу','Zhetysu',0],['Наурызбай','Nauryzbay',0],['Түрксіб','Turksib',0]]}
+];
+// Города с садом, районы не детализируем (c — садов в этом городе)
+var MAP_GARDEN_CITIES = [
+  {n:{ru:'Косшы',kz:'Қосшы',lat:'Kosshy'}, c:1},
+  {n:{ru:'Атырау',kz:'Атырау',lat:'Atyrau'}, c:2},
+  {n:{ru:'Тараз',kz:'Тараз',lat:'Taraz'}, c:2},
+  {n:{ru:'Бесагаш',kz:'Бесағаш',lat:'Besagash'}, s:{ru:'Алматинская обл.',kz:'Алматы облысы',lat:'Almaty Region'}, c:1}
+];
+// Города из таблицы цен (Казахстан), где сада ORDOGEN нет
+var MAP_FREE_CITIES = [
+  {ru:'Шымкент',kz:'Шымкент',lat:'Shymkent'},{ru:'Караганда',kz:'Қарағанды',lat:'Karaganda'},{ru:'Усть-Каменогорск',kz:'Өскемен',lat:'Oskemen'},
+  {ru:'Кызылорда',kz:'Қызылорда',lat:'Kyzylorda'},{ru:'Актау',kz:'Ақтау',lat:'Aktau'},{ru:'Семей',kz:'Семей',lat:'Semey'},
+  {ru:'Уральск',kz:'Орал',lat:'Oral'},{ru:'Костанай',kz:'Қостанай',lat:'Kostanay'},{ru:'Талдыкорган',kz:'Талдықорған',lat:'Taldykorgan'},
+  {ru:'Туркестан',kz:'Түркістан',lat:'Turkistan'},{ru:'Петропавловск',kz:'Петропавл',lat:'Petropavl'},{ru:'Кокшетау',kz:'Көкшетау',lat:'Kokshetau'},
+  {ru:'Рудный',kz:'Рудный',lat:'Rudny'},{ru:'Жезказган',kz:'Жезқазған',lat:'Zhezkazgan'},{ru:'Жанаозен',kz:'Жаңаөзен',lat:'Zhanaozen'},
+  {ru:'Каскелен',kz:'Қаскелең',lat:'Kaskelen'},{ru:'Талгар',kz:'Талғар',lat:'Talgar'},{ru:'Балхаш',kz:'Балқаш',lat:'Balkhash'},{ru:'Экибастуз',kz:'Екібастұз',lat:'Ekibastuz'}
+];
+function mapScript(){ return ({ru:'ru',ky:'ru',tj:'ru',kz:'kz'})[CUR_LANG] || 'lat'; }
+function mapName(o){ var s = mapScript(); return o[s] || o.ru; }
+function mapDist(d){ return mapScript() === 'lat' ? d[1] : d[0]; }
+// подпись района для поля «Город» (чтобы «Астана, район Алматы» не путалась с городом Алматы)
+function mapDistFull(dn){ var s = mapScript(); return s === 'lat' ? dn + ' district' : (s === 'kz' ? dn + ' ауданы' : 'район ' + dn); }
+
+function renderMap(){
+  var root = document.getElementById('map-root');
+  if (!root) return;
+  var h = '';
+  h += '<div class="map-legend"><span><i class="dot has"></i>' + escH(tt('map_leg_has')) + '</span><span><i class="dot free"></i>' + escH(tt('map_leg_free')) + '</span></div>';
+  h += '<h3 class="map-h">' + escH(tt('map_with_h')) + '</h3><div class="map-grid">';
+  MAP_DISTRICT_CITIES.forEach(function(c){
+    var cn = mapName(c.n), has = '', free = '';
+    c.d.forEach(function(d){
+      var dn = mapDist(d);
+      if (d[2]) has += '<span class="chip has">' + escH(dn) + '</span>';
+      else free += '<button type="button" class="chip free" data-city="' + escH(cn + ', ' + mapDistFull(dn)) + '">' + escH(dn) + '</button>';
+    });
+    h += '<div class="city-card"><div><div class="city-name">' + escH(cn) + '</div></div>'
+      + '<span class="city-badge"><i class="dot has"></i>' + escH(tt('map_has')) + '</span>'
+      + '<div class="city-sec">' + escH(tt('map_has_d')) + '</div><div class="chips">' + has + '</div>'
+      + '<div class="city-sec">' + escH(tt('map_free')) + '</div><div class="chips">' + free + '</div>'
+      + '<button type="button" class="city-btn" data-city="' + escH(cn) + '">' + escH(tt('map_btn')) + '</button></div>';
+  });
+  h += '</div><div class="map-grid sm">';
+  MAP_GARDEN_CITIES.forEach(function(c){
+    var cn = mapName(c.n);
+    h += '<div class="city-card"><div><div class="city-name">' + escH(cn) + '</div>'
+      + (c.s ? '<div class="city-sub">' + escH(mapName(c.s)) + '</div>' : '') + '</div>'
+      + '<span class="city-badge"><i class="dot has"></i>' + escH(tt('map_has')) + '</span>'
+      + (c.c > 1 ? '<div class="city-cnt">' + escH(tt('map_cnt')) + ' <b>' + c.c + '</b></div>' : '')
+      + '<div class="city-free">' + escH(tt('map_partner')) + '</div>'
+      + '<button type="button" class="city-btn" data-city="' + escH(cn) + '">' + escH(tt('map_btn')) + '</button></div>';
+  });
+  h += '</div><h3 class="map-h">' + escH(tt('map_free_h')) + '</h3><div class="map-grid free">';
+  MAP_FREE_CITIES.forEach(function(c){
+    var cn = mapName(c);
+    h += '<div class="city-card free"><div class="city-name">' + escH(cn) + '</div>'
+      + '<span class="city-badge free"><i class="dot free"></i>' + escH(tt('map_city_free')) + '</span>'
+      + '<button type="button" class="city-btn" data-city="' + escH(cn) + '">' + escH(tt('map_btn_city')) + '</button></div>';
+  });
+  h += '</div>';
+  root.innerHTML = h;
+  // подсказки для поля «Город»
+  var dl = document.getElementById('lf-cities');
+  if (dl) {
+    var names = [];
+    MAP_DISTRICT_CITIES.forEach(function(c){ names.push(mapName(c.n)); });
+    MAP_GARDEN_CITIES.forEach(function(c){ names.push(mapName(c.n)); });
+    MAP_FREE_CITIES.forEach(function(c){ names.push(mapName(c)); });
+    dl.innerHTML = names.map(function(n){ return '<option value="' + escH(n) + '"></option>'; }).join('');
+  }
+}
+
+// --- Переход к форме заявки (все CTA) ---
+function goLead(city){
+  var sec = document.getElementById('lead');
+  var form = document.getElementById('lead-form');
+  if (form && form.classList.contains('done') && city) { form.classList.remove('done'); }
+  if (city) { var ci = document.getElementById('lf-city'); if (ci) ci.value = city; }
+  if (sec) sec.scrollIntoView({behavior:'smooth', block:'start'});
+  setTimeout(function(){
+    var f = document.getElementById('lf-name');
+    if (f && !(form && form.classList.contains('done'))) { try { f.focus({preventScroll:true}); } catch(e) { f.focus(); } }
+  }, 650);
+}
+document.addEventListener('click', function(e){
+  var a = e.target.closest ? e.target.closest('.js-lead, #map-root [data-city]') : null;
+  if (!a) return;
+  e.preventDefault();
+  goLead(a.getAttribute('data-city') || '');
+});
+
+// --- Отправка заявки: LEAD_ENDPOINT → иначе WhatsApp 3070 с данными формы (заявка не теряется) ---
+function normPhone(v){
+  var s = String(v || '').trim();
+  if (!s || /[^\d\s()+\-.]/.test(s)) return null;
+  var plus = s.charAt(0) === '+';
+  var d = s.replace(/\D/g, '');
+  if (!plus && d.length === 11 && d.charAt(0) === '8') d = '7' + d.slice(1); // 8 777 … → +7 777 …
+  if (d.length < 11 || d.length > 15) return null;                          // нужен код страны
+  return '+' + d;
+}
+(function initLeadForm(){
+  var form = document.getElementById('lead-form');
+  if (!form) return;
+  var err = document.getElementById('lf-err');
+  var btn = document.getElementById('lf-btn');
+  var wa = document.getElementById('lf-wa');
+  function fail(key, id){
+    err.textContent = tt(key);
+    form.querySelectorAll('.bad').forEach(function(x){ x.classList.remove('bad'); });
+    var el = id && document.getElementById(id);
+    if (el) { el.classList.add('bad'); try { el.focus({preventScroll:false}); } catch(e) { el.focus(); } }
+  }
+  function done(waUrl){
+    btn.disabled = false; btn.textContent = tt('lf_btn');
+    if (waUrl) { wa.href = waUrl; wa.style.display = 'block'; } else { wa.style.display = 'none'; }
+    form.classList.add('done');
+    form.reset();
+  }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    err.textContent = '';
+    var name = document.getElementById('lf-name').value.trim();
+    var phone = normPhone(document.getElementById('lf-phone').value);
+    var city = document.getElementById('lf-city').value.trim();
+    if (name.length < 2) return fail('lf_err_name', 'lf-name');
+    if (!phone) return fail('lf_err_phone', 'lf-phone');
+    if (city.length < 2) return fail('lf_err_city', 'lf-city');
+    if (!document.getElementById('lf-family').checked) return fail('lf_err_family', 'lf-family');
+    if (!document.getElementById('lf-consent').checked) return fail('lf_err_consent', 'lf-consent');
+    form.querySelectorAll('.bad').forEach(function(x){ x.classList.remove('bad'); });
+
+    var payload = {name: name, phone: phone, city: city, family: true, source: 'franch', page: location.href, lang: CUR_LANG};
+    var msg = 'Заявка на франшизу ORDOGEN\nИмя: ' + name + '\nТелефон: ' + phone + '\nГород: ' + city
+            + '\nСемейная пара с детьми: да\nЯзык сайта: ' + CUR_LANG + '\nСтраница: ' + location.href;
+    var waUrl = 'https://wa.me/77767233070?text=' + encodeURIComponent(msg);
+    function fallback(){
+      try { var w = window.open(waUrl, '_blank'); if (w) w.opener = null; } catch(x) {}
+      done(waUrl);
+    }
+    if (!LEAD_ENDPOINT) { fallback(); return; }
+    btn.disabled = true; btn.textContent = tt('lf_sending');
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var timer = setTimeout(function(){ if (ctrl) ctrl.abort(); }, 10000);
+    fetch(LEAD_ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload), signal: ctrl ? ctrl.signal : undefined})
+      .then(function(r){ clearTimeout(timer); if (!r.ok) throw new Error('HTTP ' + r.status); done(null); })
+      .catch(function(){ clearTimeout(timer); fallback(); });
+  });
+})();
+
+renderMap();
 </script>
 </body>
 </html>
