@@ -1712,12 +1712,12 @@ var MAP_GARDEN_CITIES = [
 ];
 // Города из таблицы цен (Казахстан), где сада ORDOGEN нет
 var MAP_FREE_CITIES = [
-  {ru:'Шымкент',kz:'Шымкент',lat:'Shymkent'},{ru:'Караганда',kz:'Қарағанды',lat:'Karaganda'},{ru:'Усть-Каменогорск',kz:'Өскемен',lat:'Oskemen'},
+  {ru:'Караганда',kz:'Қарағанды',lat:'Karaganda'},{ru:'Усть-Каменогорск',kz:'Өскемен',lat:'Oskemen'},
   {ru:'Кызылорда',kz:'Қызылорда',lat:'Kyzylorda'},{ru:'Актау',kz:'Ақтау',lat:'Aktau'},{ru:'Семей',kz:'Семей',lat:'Semey'},
   {ru:'Уральск',kz:'Орал',lat:'Oral'},{ru:'Костанай',kz:'Қостанай',lat:'Kostanay'},{ru:'Талдыкорган',kz:'Талдықорған',lat:'Taldykorgan'},
   {ru:'Туркестан',kz:'Түркістан',lat:'Turkistan'},{ru:'Петропавловск',kz:'Петропавл',lat:'Petropavl'},{ru:'Кокшетау',kz:'Көкшетау',lat:'Kokshetau'},
   {ru:'Рудный',kz:'Рудный',lat:'Rudny'},{ru:'Жезказган',kz:'Жезқазған',lat:'Zhezkazgan'},{ru:'Жанаозен',kz:'Жаңаөзен',lat:'Zhanaozen'},
-  {ru:'Каскелен',kz:'Қаскелең',lat:'Kaskelen'},{ru:'Талгар',kz:'Талғар',lat:'Talgar'},{ru:'Балхаш',kz:'Балқаш',lat:'Balkhash'},{ru:'Экибастуз',kz:'Екібастұз',lat:'Ekibastuz'}
+  {ru:'Каскелен',kz:'Қаскелең',lat:'Kaskelen'},{ru:'Балхаш',kz:'Балқаш',lat:'Balkhash'},{ru:'Экибастуз',kz:'Екібастұз',lat:'Ekibastuz'}
 ];
 function mapScript(){ return ({ru:'ru',ky:'ru',tj:'ru',kz:'kz'})[CUR_LANG] || 'lat'; }
 function mapName(o){ var s = mapScript(); return o[s] || o.ru; }
