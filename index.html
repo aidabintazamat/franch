@@ -366,7 +366,7 @@ img,svg,iframe,video,table{max-width:100%;}
 .city-badge{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;font-size:12px;font-weight:600;color:var(--green-d);background:var(--green-l);border:1px solid var(--green-m);border-radius:100px;padding:4px 10px;}
 .city-badge.free{background:#fff;}
 .city-sec{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--lgray);margin-top:4px;}
-.city-cnt,.city-free{font-size:13px;color:var(--gray);}
+.city-cnt,.city-taken{color:#8a94a0;font-size:14px;margin-top:10px}.city-free{font-size:13px;color:var(--gray);}
 .city-free{color:var(--green-d);font-weight:600;}
 .chips{display:flex;flex-wrap:wrap;gap:6px;}
 .chip{font-family:inherit;font-size:13px;line-height:1.3;padding:6px 11px;border-radius:8px;}
@@ -1534,7 +1534,7 @@ var T_ADD = {
     cmp_l5:"Запуск по готовому чек-листу вместо долгого поиска решений",cmp_l6:"Модель, отработанная в действующих садах сети",
     s8p:"Лидогенерация, бренд-менеджмент и федеральный маркетинг",cta_btn:"Оставить заявку",
     map_label:"Карта городов",map_title:"Свободные территории для партнёров",map_sub:"Где уже работают сады ORDOGEN и какие районы и города свободны. Выберите свой — менеджер подтвердит, что территория свободна, и расскажет об условиях.",
-    map_with_h:"Города, где уже работает ORDOGEN",map_free_h:"Города без сада ORDOGEN",map_has:"Есть сад ORDOGEN",map_has_d:"Районы с садом ORDOGEN",map_free:"Свободные районы",map_partner:"Свободно для партнёра",map_city_free:"Свободен весь город",map_cnt:"Садов ORDOGEN в городе:",map_btn:"Занять район",map_btn_city:"Занять город",map_leg_has:"есть сад ORDOGEN",map_leg_free:"свободно — нажмите на район, чтобы выбрать",
+    map_with_h:"Города, где уже работает ORDOGEN",map_free_h:"Города без сада ORDOGEN",map_has:"Есть сад ORDOGEN",map_has_d:"Районы с садом ORDOGEN",map_free:"Свободные районы",map_partner:"Свободно для партнёра",map_taken:"Город занят — здесь уже работает партнёр ORDOGEN",map_city_free:"Свободен весь город",map_cnt:"Садов ORDOGEN в городе:",map_btn:"Занять район",map_btn_city:"Занять город",map_leg_has:"есть сад ORDOGEN",map_leg_free:"свободно — нажмите на район, чтобы выбрать",
     map_note:"Сады — по данным системы ORDO на 22.11.2026. Районы указаны по официальному делению городов. Окончательно свободность территории подтверждает менеджер после заявки.",
     sel_label:"Отбор партнёров",sel_title:"Только семейные пары с детьми",sel_sub:"Мы открываем сады вместе с семьями — это главное условие отбора. Почему:",
     sel1h:"Сад — семейное дело",sel1p:"Сад работает каждый день и годами. В семье решения принимаются быстрее, а ответственность делится на двоих.",
@@ -1552,7 +1552,7 @@ var T_ADD = {
     cmp_l5:"Шешім іздеуге ұзақ уақыт жұмсаудың орнына дайын чек-парақ бойынша іске қосу",cmp_l6:"Желінің жұмыс істеп тұрған балабақшаларында сыналған модель",
     s8p:"Лидогенерация, бренд-менеджмент және федералдық маркетинг",cta_btn:"Өтінім қалдыру",
     map_label:"Қалалар картасы",map_title:"Серіктестерге арналған бос аумақтар",map_sub:"ORDOGEN балабақшалары қай жерде жұмыс істейді және қай аудандар мен қалалар бос. Өзіңізге керегін таңдаңыз — менеджер аумақтың бос екенін растап, шарттары туралы айтып береді.",
-    map_with_h:"ORDOGEN жұмыс істейтін қалалар",map_free_h:"ORDOGEN балабақшасы жоқ қалалар",map_has:"ORDOGEN балабақшасы бар",map_has_d:"ORDOGEN балабақшасы бар аудандар",map_free:"Бос аудандар",map_partner:"Серіктес үшін бос",map_city_free:"Бүкіл қала бос",map_cnt:"Қаладағы ORDOGEN балабақшалары:",map_btn:"Ауданды алу",map_btn_city:"Қаланы алу",map_leg_has:"ORDOGEN балабақшасы бар",map_leg_free:"бос — таңдау үшін ауданды басыңыз",
+    map_with_h:"ORDOGEN жұмыс істейтін қалалар",map_free_h:"ORDOGEN балабақшасы жоқ қалалар",map_has:"ORDOGEN балабақшасы бар",map_has_d:"ORDOGEN балабақшасы бар аудандар",map_free:"Бос аудандар",map_partner:"Серіктес үшін бос",map_taken:"Қала бос емес — мұнда ORDOGEN серіктесі жұмыс істейді",map_city_free:"Бүкіл қала бос",map_cnt:"Қаладағы ORDOGEN балабақшалары:",map_btn:"Ауданды алу",map_btn_city:"Қаланы алу",map_leg_has:"ORDOGEN балабақшасы бар",map_leg_free:"бос — таңдау үшін ауданды басыңыз",
     map_note:"Балабақшалар — ORDO жүйесінің 22.11.2026 жылғы деректері бойынша. Аудандар қалалардың ресми бөлінісі бойынша көрсетілген. Аумақтың бос екенін өтінімнен кейін менеджер түпкілікті растайды.",
     sel_label:"Серіктестерді іріктеу",sel_title:"Тек балалы отбасылық жұптар",sel_sub:"Біз балабақшаларды отбасылармен бірге ашамыз — бұл іріктеудің басты шарты. Себебі:",
     sel1h:"Балабақша — отбасылық іс",sel1p:"Балабақша күн сайын және жылдар бойы жұмыс істейді. Отбасында шешімдер тезірек қабылданады, ал жауапкершілік екіге бөлінеді.",
@@ -1570,7 +1570,7 @@ var T_ADD = {
     cmp_l5:"Uzoq izlanishlar o'rniga tayyor chek-list bo'yicha ishga tushirish",cmp_l6:"Tarmoqning amaldagi bog'chalarida sinovdan o'tgan model",
     s8p:"Lidogeneratsiya, brend-menejment va federal marketing",cta_btn:"Ariza qoldirish",
     map_label:"Shaharlar xaritasi",map_title:"Hamkorlar uchun bo'sh hududlar",map_sub:"ORDOGEN bog'chalari qayerda ishlayapti va qaysi tumanlar hamda shaharlar bo'sh. O'zingiznikini tanlang — menejer hudud bo'shligini tasdiqlaydi va shartlar haqida aytib beradi.",
-    map_with_h:"ORDOGEN ishlayotgan shaharlar",map_free_h:"ORDOGEN bog'chasi yo'q shaharlar",map_has:"ORDOGEN bog'chasi bor",map_has_d:"ORDOGEN bog'chasi bor tumanlar",map_free:"Bo'sh tumanlar",map_partner:"Hamkor uchun bo'sh",map_city_free:"Butun shahar bo'sh",map_cnt:"Shahardagi ORDOGEN bog'chalari:",map_btn:"Tumanni band qilish",map_btn_city:"Shaharni band qilish",map_leg_has:"ORDOGEN bog'chasi bor",map_leg_free:"bo'sh — tanlash uchun tumanni bosing",
+    map_with_h:"ORDOGEN ishlayotgan shaharlar",map_free_h:"ORDOGEN bog'chasi yo'q shaharlar",map_has:"ORDOGEN bog'chasi bor",map_has_d:"ORDOGEN bog'chasi bor tumanlar",map_free:"Bo'sh tumanlar",map_partner:"Hamkor uchun bo'sh",map_taken:"Shahar band — bu yerda ORDOGEN hamkori ishlaydi",map_city_free:"Butun shahar bo'sh",map_cnt:"Shahardagi ORDOGEN bog'chalari:",map_btn:"Tumanni band qilish",map_btn_city:"Shaharni band qilish",map_leg_has:"ORDOGEN bog'chasi bor",map_leg_free:"bo'sh — tanlash uchun tumanni bosing",
     map_note:"Bog'chalar — ORDO tizimining 22.11.2026 holatidagi ma'lumotlari bo'yicha. Tumanlar shaharlarning rasmiy bo'linishi bo'yicha ko'rsatilgan. Hudud bo'shligini arizadan so'ng menejer yakuniy tasdiqlaydi.",
     sel_label:"Hamkorlarni tanlash",sel_title:"Faqat farzandli oilaviy juftliklar",sel_sub:"Biz bog'chalarni oilalar bilan birga ochamiz — bu tanlovning asosiy sharti. Sababi:",
     sel1h:"Bog'cha — oilaviy ish",sel1p:"Bog'cha har kuni va yillar davomida ishlaydi. Oilada qarorlar tezroq qabul qilinadi, mas'uliyat esa ikkiga bo'linadi.",
@@ -1588,7 +1588,7 @@ var T_ADD = {
     cmp_l5:"Узак издөөнүн ордуна даяр чек-тизме боюнча ишке киргизүү",cmp_l6:"Тармактын иштеп жаткан бакчаларында сыналган модель",
     s8p:"Лидогенерация, бренд-менеджмент жана федералдык маркетинг",cta_btn:"Өтүнмө калтыруу",
     map_label:"Шаарлар картасы",map_title:"Өнөктөштөр үчүн бош аймактар",map_sub:"ORDOGEN бакчалары кайда иштейт жана кайсы райондор менен шаарлар бош. Өзүңүздүкүн тандаңыз — менеджер аймактын бош экенин ырастап, шарттары тууралуу айтып берет.",
-    map_with_h:"ORDOGEN иштеген шаарлар",map_free_h:"ORDOGEN бакчасы жок шаарлар",map_has:"ORDOGEN бакчасы бар",map_has_d:"ORDOGEN бакчасы бар райондор",map_free:"Бош райондор",map_partner:"Өнөктөш үчүн бош",map_city_free:"Бүт шаар бош",map_cnt:"Шаардагы ORDOGEN бакчалары:",map_btn:"Районду ээлөө",map_btn_city:"Шаарды ээлөө",map_leg_has:"ORDOGEN бакчасы бар",map_leg_free:"бош — тандоо үчүн районду басыңыз",
+    map_with_h:"ORDOGEN иштеген шаарлар",map_free_h:"ORDOGEN бакчасы жок шаарлар",map_has:"ORDOGEN бакчасы бар",map_has_d:"ORDOGEN бакчасы бар райондор",map_free:"Бош райондор",map_partner:"Өнөктөш үчүн бош",map_taken:"Шаар бош эмес — бул жерде ORDOGEN өнөктөшү иштейт",map_city_free:"Бүт шаар бош",map_cnt:"Шаардагы ORDOGEN бакчалары:",map_btn:"Районду ээлөө",map_btn_city:"Шаарды ээлөө",map_leg_has:"ORDOGEN бакчасы бар",map_leg_free:"бош — тандоо үчүн районду басыңыз",
     map_note:"Бакчалар — ORDO системасынын 22.11.2026-жылдагы маалыматы боюнча. Райондор шаарлардын расмий бөлүнүшү боюнча көрсөтүлгөн. Аймактын бош экенин өтүнмөдөн кийин менеджер акыркы жолу ырастайт.",
     sel_label:"Өнөктөштөрдү тандоо",sel_title:"Балалуу үй-бүлөлүк жубайлар гана",sel_sub:"Биз бакчаларды үй-бүлөлөр менен бирге ачабыз — бул тандоонун негизги шарты. Себеби:",
     sel1h:"Бакча — үй-бүлөлүк иш",sel1p:"Бакча күн сайын жана жылдар бою иштейт. Үй-бүлөдө чечимдер тезирээк кабыл алынат, ал эми жоопкерчилик экиге бөлүнөт.",
@@ -1606,7 +1606,7 @@ var T_ADD = {
     cmp_l5:"Оғоз аз рӯи чек-листи тайёр ба ҷои ҷустуҷӯи тӯлонӣ",cmp_l6:"Модели дар боғчаҳои амалкунандаи шабака санҷидашуда",
     s8p:"Лидогенератсия, бренд-менеҷмент ва маркетинги федералӣ",cta_btn:"Дархост гузоштан",
     map_label:"Харитаи шаҳрҳо",map_title:"Ҳудудҳои озод барои шарикон",map_sub:"Боғчаҳои ORDOGEN дар куҷо кор мекунанд ва кадом ноҳияҳо ва шаҳрҳо озоданд. Ҳудуди худро интихоб кунед — менеҷер озод будани онро тасдиқ мекунад ва дар бораи шартҳо нақл мекунад.",
-    map_with_h:"Шаҳрҳое, ки ORDOGEN дар онҳо кор мекунад",map_free_h:"Шаҳрҳои бе боғчаи ORDOGEN",map_has:"Боғчаи ORDOGEN ҳаст",map_has_d:"Ноҳияҳо бо боғчаи ORDOGEN",map_free:"Ноҳияҳои озод",map_partner:"Барои шарик озод",map_city_free:"Тамоми шаҳр озод",map_cnt:"Боғчаҳои ORDOGEN дар шаҳр:",map_btn:"Ишғоли ноҳия",map_btn_city:"Ишғоли шаҳр",map_leg_has:"боғчаи ORDOGEN ҳаст",map_leg_free:"озод — барои интихоб ноҳияро пахш кунед",
+    map_with_h:"Шаҳрҳое, ки ORDOGEN дар онҳо кор мекунад",map_free_h:"Шаҳрҳои бе боғчаи ORDOGEN",map_has:"Боғчаи ORDOGEN ҳаст",map_has_d:"Ноҳияҳо бо боғчаи ORDOGEN",map_free:"Ноҳияҳои озод",map_partner:"Барои шарик озод",map_taken:"Шаҳр банд аст — дар ин ҷо шарики ORDOGEN кор мекунад",map_city_free:"Тамоми шаҳр озод",map_cnt:"Боғчаҳои ORDOGEN дар шаҳр:",map_btn:"Ишғоли ноҳия",map_btn_city:"Ишғоли шаҳр",map_leg_has:"боғчаи ORDOGEN ҳаст",map_leg_free:"озод — барои интихоб ноҳияро пахш кунед",
     map_note:"Боғчаҳо — аз рӯи маълумоти системаи ORDO то 22.11.2026. Ноҳияҳо аз рӯи тақсимоти расмии шаҳрҳо нишон дода шудаанд. Озод будани ҳудудро пас аз дархост менеҷер ниҳоӣ тасдиқ мекунад.",
     sel_label:"Интихоби шарикон",sel_title:"Танҳо ҷуфтҳои оилавии фарзанддор",sel_sub:"Мо боғчаҳоро якҷоя бо оилаҳо мекушоем — ин шарти асосии интихоб аст. Сабаб:",
     sel1h:"Боғча — кори оилавӣ",sel1p:"Боғча ҳар рӯз ва солҳо кор мекунад. Дар оила қарорҳо тезтар қабул мешаванд ва масъулият байни ду нафар тақсим мешавад.",
@@ -1624,7 +1624,7 @@ var T_ADD = {
     cmp_l5:"Uzun axtarışlar əvəzinə hazır yoxlama siyahısı ilə başlanğıc",cmp_l6:"Şəbəkənin fəaliyyət göstərən bağçalarında sınaqdan keçmiş model",
     s8p:"Lidogenerasiya, brend-menecment və federal marketinq",cta_btn:"Müraciət göndərmək",
     map_label:"Şəhərlər xəritəsi",map_title:"Tərəfdaşlar üçün boş ərazilər",map_sub:"ORDOGEN bağçaları harada fəaliyyət göstərir və hansı rayonlar və şəhərlər boşdur. Özünüzünkünü seçin — menecer ərazinin boş olduğunu təsdiqləyəcək və şərtlər barədə danışacaq.",
-    map_with_h:"ORDOGEN fəaliyyət göstərən şəhərlər",map_free_h:"ORDOGEN bağçası olmayan şəhərlər",map_has:"ORDOGEN bağçası var",map_has_d:"ORDOGEN bağçası olan rayonlar",map_free:"Boş rayonlar",map_partner:"Tərəfdaş üçün boşdur",map_city_free:"Bütün şəhər boşdur",map_cnt:"Şəhərdə ORDOGEN bağçaları:",map_btn:"Rayonu tutmaq",map_btn_city:"Şəhəri tutmaq",map_leg_has:"ORDOGEN bağçası var",map_leg_free:"boşdur — seçmək üçün rayona klikləyin",
+    map_with_h:"ORDOGEN fəaliyyət göstərən şəhərlər",map_free_h:"ORDOGEN bağçası olmayan şəhərlər",map_has:"ORDOGEN bağçası var",map_has_d:"ORDOGEN bağçası olan rayonlar",map_free:"Boş rayonlar",map_partner:"Tərəfdaş üçün boşdur",map_taken:"Şəhər tutulub — burada ORDOGEN tərəfdaşı fəaliyyət göstərir",map_city_free:"Bütün şəhər boşdur",map_cnt:"Şəhərdə ORDOGEN bağçaları:",map_btn:"Rayonu tutmaq",map_btn_city:"Şəhəri tutmaq",map_leg_has:"ORDOGEN bağçası var",map_leg_free:"boşdur — seçmək üçün rayona klikləyin",
     map_note:"Bağçalar — ORDO sisteminin 22.11.2026 tarixinə olan məlumatlarına görə. Rayonlar şəhərlərin rəsmi bölgüsünə görə göstərilib. Ərazinin boş olduğunu müraciətdən sonra menecer yekun təsdiqləyir.",
     sel_label:"Tərəfdaşların seçimi",sel_title:"Yalnız uşaqlı ailə cütlükləri",sel_sub:"Bağçaları ailələrlə birlikdə açırıq — bu, seçimin əsas şərtidir. Səbəbi:",
     sel1h:"Bağça — ailə işidir",sel1p:"Bağça hər gün və illərlə işləyir. Ailədə qərarlar daha tez qəbul olunur, məsuliyyət isə ikiyə bölünür.",
@@ -1642,7 +1642,7 @@ var T_ADD = {
     cmp_l5:"Uzun arayışlar yerine hazır kontrol listesiyle başlangıç",cmp_l6:"Ağın faaliyetteki anaokullarında denenmiş model",
     s8p:"Lead generation, marka yönetimi ve ulusal pazarlama",cta_btn:"Başvuru bırakın",
     map_label:"Şehir haritası",map_title:"Ortaklar için boş bölgeler",map_sub:"ORDOGEN anaokulları nerede faaliyette ve hangi ilçeler ile şehirler boş. Size uygun olanı seçin — yöneticimiz bölgenin boş olduğunu teyit edip koşulları anlatacak.",
-    map_with_h:"ORDOGEN'in faaliyette olduğu şehirler",map_free_h:"ORDOGEN anaokulu olmayan şehirler",map_has:"ORDOGEN anaokulu var",map_has_d:"ORDOGEN anaokulu olan ilçeler",map_free:"Boş ilçeler",map_partner:"Ortak için boş",map_city_free:"Şehrin tamamı boş",map_cnt:"Şehirdeki ORDOGEN anaokulları:",map_btn:"İlçeyi ayırt",map_btn_city:"Şehri ayırt",map_leg_has:"ORDOGEN anaokulu var",map_leg_free:"boş — seçmek için ilçeye tıklayın",
+    map_with_h:"ORDOGEN'in faaliyette olduğu şehirler",map_free_h:"ORDOGEN anaokulu olmayan şehirler",map_has:"ORDOGEN anaokulu var",map_has_d:"ORDOGEN anaokulu olan ilçeler",map_free:"Boş ilçeler",map_partner:"Ortak için boş",map_taken:"Şehir dolu — burada bir ORDOGEN ortağı çalışıyor",map_city_free:"Şehrin tamamı boş",map_cnt:"Şehirdeki ORDOGEN anaokulları:",map_btn:"İlçeyi ayırt",map_btn_city:"Şehri ayırt",map_leg_has:"ORDOGEN anaokulu var",map_leg_free:"boş — seçmek için ilçeye tıklayın",
     map_note:"Anaokulları — ORDO sisteminin 22.11.2026 tarihli verilerine göre. İlçeler şehirlerin resmî idari bölünüşüne göre gösterilmiştir. Bölgenin boş olduğunu başvurudan sonra yöneticimiz kesin olarak teyit eder.",
     sel_label:"Ortak seçimi",sel_title:"Yalnızca çocuklu evli çiftler",sel_sub:"Anaokullarını ailelerle birlikte açıyoruz — bu, seçimin ana şartı. Nedeni:",
     sel1h:"Anaokulu bir aile işidir",sel1p:"Anaokulu her gün ve yıllarca çalışır. Ailede kararlar daha hızlı alınır, sorumluluk ikiye bölünür.",
@@ -1660,7 +1660,7 @@ var T_ADD = {
     cmp_l5:"Pelancaran mengikut senarai semak sedia ada, bukan pencarian yang panjang",cmp_l6:"Model yang telah diuji di tadika rangkaian yang sedang beroperasi",
     s8p:"Penjanaan petunjuk, pengurusan jenama dan pemasaran persekutuan",cta_btn:"Hantar permohonan",
     map_label:"Peta bandar",map_title:"Wilayah kosong untuk rakan kongsi",map_sub:"Di mana tadika ORDOGEN sudah beroperasi dan daerah serta bandar mana yang masih kosong. Pilih kawasan anda — pengurus akan mengesahkan ia kosong dan menerangkan syaratnya.",
-    map_with_h:"Bandar yang sudah ada ORDOGEN",map_free_h:"Bandar tanpa tadika ORDOGEN",map_has:"Ada tadika ORDOGEN",map_has_d:"Daerah dengan tadika ORDOGEN",map_free:"Daerah kosong",map_partner:"Kosong untuk rakan kongsi",map_city_free:"Seluruh bandar kosong",map_cnt:"Tadika ORDOGEN di bandar:",map_btn:"Tempah daerah",map_btn_city:"Tempah bandar",map_leg_has:"ada tadika ORDOGEN",map_leg_free:"kosong — klik daerah untuk memilih",
+    map_with_h:"Bandar yang sudah ada ORDOGEN",map_free_h:"Bandar tanpa tadika ORDOGEN",map_has:"Ada tadika ORDOGEN",map_has_d:"Daerah dengan tadika ORDOGEN",map_free:"Daerah kosong",map_partner:"Kosong untuk rakan kongsi",map_taken:"Bandar sudah diambil — rakan kongsi ORDOGEN beroperasi di sini",map_city_free:"Seluruh bandar kosong",map_cnt:"Tadika ORDOGEN di bandar:",map_btn:"Tempah daerah",map_btn_city:"Tempah bandar",map_leg_has:"ada tadika ORDOGEN",map_leg_free:"kosong — klik daerah untuk memilih",
     map_note:"Tadika — berdasarkan data sistem ORDO pada 22.11.2026. Daerah mengikut pembahagian rasmi bandar. Status kosong wilayah disahkan oleh pengurus selepas permohonan.",
     sel_label:"Pemilihan rakan kongsi",sel_title:"Hanya pasangan suami isteri yang mempunyai anak",sel_sub:"Kami membuka tadika bersama keluarga — ini syarat utama pemilihan. Sebabnya:",
     sel1h:"Tadika ialah perniagaan keluarga",sel1p:"Tadika beroperasi setiap hari selama bertahun-tahun. Dalam keluarga, keputusan dibuat lebih cepat dan tanggungjawab dikongsi berdua.",
@@ -1678,7 +1678,7 @@ var T_ADD = {
     cmp_l5:"Launch with a ready-made checklist instead of a long trial-and-error search",cmp_l6:"A model proven in the network's operating kindergartens",
     s8p:"Lead generation, brand management and national marketing",cta_btn:"Leave a request",
     map_label:"City map",map_title:"Open territories for partners",map_sub:"Where ORDOGEN kindergartens already operate and which districts and cities are open. Pick yours — a manager will confirm it is available and explain the terms.",
-    map_with_h:"Cities where ORDOGEN already operates",map_free_h:"Cities without an ORDOGEN kindergarten",map_has:"ORDOGEN kindergarten here",map_has_d:"Districts with an ORDOGEN kindergarten",map_free:"Open districts",map_partner:"Open for a partner",map_city_free:"Whole city open",map_cnt:"ORDOGEN kindergartens in the city:",map_btn:"Claim a district",map_btn_city:"Claim the city",map_leg_has:"ORDOGEN kindergarten",map_leg_free:"open — tap a district to choose it",
+    map_with_h:"Cities where ORDOGEN already operates",map_free_h:"Cities without an ORDOGEN kindergarten",map_has:"ORDOGEN kindergarten here",map_has_d:"Districts with an ORDOGEN kindergarten",map_free:"Open districts",map_partner:"Open for a partner",map_taken:"City taken — an ORDOGEN partner already operates here",map_city_free:"Whole city open",map_cnt:"ORDOGEN kindergartens in the city:",map_btn:"Claim a district",map_btn_city:"Claim the city",map_leg_has:"ORDOGEN kindergarten",map_leg_free:"open — tap a district to choose it",
     map_note:"Kindergartens are based on ORDO system data as of 22.11.2026. Districts follow the official city divisions. A manager gives final confirmation that a territory is open after your request.",
     sel_label:"Partner selection",sel_title:"Married couples with children only",sel_sub:"We open kindergartens together with families — this is our main selection criterion. Here's why:",
     sel1h:"A kindergarten is a family business",sel1p:"A kindergarten runs every day, for years. In a family, decisions are made faster and responsibility is shared by two.",
@@ -1751,8 +1751,7 @@ function renderMap(){
       + (c.s ? '<div class="city-sub">' + escH(mapName(c.s)) + '</div>' : '') + '</div>'
       + '<span class="city-badge"><i class="dot has"></i>' + escH(tt('map_has')) + '</span>'
       + (c.c > 1 ? '<div class="city-cnt">' + escH(tt('map_cnt')) + ' <b>' + c.c + '</b></div>' : '')
-      + '<div class="city-free">' + escH(tt('map_partner')) + '</div>'
-      + '<button type="button" class="city-btn" data-city="' + escH(cn) + '">' + escH(tt('map_btn')) + '</button></div>';
+      + '<div class="city-taken">' + escH(tt('map_taken')) + '</div></div>';
   });
   h += '</div><h3 class="map-h">' + escH(tt('map_free_h')) + '</h3><div class="map-grid free">';
   MAP_FREE_CITIES.forEach(function(c){
