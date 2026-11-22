@@ -10,16 +10,18 @@
 <meta property="og:image" content="img/ordogen_10_ordagen_kids_certificate.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --white:#FFFFFF;--cream:#FAF7F0;--cream-2:#F3EEE2;
-  --green:#8CC04B;--green-d:#6E9F33;--green-dd:#4F7A1F;--green-l:#EEF6E2;
-  --lime:#D4FF3A;--ink:#1F2E3D;--ink-2:#4A5866;--ink-3:#7A8592;--line:#E8E2D4;
-  --r:24px;--r-sm:16px;
-  --shadow:0 1px 2px rgba(31,46,61,.04),0 12px 32px -12px rgba(31,46,61,.14);
-  --shadow-lg:0 2px 4px rgba(31,46,61,.04),0 30px 60px -24px rgba(31,46,61,.25);
-  --h:'Inter Tight','Inter',system-ui,sans-serif;--b:'Inter',system-ui,sans-serif;
+  /* токены ordo.education (app.css/home.css) */
+  --white:#FFFFFF;--cream:#F1F4F7;--cream-2:#F4F6F8;
+  --green:#8CC04B;--green-d:#71A438;--green-dd:#5E8F1B;--green-l:#EEF5E4;
+  --lime:#E6F1D3;--ink:#1F2E3D;--ink-2:#5A6B7B;--ink-3:#93A1B0;--line:#E7ECF0;
+  --teal:#0E9C9C;--blue:#2E90D9;--purple:#7C3AED;--tag-bg:#E7F5F5;--in-bd:#E2E8EE;
+  --r:16px;--r-sm:12px;
+  --shadow:0 1px 2px rgba(38,55,74,.04),0 12px 28px -18px rgba(38,55,74,.22);
+  --shadow-lg:0 16px 34px -20px rgba(38,55,74,.32);
+  --h:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;--b:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
@@ -347,10 +349,144 @@ footer{background:var(--cream);border-top:1px solid var(--line);padding:56px 0 1
   footer{padding-bottom:110px;}
 }
 @media(max-width:380px){.map-grid.sm,.map-grid.free{grid-template-columns:1fr;}}
+
+/* ===== стиль ordo.education (22.11, Аида TG 7773) ===== */
+body{font-size:16px;color:var(--ink);}
+.wrap{max-width:1240px;padding:0 40px;}
+.sec{padding:96px 0;}
+.sec.cream{background:var(--cream);border-top:1px solid #EAEEF2;border-bottom:1px solid #EAEEF2;}
+h1,h2,h3,h4{letter-spacing:-.01em;}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--green);margin-bottom:12px;}
+.eyebrow::before{display:none;}
+h2.t{font-size:clamp(28px,3vw,38px);font-weight:800;line-height:1.15;margin-bottom:12px;}
+p.s{font-size:17px;color:var(--ink-2);}
+.head{margin-bottom:44px;}
+mark.hl{background:linear-gradient(90deg,#A3D65C,#8cc04b,#5E8F1B);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding:0;border-radius:0;}
+.ico{stroke:var(--green);stroke-width:1.8;}
+/* topbar + header */
+.topbar{background:#EAF3FB;border-bottom:1px solid #D3E6F5;font-size:13px;font-weight:600;color:var(--ink);}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:40px;}
+.topbar a{text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
+.topbar svg{width:15px;height:15px;stroke:var(--blue);fill:none;stroke-width:2;}
+.topbar .tb-r{color:var(--ink-2);font-weight:500;}
+.hdr{background:rgba(255,255,255,.85);border-bottom:1px solid #EAEEF2;}
+.hdr .wrap{height:70px;}
+.nav a{font-size:14.5px;font-weight:600;color:var(--ink-2);border-radius:10px;}
+.nav a:hover{background:var(--cream-2);color:var(--ink);}
+.lang summary{border-radius:10px;border-color:var(--in-bd);}
+.lang-menu{border-radius:14px;border-color:#EEF1F4;}
+.lang-btn{border-radius:9px;}
+.lang-btn.active{background:var(--green-l);color:var(--green-dd);}
+/* buttons */
+.btn{border-radius:10px;font-weight:700;font-size:15px;padding:15px 24px;}
+.btn-g{background:var(--green);box-shadow:0 8px 18px -8px rgba(134,188,37,.5);}
+.btn-g:hover{background:var(--green-d);}
+.btn-o{background:#fff;border:1px solid var(--in-bd);}
+.btn-o:hover{border-color:var(--green);color:var(--green-dd);}
+.hdr .btn{padding:11px 20px;font-size:14px;}
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--cream);padding:64px 0 0;}
+.hero::before,.hero::after{content:'';position:absolute;border-radius:50%;pointer-events:none;z-index:0;}
+.hero::before{width:420px;height:420px;right:-120px;top:-80px;background:rgba(46,144,217,.07);}
+.hero::after{width:300px;height:300px;left:42%;bottom:40px;background:rgba(124,58,237,.05);}
+.hero>.wrap,.hero .strip{position:relative;z-index:1;}
+.hero-tag{background:rgba(140,192,75,.12);border:0;border-radius:30px;padding:8px 15px;font-size:12.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#7BAE3D;}
+.hero-tag img{display:none;}
+.hero h1{font-size:clamp(36px,4.2vw,52px);font-weight:800;line-height:1.08;letter-spacing:-.02em;}
+.hero-sub{font-size:17px;line-height:1.65;}
+.hf{border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:22px;}
+.hf-t{font-weight:800;}
+.fld span{font-size:13px;font-weight:700;color:var(--ink);}
+.fld input{background:#fff;border:1px solid var(--in-bd);border-radius:12px;padding:13px 14px;}
+.fld input:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(140,192,75,.15);}
+.chk.main{background:var(--green-l);border-radius:12px;}
+.chk.main mark{background:var(--lime);}
+.fok{border-radius:12px;}
+.hero-ph .ph{border-radius:24px;box-shadow:var(--shadow-lg);}
+.badge-60{border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow-lg);}
+.badge-60 b{font-weight:800;}
+.badge-60 b i{color:var(--green);}
+.lamb-hero{display:none;}
+.strip{border-top:1px solid #EAEEF2;background:#fff;margin-top:64px;}
+.strip span::before{background:var(--green);}
+/* cards */
+.card,.step,.cs,.cmp-card,.city-card{border:1px solid var(--line);border-radius:var(--r);padding:24px;transition:border-color .25s,box-shadow .25s,transform .25s;}
+.card:hover,.step:hover,.city-card:hover{border-color:#D6DEE6;box-shadow:var(--shadow-lg);transform:translateY(-2px);}
+.card .ib{width:46px;height:46px;border-radius:13px;background:var(--tag-bg);margin-bottom:18px;}
+.card .ib .ico{width:24px;height:24px;}
+.cards>.card:nth-child(3n+2) .ib{background:#EAF0FE;}.cards>.card:nth-child(3n+2) .ico{stroke:var(--blue);}
+.cards>.card:nth-child(3n) .ib{background:#F0E9FE;}.cards>.card:nth-child(3n) .ico{stroke:var(--purple);}
+.card h3,.step h3{font-size:18px;font-weight:800;}
+.card p,.step p,.cs p{font-size:15px;line-height:1.6;}
+.reason .n{font-weight:800;border-radius:12px;background:var(--green-l);color:var(--green-dd);}
+.reason h4{font-weight:800;font-size:18px;}
+.step .no{border-radius:12px;background:var(--cream-2);font-weight:800;}
+.step.key{border-color:var(--green);box-shadow:0 0 0 3px rgba(140,192,75,.15);}
+.step.key .no{background:var(--green);color:#fff;}
+.fam-ph .ph,.lead-aside .ph{border-radius:20px;}
+.fam-ph .lamb{background:#fff;border:1px solid var(--line);}
+.com-grid figure{border-radius:16px;}
+.com-grid figcaption{border-radius:10px;}
+.com-list h4{font-weight:800;}
+/* map */
+.dot.free{background:var(--lime);box-shadow:0 0 0 1.5px var(--green) inset;}
+.city-name{font-weight:800;}
+.city-badge{border-radius:30px;font-weight:700;}
+.city-badge.free{background:rgba(140,192,75,.12);color:#7BAE3D;}
+.chip{border-radius:30px;}
+.chip.has{background:var(--tag-bg);color:var(--teal);}
+.chip.free{background:var(--lime);color:var(--green-dd);}
+.city-btn{background:var(--green);border-radius:10px;font-weight:700;}
+.city-btn:hover{background:var(--green-d);}
+.city-card.free{border-radius:14px;}
+/* conditions */
+.cs .v{font-weight:800;color:var(--ink);}
+.cs h4,.cmp-h{font-weight:800;}
+.geo-tab{border-radius:10px;border-color:var(--in-bd);}
+.geo-tab.active{background:var(--green);border-color:var(--green);color:#fff;}
+.ptable{border-radius:var(--r);border-color:var(--line);}
+.ptable th{background:var(--cream-2);color:var(--ink-3);font-weight:800;font-size:12px;}
+.ptable .pprice{font-weight:800;}
+.pnote{border-radius:12px;background:#EAF3FB;border:1px solid #D3E6F5;}
+.pnote.warn{background:#FBF1E1;border-color:#F3DFC0;}
+.cmp-card.win{border-color:var(--green);box-shadow:0 0 0 3px rgba(140,192,75,.12);}
+/* quiz / faq / lead */
+.qbox{border-radius:20px;box-shadow:var(--shadow);border-color:var(--line);}
+.qprog{background:var(--cream-2);}
+.qq h3,.qres h3{font-weight:800;}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:10px;padding:0 22px;}
+.faq summary{font-weight:800;font-size:17px;padding:20px 0;}
+.faq summary::after{background-color:var(--cream-2);border-radius:10px;}
+.faq details[open]{border-color:#D6DEE6;box-shadow:var(--shadow);}
+.faq details[open] summary::after{background-color:var(--lime);}
+.faq details p{padding:0 40px 20px 0;font-size:15.5px;}
+.lead-form{background:linear-gradient(160deg,#F6FAEF 0%,#E6F1D3 55%,#CFE5AE 100%);border:0;border-radius:22px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;}
+.lead-form::before{content:'';position:absolute;width:180px;height:180px;border-radius:50%;right:-50px;top:-60px;background:rgba(255,255,255,.35);pointer-events:none;}
+.lead-form>*{position:relative;}
+.wa-alt{color:var(--green-dd);}
+/* footer */
+footer{background:var(--cream);border-top:1px solid #EAEEF2;}
+.social-btn{border-radius:12px;border-color:var(--in-bd);}
+.social-btn:hover{background:var(--green-l);}
+.mbar .btn{border-radius:10px;}
+@media(max-width:860px){
+  .wrap{padding:0 16px;}
+  .sec{padding:64px 0;}
+  .topbar .tb-r{display:none;}
+  .topbar .wrap{height:36px;}
+  .hero{padding:20px 0 0;}
+  .hero h1{font-size:clamp(30px,8.6vw,42px);}
+  .hero::before{width:260px;height:260px;right:-120px;top:-60px;}
+  .hero::after{display:none;}
+  .faq details{padding:0 16px;}
+  .faq summary{font-size:16px;}
+  .card,.step,.cs,.cmp-card{padding:20px;}
+}
 </style>
 </head>
 <body>
 
+<div class="topbar"><div class="wrap"><a href="https://wa.me/77767233070" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+7 776 723 30 70</a><span class="tb-r">Франшиза ORDOGEN · 60+ проданных франшиз</span></div></div>
 <!-- HEADER -->
 <header class="hdr" id="hdr">
   <div class="wrap">
