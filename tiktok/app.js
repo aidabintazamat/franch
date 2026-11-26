@@ -4,7 +4,8 @@
 (function () {
   'use strict';
 
-  var CLIENT_KEY = 'awy06h4yb60id6g3';
+  var KEYS = { production: 'awy06h4yb60id6g3', sandbox: 'sbawajrjs8sf1vuute' };
+  var ENV = (new URLSearchParams(location.search).get('env') === 'sandbox') ? 'sandbox' : 'production';
   var REDIRECT_URI = 'https://franch.ordogen.education/tiktok/callback/';
   var SCOPES = 'user.info.basic,user.info.profile,user.info.stats,video.list,video.upload,video.publish';
   var LOCAL = 'http://127.0.0.1:8787';
@@ -119,9 +120,9 @@
   /* ---------- connect ---------- */
   function authorizeUrl() {
     var st = randomState();
-    try { sessionStorage.setItem('ordo_tt_state', st); localStorage.setItem('ordo_tt_state', st); } catch (e) {}
+    try { sessionStorage.setItem('ordo_tt_state', st); localStorage.setItem('ordo_tt_state', st); localStorage.setItem('ordo_tt_env', ENV); } catch (e) {}
     return 'https://www.tiktok.com/v2/auth/authorize/?' + [
-      'client_key=' + encodeURIComponent(CLIENT_KEY),
+      'client_key=' + encodeURIComponent(KEYS[ENV]),
       'scope=' + encodeURIComponent(SCOPES),
       'response_type=code',
       'redirect_uri=' + encodeURIComponent(REDIRECT_URI),
@@ -330,7 +331,9 @@
     if (!saved || saved !== st) return fail(t('cb_state'));
     try { sessionStorage.removeItem('ordo_tt_state'); localStorage.removeItem('ordo_tt_state'); } catch (e) {}
     history.replaceState(null, '', location.pathname);
-    local('/tiktok/exchange', { method: 'POST', body: { code: code, state: st, redirect_uri: REDIRECT_URI } }).then(function (j) {
+    var env = 'production';
+    try { env = localStorage.getItem('ordo_tt_env') || 'production'; } catch (e) {}
+    local('/tiktok/exchange', { method: 'POST', body: { code: code, state: st, redirect_uri: REDIRECT_URI, env: env } }).then(function (j) {
       var u = j.user || {};
       $('cbIcon').textContent = '✓';
       $('cbTitle').setAttribute('data-i', 'cb_ok'); $('cbTitle').innerHTML = t('cb_ok');
@@ -341,7 +344,7 @@
         $('cbName').textContent = u.display_name || '';
         $('cbHandle').textContent = u.username ? '@' + u.username : '';
       }
-      var next = '/tiktok/?open_id=' + encodeURIComponent(j.open_id) + '#publish';
+      var next = '/tiktok/?open_id=' + encodeURIComponent(j.open_id) + (j.env === 'sandbox' ? '&env=sandbox' : '') + '#publish';
       $('cbGo').href = next; $('cbGo').classList.remove('hidden');
       setTimeout(function () { location.href = next; }, 3500);
     }).catch(function (e) { fail(e.message + ' — ' + t('local_off')); });
