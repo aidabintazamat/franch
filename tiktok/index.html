@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ORDO × TikTok — publish videos</title>
-<meta name="description" content="ORDO × TikTok: connect a TikTok account with Login Kit and publish ORDO educational videos via the Content Posting API.">
+<title>ORDO × TikTok</title>
+<meta name="description" content="ORDO × TikTok: kindergartens, kids centers and clubs publish ORDO news videos to their own TikTok in one click — with caption, hashtags, privacy settings and child-safety rules built in.">
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://franch.ordogen.education/tiktok/">
 <link rel="icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=1">
+<link rel="stylesheet" href="style.css?v=2">
 </head>
 <body data-page="main">
 <header class="top">
@@ -21,21 +21,82 @@
 </header>
 
 <main class="wrap">
-  <div class="hero">
-    <span class="eyebrow" data-i="eyebrow"></span>
-    <h1 data-i="h1"></h1>
-    <p class="lead" data-i="lead"></p>
-    <a class="btn btn-tt" data-connect href="#">
-      <svg class="tt-ico" viewBox="0 0 48 48" fill="currentColor" aria-hidden="true"><path d="M34.1 6c.6 4.9 3.4 8.3 8.4 8.6v5.6c-2.9.3-5.4-.7-8.3-2.4v10.6c0 13.5-14.7 17.7-20.6 8.1-3.8-6.2-1.5-17 10.7-17.4v5.9c-.9.1-1.9.4-2.8.7-2.7.9-4.3 2.7-3.9 5.8.9 5.9 11.7 7.6 10.8-3.9V6h5.7z"/></svg>
-      <span data-i="connect"></span>
-    </a>
-    <div class="status"><span class="dot wait" id="localDot"></span><span id="localTxt">…</span></div>
+  <section class="hero sell">
+    <div class="hero-txt">
+      <span class="eyebrow" data-i="eyebrow"></span>
+      <h1 data-i="h1"></h1>
+      <p class="lead" data-i="lead"></p>
+      <div class="cta">
+        <a class="btn btn-green" href="https://kz.ordo.education/#register-business" data-i="cta_try"></a>
+        <a class="btn btn-ghost" href="https://ordo.education" data-i="cta_plans"></a>
+      </div>
+      <p class="plus" data-i="plus_note"></p>
+    </div>
+    <div class="phone" aria-hidden="true">
+      <div class="ph-top"><img src="ordo360_logo.svg" alt=""><span data-i="m_news"></span></div>
+      <div class="ph-card">
+        <div class="ph-vid"><span>▶</span></div>
+        <b data-i="m_title"></b>
+        <small data-i="m_meta"></small>
+        <div class="ph-tags" data-i="m_tags"></div>
+        <div class="ph-btn"><svg class="tt-ico" viewBox="0 0 48 48" fill="currentColor" aria-hidden="true"><path d="M34.1 6c.6 4.9 3.4 8.3 8.4 8.6v5.6c-2.9.3-5.4-.7-8.3-2.4v10.6c0 13.5-14.7 17.7-20.6 8.1-3.8-6.2-1.5-17 10.7-17.4v5.9c-.9.1-1.9.4-2.8.7-2.7.9-4.3 2.7-3.9 5.8.9 5.9 11.7 7.6 10.8-3.9V6h5.7z"/></svg><span data-i="publish"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 data-i="ben_h"></h2>
+    <div class="grid4">
+      <div class="feat"><i>📈</i><h3 data-i="b1h"></h3><p data-i="b1p"></p></div>
+      <div class="feat"><i>⏱</i><h3 data-i="b2h"></h3><p data-i="b2p"></p></div>
+      <div class="feat"><i>🛡</i><h3 data-i="b3h"></h3><p data-i="b3p"></p></div>
+      <div class="feat"><i>📊</i><h3 data-i="b4h"></h3><p data-i="b4p"></p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 data-i="how_h"></h2>
     <div class="steps">
       <div class="step"><b>1</b><h3 data-i="s1h"></h3><p data-i="s1p"></p></div>
       <div class="step"><b>2</b><h3 data-i="s2h"></h3><p data-i="s2p"></p></div>
       <div class="step"><b>3</b><h3 data-i="s3h"></h3><p data-i="s3p"></p></div>
     </div>
-  </div>
+    <p class="sub incl" data-i="incl"></p>
+  </section>
+
+  <section class="block">
+    <h2 data-i="who_h"></h2>
+    <div class="grid3">
+      <div class="who"><i>🏫</i><h3 data-i="w1h"></h3><p data-i="w1p"></p></div>
+      <div class="who"><i>🧩</i><h3 data-i="w2h"></h3><p data-i="w2p"></p></div>
+      <div class="who"><i>🎨</i><h3 data-i="w3h"></h3><p data-i="w3p"></p></div>
+    </div>
+  </section>
+
+  <section class="card" id="rules">
+    <h2 data-i="rules_h"></h2>
+    <p class="sub" data-i="rules_sub"></p>
+    <div data-i="rules_html"></div>
+  </section>
+
+  <section class="band">
+    <h2 data-i="band_h"></h2>
+    <p data-i="band_p"></p>
+    <div class="cta">
+      <a class="btn btn-green" href="https://kz.ordo.education/#register-business" data-i="cta_try"></a>
+      <a class="btn btn-ghost" href="https://ordo.education" data-i="cta_plans"></a>
+    </div>
+  </section>
+
+  <section class="service" id="connect">
+    <h2 data-i="svc_h"></h2>
+    <p class="sub" data-i="svc_sub"></p>
+    <a class="btn btn-tt" data-connect href="#">
+      <svg class="tt-ico" viewBox="0 0 48 48" fill="currentColor" aria-hidden="true"><path d="M34.1 6c.6 4.9 3.4 8.3 8.4 8.6v5.6c-2.9.3-5.4-.7-8.3-2.4v10.6c0 13.5-14.7 17.7-20.6 8.1-3.8-6.2-1.5-17 10.7-17.4v5.9c-.9.1-1.9.4-2.8.7-2.7.9-4.3 2.7-3.9 5.8.9 5.9 11.7 7.6 10.8-3.9V6h5.7z"/></svg>
+      <span data-i="connect"></span>
+    </a>
+    <div class="status"><span class="dot wait" id="localDot"></span><span id="localTxt">…</span></div>
+  </section>
 
   <section class="card hidden" id="needConnect">
     <p class="empty" data-i="connect_first"></p>
@@ -116,12 +177,6 @@
       <div class="videos" id="videoList"><p class="empty">…</p></div>
     </section>
 
-    <section class="card" id="rules">
-      <h2 data-i="rules_h"></h2>
-      <p class="sub" data-i="rules_sub"></p>
-      <div data-i="rules_html"></div>
-    </section>
-
     <p style="text-align:center"><a class="btn btn-ghost" data-connect href="#"><span data-i="reconnect"></span></a></p>
   </div>
 </main>
@@ -136,6 +191,6 @@
     </span>
   </div>
 </footer>
-<script src="app.js?v=4"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>
