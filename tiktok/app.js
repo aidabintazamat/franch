@@ -13,6 +13,9 @@
   /* ---------- i18n ---------- */
   var T = {
     en: {
+      rules_h: 'Content rules for kindergarten videos',
+      rules_sub: 'ORDO publishes only content that follows the TikTok Community Guidelines. Every video is checked against these rules before posting.',
+      rules_html: '<div class="rules"><div><h3>✅ Allowed</h3><ul><li>Everyday kindergarten life: lessons, walks, holidays, meals, creativity</li><li>Children fully dressed, in safe activities, with an adult nearby</li><li>Only with written consent of parents for filming</li></ul></div><div><h3>❌ Never</h3><ul><li>Changing clothes, sleeping in underwear, bathing, toilets</li><li>Tears, punishment or crying for views; dangerous games</li><li>Children\'s full names, group lists, journals or screens with personal data</li><li>AI editing of real children\'s faces or voices — even with a label</li><li>Asking children to persuade parents to buy</li></ul></div><div><h3>⚙️ Settings</h3><ul><li>Accounts are run by an organization or an adult (stated in bio)</li><li>Duet and Stitch off for videos with real children; comment filter on</li><li>AI-generated content (AI characters, cloned voice) is always labeled</li><li>Promotional videos are marked “Your brand”; music only from TikTok Commercial Music Library</li><li>Ads with children: audience 18+ only</li></ul></div></div>',
       eyebrow: 'Official integration · TikTok Login Kit + Content Posting API',
       h1: 'ORDO <span class="x">×</span> TikTok — publish videos',
       lead: 'ORDO prepares short educational videos for kindergartens and parents. Connect our TikTok account once and publish finished videos straight from ORDO — with your caption and privacy settings.',
@@ -49,6 +52,9 @@
       footer_terms: 'Terms of Service', footer_privacy: 'Privacy Policy', footer_contact: 'Contact'
     },
     ru: {
+      rules_h: 'Правила контента для роликов детских садов',
+      rules_sub: 'ORDO публикует только контент, который соответствует правилам сообщества TikTok. Каждый ролик проверяется по этим правилам перед публикацией.',
+      rules_html: '<div class="rules"><div><h3>✅ Можно</h3><ul><li>Обычная жизнь сада: занятия, прогулки, праздники, еда, творчество</li><li>Дети одетые, в безопасной деятельности, рядом взрослый</li><li>Только с письменного согласия родителей на съёмку</li></ul></div><div><h3>❌ Нельзя</h3><ul><li>Переодевание, сон в белье, купание, туалет</li><li>Слёзы, наказания, плач ради просмотров; опасные игры</li><li>Полные имена детей, списки групп, журналы и экраны с персональными данными</li><li>ИИ-обработка лиц и голосов реальных детей — даже с меткой</li><li>Призывы к детям уговорить родителей купить</li></ul></div><div><h3>⚙️ Настройки</h3><ul><li>Аккаунты ведёт организация или взрослый (указано в описании профиля)</li><li>Дуэт и Стежок выключены для роликов с реальными детьми, фильтр комментариев включён</li><li>ИИ-контент (ИИ-персонажи, клон голоса) всегда с меткой «Создано ИИ»</li><li>Продающие ролики — с отметкой «Ваш бренд»; музыка только из коммерческой библиотеки TikTok</li><li>Реклама с детьми — показ только 18+</li></ul></div></div>',
       eyebrow: 'Официальная интеграция · TikTok Login Kit + Content Posting API',
       h1: 'ORDO <span class="x">×</span> TikTok — публикация роликов',
       lead: 'ORDO готовит короткие обучающие ролики для детских садов и родителей. Подключите наш TikTok-аккаунт один раз и публикуйте готовые ролики прямо из ORDO — с подписью и настройками приватности.',
